@@ -2,37 +2,10 @@ import { useMiniSearch } from "react-minisearch";
 import index from "indexes/index.json";
 import NextLink from "next/link";
 import { Input } from "@chakra-ui/react";
-import {
-	Menu,
-	MenuButton,
-	MenuList,
-	MenuItem,
-	MenuItemOption,
-	MenuGroup,
-	MenuOptionGroup,
-	MenuIcon,
-	MenuCommand,
-	Divider,
-	Box,
-	Link,
-	VStack,
-	HStack,
-	Icon,
-} from "@chakra-ui/react";
-import {
-	Breadcrumb,
-	BreadcrumbItem,
-	BreadcrumbLink,
-	BreadcrumbSeparator,
-} from "@chakra-ui/react";
+import { Divider, Box, Link, VStack, HStack, Icon } from "@chakra-ui/react";
+import { Breadcrumb, BreadcrumbItem } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import {
-	Tag,
-	TagLabel,
-	TagLeftIcon,
-	TagRightIcon,
-	TagCloseButton,
-} from "@chakra-ui/react";
+import { Tag } from "@chakra-ui/react";
 import { BiChevronRight } from "react-icons/bi";
 
 type Index = {

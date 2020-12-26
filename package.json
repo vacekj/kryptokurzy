@@ -8,7 +8,8 @@
 		"start": "next start",
 		"index": "node generate-fts-indexes.mjs",
 		"prebuild": "yarn index",
-		"e2e": "yarn run cypress run",
+		"cy:run": "yarn run cypress run",
+		"e2e": "start-server-and-test dev http://localhost:3000 cy:run",
 		"e2e:update": "yarn run cypress run --env updateSnapshots=true"
 	},
 	"husky": {
