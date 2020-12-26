@@ -5,16 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="29e902be-cac6-49c5-a000-dbc345811b23" name="Default Changelist" comment="feat: better search">
-      <change afterPath="$PROJECT_DIR$/tsconfig-index.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/fixtures/example.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/integration/__image_snapshots__/Visual Regression Testing  toMatchImageSnapshot - element #0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/integration/visual.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/plugins/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/snapshots/visual.test.ts/Visual Regression Testing -- toMatchImageSnapshot.snap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/snapshots/visual.test.ts/__diff_output__/Visual Regression Testing -- toMatchImageSnapshot.diff.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/support/commands.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/support/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/videos/visual.test.ts.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/logo.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/MailCTA.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/MailCTA.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navbar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Search.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generate-fts-indexes.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/generate-fts-indexes.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/indexes/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/indexes/index.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/hello.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/hello.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/courses/bitcoin/starter.mdx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
@@ -61,6 +67,7 @@
       <recent name="$PROJECT_DIR$/public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/pages/courses/bitcoin" />
       <recent name="$PROJECT_DIR$/pages" />
     </key>
@@ -78,7 +85,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608915068847</updated>
-      <workItem from="1608915073285" duration="30138000" />
+      <workItem from="1608915073285" duration="36195000" />
     </task>
     <task id="LOCAL-00001" summary="postinstall">
       <created>1608915917969</created>
@@ -108,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608982255343</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="feat: better search">
+      <created>1608992411747</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1608992411747</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,6 +149,5 @@
     <MESSAGE value="feat: search" />
     <MESSAGE value="feat: better search" />
     <option name="LAST_COMMIT_MESSAGE" value="feat: better search" />
-    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
