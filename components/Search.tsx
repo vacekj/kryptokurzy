@@ -1,43 +1,168 @@
 import { useMiniSearch } from "react-minisearch";
 import index from "indexes/index.json";
 import NextLink from "next/link";
+import { Input } from "@chakra-ui/react";
+import {
+	Menu,
+	MenuButton,
+	MenuList,
+	MenuItem,
+	MenuItemOption,
+	MenuGroup,
+	MenuOptionGroup,
+	MenuIcon,
+	MenuCommand,
+	Divider,
+	Box,
+	Link,
+	VStack,
+	HStack,
+	Icon,
+} from "@chakra-ui/react";
+import {
+	Breadcrumb,
+	BreadcrumbItem,
+	BreadcrumbLink,
+	BreadcrumbSeparator,
+} from "@chakra-ui/react";
+import { motion } from "framer-motion";
+import {
+	Tag,
+	TagLabel,
+	TagLeftIcon,
+	TagRightIcon,
+	TagCloseButton,
+} from "@chakra-ui/react";
+import { BiChevronRight } from "react-icons/bi";
 
 type Index = {
 	"data.title": string;
 	"data.tags": string;
 	content: string;
-	url: "string";
+	url: string;
 	isEmpty: boolean;
 };
 
-export default function Search() {
-	const { search, searchResults } = useMiniSearch(index, {
-		fields: ["content", "data.title", "data.text"],
+export default function Search(props: { isOpen: boolean }) {
+	const { search, searchResults } = useMiniSearch(index as Index[], {
+		fields: ["content", "data.title", "data.tags"],
 		storeFields: ["url"],
 		idField: "url",
+		searchOptions: { fuzzy: 0.2 },
 	});
-
-	const handleSearchChange = (event) => {
-		search(event.target.value, { fuzzy: 0.2 });
-	};
-
 	return (
-		<div>
-			<input
-				type="text"
-				onChange={handleSearchChange}
-				placeholder="Search…"
-			/>
-
-			<ol>
-				<h3>Results:</h3>
-				{searchResults &&
+		<Box position={"relative"}>
+			<Box
+				as={motion.div}
+				transition={{
+					ease: "easeIn",
+				}}
+				animate={{
+					width: props.isOpen ? "initial" : 0,
+				}}
+				overflow={"hidden"}
+				initial={false}
+			>
+				<Input
+					w={"64"}
+					bg={"white"}
+					overflow={"hidden"}
+					type="text"
+					onChange={(e) => {
+						e.target.focus();
+						search(e.target.value);
+					}}
+					placeholder="Prohledat jaknacrypto.cz"
+				/>
+			</Box>
+			<Box
+				display={
+					props.isOpen && searchResults?.length ? "flex" : "none"
+				}
+				flexDir={"column"}
+				position={"absolute"}
+				left={0}
+				zIndex={10}
+				top={0}
+				bg={"white"}
+				shadow={"lg"}
+				w={"full"}
+				mt={12}
+				borderRadius={4}
+				overflow={"hidden"}
+			>
+				{searchResults && searchResults.length ? (
 					searchResults.map((result, i) => (
-						<NextLink href={"/" + result.url} key={i}>
-							{result.url}
-						</NextLink>
-					))}
-			</ol>
-		</div>
+						<>
+							<VStack
+								cursor={"pointer"}
+								p={4}
+								_hover={{
+									bg: "gray.50",
+								}}
+								key={result.url}
+								alignItems={"start"}
+							>
+								<NextLink href={"/" + result.url} key={i}>
+									<Link fontWeight={"bold"} fontSize={"lg"}>
+										{result["data.title"]}
+									</Link>
+								</NextLink>
+								<HStack>
+									<Breadcrumb
+										spacing="8px"
+										separator={
+											<Icon
+												as={BiChevronRight}
+												color="gray.500"
+											/>
+										}
+									>
+										{result.url.split("/").map((crumb) => (
+											<BreadcrumbItem
+												color={"gray.500"}
+												fontSize={"sm"}
+											>
+												<NextLink
+													href={result.url.slice(
+														0,
+														result.url.indexOf(
+															crumb
+														)
+													)}
+												>
+													<Link>
+														{crumb
+															.trim()
+															.replace(
+																/^\w/,
+																(c) =>
+																	c.toUpperCase()
+															)}
+													</Link>
+												</NextLink>
+											</BreadcrumbItem>
+										))}
+									</Breadcrumb>
+								</HStack>
+								<HStack>
+									{result["data.tags"] &&
+										result["data.tags"]
+											.split(" ")
+											.map((tag) => (
+												<Tag key={tag}>{tag}</Tag>
+											))}
+								</HStack>
+							</VStack>
+							{i < searchResults.length - 1 && <Divider />}
+						</>
+					))
+				) : (
+					<Box key={"none"} color={"gray.500"}>
+						Žádné výsledky
+					</Box>
+				)}
+			</Box>
+		</Box>
 	);
 }

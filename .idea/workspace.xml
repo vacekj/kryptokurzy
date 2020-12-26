@@ -4,13 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29e902be-cac6-49c5-a000-dbc345811b23" name="Default Changelist" comment="dummy dum">
-      <change afterPath="$PROJECT_DIR$/components/Search.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/generate-fts-indexes.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/indexes/index.json" afterDir="false" />
+    <list default="true" id="29e902be-cac6-49c5-a000-dbc345811b23" name="Default Changelist" comment="feat: better search">
+      <change afterPath="$PROJECT_DIR$/tsconfig-index.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MailCTA.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/MailCTA.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Search.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generate-fts-indexes.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/generate-fts-indexes.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indexes/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/indexes/index.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/hello.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/hello.mdx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/hello.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/hello.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/courses/bitcoin/starter.mdx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
@@ -21,6 +25,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="1m9oG3lRsZWlXpEnxssC0wtLGsw" />
   <component name="ProjectLevelVcsManager">
@@ -34,7 +41,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -49,11 +56,17 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/pages/courses/bitcoin" />
       <recent name="$PROJECT_DIR$/public" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pages/courses/bitcoin" />
+      <recent name="$PROJECT_DIR$/pages" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Generate Indexes" type="NodeJSConfigurationType" path-to-js-file="generate-fts-indexes.mjs" working-dir="$PROJECT_DIR$">
+    <configuration name="generate-fts-indexes.mjs" type="NodeJSConfigurationType" nameIsGenerated="true" path-to-js-file="generate-fts-indexes.mjs" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
   </component>
@@ -65,7 +78,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608915068847</updated>
-      <workItem from="1608915073285" duration="21056000" />
+      <workItem from="1608915073285" duration="30138000" />
     </task>
     <task id="LOCAL-00001" summary="postinstall">
       <created>1608915917969</created>
@@ -88,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608933277196</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat: search">
+      <created>1608982255343</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1608982255343</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -112,7 +132,9 @@
     <MESSAGE value="postinstall" />
     <MESSAGE value="feat: lets go" />
     <MESSAGE value="dummy dum" />
-    <option name="LAST_COMMIT_MESSAGE" value="dummy dum" />
+    <MESSAGE value="feat: search" />
+    <MESSAGE value="feat: better search" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: better search" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

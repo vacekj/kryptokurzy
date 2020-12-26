@@ -5,23 +5,29 @@ import striptags from "striptags";
 import remark from "remark";
 import mdx from "remark-mdx";
 import html from "remark-html";
+import pkg from "vfile";
+import recursiveReadDir from "recursive-readdir";
 
-const pages = await fs.readdir(path.dirname("pages/mdx"));
+const { VFile } = pkg;
 
-const mdxPagesPromises = pages.filter(page => page.match(/\.mdx$/))
-	.map(page => {
-		const file = fs.readFileSync(`${process.cwd()}/pages/${page}`);
+const pages = await recursiveReadDir(path.dirname("pages/mdx"));
+
+const mdxPagesPromises = pages
+	.filter((page) => page.match(/\.mdx$/))
+	.map((page) => {
+		const file = fs.readFileSync(`${process.cwd()}/${page}`);
 		return {
 			...matter(file),
-			url: page.split('.')[0]
+			url: page.split(".")[0].slice(6),
 		};
 	})
 	.map(flattenObject)
-	.map(async page => {
+	.map(async (page) => {
+		/** @type {VFile} */
 		const md = await remark().use(mdx).use(html).process(page.content);
 		return {
 			...page,
-			content: striptags(md.contents)
+			content: striptags(md.contents.toString()),
 		};
 	});
 
@@ -35,7 +41,7 @@ function flattenObject(ob) {
 	for (let i in ob) {
 		if (!ob.hasOwnProperty(i)) continue;
 
-		if ((typeof ob[i]) == "object" && ob[i] !== null) {
+		if (typeof ob[i] == "object" && ob[i] !== null) {
 			const flatObject = flattenObject(ob[i]);
 			for (let x in flatObject) {
 				if (!flatObject.hasOwnProperty(x)) continue;

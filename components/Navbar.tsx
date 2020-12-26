@@ -9,9 +9,12 @@ import {
 import { HiOutlineMoon, HiOutlineSearch, HiOutlineSun } from "react-icons/hi";
 import Img from "next/image";
 import NextLink from "next/link";
+import { useState } from "react";
+import Search from "./Search";
 
 export default function NavBar() {
 	const { colorMode, toggleColorMode } = useColorMode();
+	const [searchOpen, setSearchOpen] = useState(false);
 	return (
 		<HStack bg={"black"} p={3} px={6} justifyContent="space-between">
 			<HStack spacing={5}>
@@ -29,6 +32,17 @@ export default function NavBar() {
 				</Button>
 			</HStack>
 			<HStack spacing={1}>
+				<Search isOpen={searchOpen} />
+				<IconButton
+					variant={"unstyled"}
+					aria-label="Hledat"
+					_hover={{
+						opacity: 0.7,
+					}}
+					onClick={() => setSearchOpen(!searchOpen)}
+					icon={<Icon w={6} h={6} as={HiOutlineSearch} />}
+					color={"white"}
+				/>
 				<IconButton
 					variant={"unstyled"}
 					aria-label="Přepnout noční režim"
@@ -43,15 +57,6 @@ export default function NavBar() {
 							<Icon w={6} h={6} as={HiOutlineSun} />
 						)
 					}
-					color={"white"}
-				/>
-				<IconButton
-					variant={"unstyled"}
-					aria-label="Hledat"
-					_hover={{
-						opacity: 0.7,
-					}}
-					icon={<Icon w={6} h={6} as={HiOutlineSearch} />}
 					color={"white"}
 				/>
 			</HStack>

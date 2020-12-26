@@ -39,7 +39,7 @@ export default function MailCTA() {
 								size={"lg"}
 								w={"full"}
 								type={"email"}
-								autocomplete={"email"}
+								autoComplete={"email"}
 								placeholder="Email address"
 								borderRightRadius={0}
 								mr={0}
