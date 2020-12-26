@@ -52,15 +52,14 @@ export default function Search(props: { isOpen: boolean }) {
 	});
 	return (
 		<Box position={"relative"}>
-			<Box
-				as={motion.div}
-				transition={{
-					ease: "easeIn",
-				}}
+			<motion.div
+				transition={{ duration: 0.3, type: "tween" }}
 				animate={{
 					width: props.isOpen ? "initial" : 0,
 				}}
-				overflow={"hidden"}
+				style={{
+					overflow: "hidden",
+				}}
 				initial={false}
 			>
 				<Input
@@ -74,7 +73,7 @@ export default function Search(props: { isOpen: boolean }) {
 					}}
 					placeholder="Prohledat jaknacrypto.cz"
 				/>
-			</Box>
+			</motion.div>
 			<Box
 				display={
 					props.isOpen && searchResults?.length ? "flex" : "none"
