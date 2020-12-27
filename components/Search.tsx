@@ -90,31 +90,33 @@ export default function Search(props: { isOpen: boolean }) {
 											/>
 										}
 									>
-										{result.url.split("/").map((crumb) => (
-											<BreadcrumbItem
-												color={"gray.500"}
-												fontSize={"sm"}
-											>
-												<NextLink
-													href={result.url.slice(
-														0,
-														result.url.indexOf(
-															crumb
-														)
-													)}
+										{result.url
+											.split("/")
+											.map((crumb, i, arr) => (
+												<BreadcrumbItem
+													color={"gray.500"}
+													fontSize={"sm"}
 												>
-													<Link>
-														{crumb
-															.trim()
-															.replace(
-																/^\w/,
-																(c) =>
-																	c.toUpperCase()
-															)}
-													</Link>
-												</NextLink>
-											</BreadcrumbItem>
-										))}
+													<NextLink
+														href={result.url.substring(
+															0,
+															result.url.indexOf(
+																arr[i + 1]
+															)
+														)}
+													>
+														<Link>
+															{crumb
+																.trim()
+																.replace(
+																	/^\w/,
+																	(c) =>
+																		c.toUpperCase()
+																)}
+														</Link>
+													</NextLink>
+												</BreadcrumbItem>
+											))}
 									</Breadcrumb>
 								</HStack>
 								<HStack>

@@ -19,7 +19,7 @@ import {
 
 export default function Footer() {
 	return (
-		<Box w={"full"} bg={"black"}>
+		<Box as={"footer"} w={"full"} bg={"black"}>
 			<Container maxW={"1000px"} p={16}>
 				<HStack
 					spacing={16}
@@ -48,8 +48,7 @@ export default function Footer() {
 					</VStack>
 					<VStack>
 						<HStack spacing={5}>
-							{/*TODO: telegram link*/}
-							<a>
+							<a href={"https://t.me/joinchat/SW9rdfYLrF5zhrqO"}>
 								<Icon
 									color={"white"}
 									h={5}
