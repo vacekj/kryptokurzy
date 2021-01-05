@@ -4,6 +4,7 @@ import Footer from "components/Footer";
 import MailCTA from "../components/MailCTA";
 import NextLink from "next/link";
 import Head from "next/head";
+import ConsultingForm from "../components/ConsultingForm";
 
 export default function Showcase() {
 	return (
@@ -13,10 +14,7 @@ export default function Showcase() {
 				<title>JakNaCrypto.cz</title>
 			</Head>
 			<Navbar />
-			<Box h={"300px"} />
-			<NextLink href={"/courses/bitcoin/starter"}>
-				<a>Starter</a>
-			</NextLink>
+			<ConsultingForm />
 			<MailCTA />
 			<Footer />
 		</>

@@ -7,6 +7,8 @@ import { Breadcrumb, BreadcrumbItem } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { Tag } from "@chakra-ui/react";
 import { BiChevronRight } from "react-icons/bi";
+import React, { forwardRef, MutableRefObject, useRef } from "react";
+import { useClickAway } from "use-click-away";
 
 type Index = {
 	"data.title": string;
@@ -23,6 +25,7 @@ export default function Search(props: { isOpen: boolean }) {
 		idField: "url",
 		searchOptions: { fuzzy: 0.2 },
 	});
+
 	return (
 		<Box position={"relative"}>
 			<motion.div
@@ -65,7 +68,7 @@ export default function Search(props: { isOpen: boolean }) {
 			>
 				{searchResults && searchResults.length ? (
 					searchResults.map((result, i) => (
-						<>
+						<React.Fragment key={result.url}>
 							<VStack
 								cursor={"pointer"}
 								p={4}
@@ -129,7 +132,7 @@ export default function Search(props: { isOpen: boolean }) {
 								</HStack>
 							</VStack>
 							{i < searchResults.length - 1 && <Divider />}
-						</>
+						</React.Fragment>
 					))
 				) : (
 					<Box key={"none"} color={"gray.500"}>

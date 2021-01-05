@@ -39,6 +39,12 @@ function MyApp({ Component, pageProps }) {
 				<meta name="application-name" content="JakNaCrypto.cz" />
 				<meta name="msapplication-TileColor" content="#ffffff" />
 				<meta name="theme-color" content="#ffffff" />
+				<meta charSet="UTF-8" />
+				<meta
+					name="viewport"
+					content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+				/>
+				<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 			</Head>
 			<DefaultSeo {...SEO} />
 			<CookieConsent buttonText="OK">

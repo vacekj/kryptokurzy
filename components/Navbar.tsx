@@ -4,45 +4,53 @@ import {
 	Icon,
 	IconButton,
 	Link,
+	Box,
 	useColorMode,
 } from "@chakra-ui/react";
 import { HiOutlineMoon, HiOutlineSearch, HiOutlineSun } from "react-icons/hi";
-import Img from "next/image";
 import NextLink from "next/link";
-import { useState } from "react";
+import React, { forwardRef, useRef, useState } from "react";
 import Search from "./Search";
+import { useClickAway } from "use-click-away";
 
 export default function NavBar() {
 	const { colorMode, toggleColorMode } = useColorMode();
 	const [searchOpen, setSearchOpen] = useState(false);
+	const clickRef = useRef(null);
+	useClickAway(clickRef, () => {
+		setSearchOpen(false);
+	});
 	return (
-		<HStack bg={"black"} p={3} px={6} justifyContent="space-between">
+		<HStack bg={"black"} p={3} px={[3, 6]} justifyContent="space-between">
 			<HStack spacing={5}>
 				<NextLink href={"/"}>
 					<Link py={-3} mb={-1}>
-						<Img
-							src={"/logo_inverted.svg"}
-							width={215}
-							height={27}
-						/>
+						<img src={"/logo_inverted.svg"} alt={"Logo"} />
 					</Link>
 				</NextLink>
-				<Button h={9} variant={"solid"} colorScheme={"green"}>
+				<Button
+					display={["none", "block"]}
+					h={9}
+					variant={"solid"}
+					colorScheme={"green"}
+				>
 					Začněte zde
 				</Button>
 			</HStack>
 			<HStack spacing={1}>
-				<Search isOpen={searchOpen} />
-				<IconButton
-					variant={"unstyled"}
-					aria-label="Hledat"
-					_hover={{
-						opacity: 0.7,
-					}}
-					onClick={() => setSearchOpen(!searchOpen)}
-					icon={<Icon w={6} h={6} as={HiOutlineSearch} />}
-					color={"white"}
-				/>
+				<HStack spacing={0} ref={clickRef}>
+					<Search isOpen={searchOpen} />
+					<IconButton
+						variant={"unstyled"}
+						aria-label="Hledat"
+						_hover={{
+							opacity: 0.7,
+						}}
+						onClick={() => setSearchOpen(!searchOpen)}
+						icon={<Icon w={6} h={6} as={HiOutlineSearch} />}
+						color={"white"}
+					/>
+				</HStack>
 				<IconButton
 					variant={"unstyled"}
 					aria-label="Přepnout noční režim"

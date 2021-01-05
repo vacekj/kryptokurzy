@@ -6,32 +6,35 @@ import {
 	HStack,
 	Input,
 	Text,
+	Image,
 	useColorModeValue,
 	VStack,
 } from "@chakra-ui/react";
-import Img from "next/image";
 
 export default function MailCTA() {
 	const dark = useColorModeValue(false, true);
 	return (
 		<Box w={"full"} bg={dark ? "gray.800" : "gray.50"}>
-			<Container maxW={"5xl"} p={16}>
+			<Container maxW={["full", "5xl"]} p={[4, 16]}>
 				<HStack
-					spacing={16}
+					spacing={[0, 16]}
 					justifyContent="space-between"
 					alignItems="center"
 				>
-					<Img src={"/mailcta-light.svg"} width={300} height={300} />
+					<Image
+						display={["none", "block"]}
+						src={"/mailcta-light.svg"}
+						alt={"Ilustrace"}
+					/>
 					<VStack alignItems={"start"}>
 						<Heading fontSize={"4xl"}>
 							Crypto ve vaší emailové schránce
 						</Heading>
 						<Text
 							color={dark ? "gray.200" : "gray.800"}
-							fontSize={"3xl"}
+							fontSize={"2xl"}
 						>
-							Get the latest in crypto dropped to your email,
-							every week.
+							Crypto novinky doručené do vaší emailové schránky
 						</Text>
 						<HStack w="full" spacing={0}>
 							<Input
@@ -40,7 +43,7 @@ export default function MailCTA() {
 								w={"full"}
 								type={"email"}
 								autoComplete={"email"}
-								placeholder="Email address"
+								placeholder="vas@email.cz"
 								borderRightRadius={0}
 								mr={0}
 							/>

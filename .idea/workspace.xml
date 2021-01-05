@@ -4,10 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29e902be-cac6-49c5-a000-dbc345811b23" name="Default Changelist" comment="fix: vercel index generation&#10;&#10;vercel currently supports Node.js version up to 12 :(">
+    <list default="true" id="29e902be-cac6-49c5-a000-dbc345811b23" name="Default Changelist" comment="fix: meta description">
+      <change afterPath="$PROJECT_DIR$/capacitor.config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ConsultingForm.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/support/index.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/alksdjf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/indexes/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/indexes/index.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/DefaultSEO.ts" beforeDir="false" afterPath="$PROJECT_DIR$/util/DefaultSEO.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MailCTA.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/MailCTA.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Search.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +28,14 @@
   <component name="Git.Settings">
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProblemsViewState">
     <option name="selectedIndex" value="1" />
@@ -34,7 +53,7 @@
     <property name="PluginDummyText.Genre" value="latin" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pages/courses" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/components" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -49,6 +68,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/components" />
       <recent name="$PROJECT_DIR$/pages/courses" />
       <recent name="$PROJECT_DIR$/pages/courses/bitcoin" />
       <recent name="$PROJECT_DIR$" />
@@ -73,7 +93,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608915068847</updated>
-      <workItem from="1608915073285" duration="48461000" />
+      <workItem from="1608915073285" duration="55362000" />
+      <workItem from="1609107012681" duration="49000" />
+      <workItem from="1609768119966" duration="104000" />
+      <workItem from="1609768252773" duration="28000" />
+      <workItem from="1609857800614" duration="5464000" />
     </task>
     <task id="LOCAL-00001" summary="postinstall">
       <created>1608915917969</created>
@@ -145,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609066875589</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="fix: meta description">
+      <created>1609068019047</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1609068019047</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,6 +192,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
@@ -175,6 +207,7 @@
     <MESSAGE value="test: check for 404s recursively starting from index" />
     <MESSAGE value="feat: seo and PWA" />
     <MESSAGE value="fix: vercel index generation&#10;&#10;vercel currently supports Node.js version up to 12 :(" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: vercel index generation&#10;&#10;vercel currently supports Node.js version up to 12 :(" />
+    <MESSAGE value="fix: meta description" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: meta description" />
   </component>
 </project>

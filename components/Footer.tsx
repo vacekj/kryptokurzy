@@ -5,11 +5,11 @@ import {
 	HStack,
 	Icon,
 	Link,
+	Stack,
 	Text,
 	VStack,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
-import Img from "next/image";
 import {
 	FaInstagram,
 	FaTelegramPlane,
@@ -20,23 +20,20 @@ import {
 export default function Footer() {
 	return (
 		<Box as={"footer"} w={"full"} bg={"black"}>
-			<Container maxW={"1000px"} p={16}>
-				<HStack
-					spacing={16}
+			<Container maxW={"1000px"} p={[8, 16]}>
+				<Stack
+					direction={["column", "row"]}
+					spacing={[8, 16]}
 					justifyContent="space-between"
 					alignItems="start"
 				>
 					<VStack spacing={4} alignItems={"end"}>
 						<NextLink href={"/"}>
 							<Link py={-3} mb={-1}>
-								<Img
-									src={"/logo_inverted.svg"}
-									width={215}
-									height={27}
-								/>
+								<img src={"/logo_inverted.svg"} alt={"Logo"} />
 							</Link>
 						</NextLink>
-						<Text color={"gray.100"}>
+						<Text pt={[4, 0]} color={"gray.100"}>
 							&copy; Dominik Clemente, Josef Vacek 2020
 						</Text>
 					</VStack>
@@ -82,7 +79,7 @@ export default function Footer() {
 							</a>
 						</HStack>
 					</VStack>
-				</HStack>
+				</Stack>
 			</Container>
 		</Box>
 	);
