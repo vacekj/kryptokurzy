@@ -5,45 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="29e902be-cac6-49c5-a000-dbc345811b23" name="Default Changelist" comment="fix: meta description">
-      <change afterPath="$PROJECT_DIR$/caphooks/accessibility/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/caphooks/accessibility/useAccessibility.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/caphooks/app/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/caphooks/app/useApp.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/caphooks/browser/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/caphooks/browser/useBrowser.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/caphooks/camera/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/caphooks/camera/useCamera.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/caphooks/clipboard/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/caphooks/clipboard/useClipboard.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/caphooks/device/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/caphooks/device/useDevice.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/caphooks/filesystem/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/caphooks/filesystem/useFileSystem.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/caphooks/filesystem/utils.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/caphooks/geolocation/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/caphooks/geolocation/useGeolocation.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/caphooks/keyboard/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/caphooks/keyboard/useKeyboard.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/caphooks/network/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/caphooks/network/useNetwork.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/caphooks/platform/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/caphooks/platform/usePlatform.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/caphooks/react-app-env.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/caphooks/storage/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/caphooks/storage/useStorage.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/caphooks/util/feature-check.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/caphooks/util/models.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capacitor.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/capacitor.config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/App/App.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/ios/App/App.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/App/App/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/ios/App/App/Info.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/App/App/capacitor.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/ios/App/App/capacitor.config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/alksdjf" beforeDir="false" afterPath="$PROJECT_DIR$/components/navbar.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/App/App.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/ios/App/Jaknacrypto.cz.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/App/App.xcodeproj/project.xcworkspace/contents.xcworkspacedata" beforeDir="false" afterPath="$PROJECT_DIR$/ios/App/Jaknacrypto.cz.xcodeproj/project.xcworkspace/contents.xcworkspacedata" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/App/App.xcworkspace/contents.xcworkspacedata" beforeDir="false" afterPath="$PROJECT_DIR$/ios/App/App.xcworkspace/contents.xcworkspacedata" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/DefaultSEO.ts" beforeDir="false" afterPath="$PROJECT_DIR$/util/DefaultSEO.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +46,7 @@
     <property name="PluginDummyText.Genre" value="latin" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -88,7 +56,7 @@
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.general" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
@@ -122,7 +90,9 @@
       <workItem from="1609107012681" duration="49000" />
       <workItem from="1609768119966" duration="104000" />
       <workItem from="1609768252773" duration="28000" />
-      <workItem from="1609857800614" duration="13274000" />
+      <workItem from="1609857800614" duration="16298000" />
+      <workItem from="1609951412521" duration="58000" />
+      <workItem from="1609969115198" duration="1002000" />
     </task>
     <task id="LOCAL-00001" summary="postinstall">
       <created>1608915917969</created>
@@ -215,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609890973296</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="feat: fix cap bugs, darkmode-aware status bar">
+      <created>1609945352393</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1609945352393</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,6 +225,7 @@
     <MESSAGE value="fix: vercel index generation&#10;&#10;vercel currently supports Node.js version up to 12 :(" />
     <MESSAGE value="fix: meta description" />
     <MESSAGE value="feat: capacitor, responsivity" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: capacitor, responsivity" />
+    <MESSAGE value="feat: fix cap bugs, darkmode-aware status bar" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: fix cap bugs, darkmode-aware status bar" />
   </component>
 </project>

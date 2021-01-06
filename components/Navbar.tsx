@@ -12,9 +12,9 @@ import React, { useEffect, useRef, useState } from "react";
 import Search from "./Search";
 import { useClickAway } from "use-click-away";
 import { Plugins, StatusBarStyle } from "@capacitor/core";
-import { useGetInfo } from "../caphooks/device";
 import styles from "./navbar.module.css";
 import useVisibilitySensor from "@rooks/use-visibility-sensor";
+import { usePlatform } from "../caphooks/platform";
 
 const { StatusBar } = Plugins;
 
@@ -31,13 +31,16 @@ export default function NavBar() {
 	useClickAway(clickRef, () => {
 		setSearchOpen(false);
 	});
+	const { platform } = usePlatform();
 	useEffect(() => {
-		StatusBar.setStyle({
-			style:
-				colorMode === "dark" || isNavBarInView
-					? StatusBarStyle.Dark
-					: StatusBarStyle.Light,
-		});
+		if (platform !== "web") {
+			StatusBar.setStyle({
+				style:
+					colorMode === "dark" || isNavBarInView
+						? StatusBarStyle.Dark
+						: StatusBarStyle.Light,
+			});
+		}
 	}, [colorMode, isNavBarInView]);
 
 	return (
