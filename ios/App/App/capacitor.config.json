@@ -1,13 +1,19 @@
 {
-  "appId": "com.jaknacrypto.app",
-  "appName": "jaknacrypto.cz",
-  "bundledWebRuntime": false,
-  "npmClient": "yarn",
-  "webDir": "out",
-  "plugins": {
-    "SplashScreen": {
-      "launchShowDuration": 0
-    }
-  },
-  "cordova": {}
+	"appId": "com.jaknacrypto.app",
+	"appName": "jaknacrypto.cz",
+	"bundledWebRuntime": false,
+	"npmClient": "yarn",
+	"webDir": "out",
+	"backgroundColor": "#AAAAAA",
+	"plugins": {
+		"SplashScreen": {
+			"launchShowDuration": 0,
+			"showSpinner": true
+		}
+	},
+	"cordova": {},
+	"server": {
+		"url": "http://192.168.0.200:3000",
+		"cleartext": true
+	}
 }

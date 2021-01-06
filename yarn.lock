@@ -94,7 +94,7 @@
     semver "^5.4.1"
     source-map "^0.5.0"
 
-"@babel/core@^7.11.1":
+"@babel/core@^7.11.1", "@babel/core@^7.12.10":
   version "7.12.10"
   resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.12.10.tgz#b79a2e1b9f70ed3d84bbfb6d8c4ef825f606bccd"
   integrity sha512-eTAlQKq65zHfkHZV0sIVODCPGVgoo1HdBlbSLi9CqOzuZanMv2ihzY+4paiKr1mH+XmYESMAmJ/dpZ68eN6d8w==
@@ -909,6 +909,11 @@
     "@babel/helper-validator-identifier" "^7.12.11"
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
+
+"@capacitor-community/react-hooks@^0.0.11":
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/@capacitor-community/react-hooks/-/react-hooks-0.0.11.tgz#6ac0889d888e1ff3659e32d63e2d8bbc08312771"
+  integrity sha512-cDxzGQLTbWV91uw87DipG8Z3wz6JuEZPIQ22OTU2BaNEWd+nk71+fXv8OmUShbzzZTqFEIyRQjd7V9s24mQXJg==
 
 "@capacitor/cli@^2.4.5":
   version "2.4.5"
@@ -2165,6 +2170,11 @@
     "@types/estree" "0.0.39"
     estree-walker "^1.0.1"
     picomatch "^2.2.2"
+
+"@rooks/use-visibility-sensor@^4.5.0":
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/@rooks/use-visibility-sensor/-/use-visibility-sensor-4.5.0.tgz#bba3e46272c2bd694c248e754a6b663019d6484b"
+  integrity sha512-Ibxr2AiE1xOZ+W3r9Ot8bgl0CaeAEFfU8H2Qhn3sC1sl23EvgBjU+5p5NW4liAej/83Ds4JQSfkzuMRdCfC67g==
 
 "@samverschueren/stream-to-observable@^0.3.0":
   version "0.3.1"
@@ -6722,7 +6732,7 @@ next-tick@~1.0.0:
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
   integrity sha1-yobR/ogoFpsBICCOPchCS524NCw=
 
-next@10.0.4:
+next@^10.0.4:
   version "10.0.4"
   resolved "https://registry.yarnpkg.com/next/-/next-10.0.4.tgz#0d256f58a57d6bab7db7e533900c15f322960b4a"
   integrity sha512-WXEYr1FuR2cLuWGN8peYGM6ykmbtwaHvrI6RqR2qrTXUNsW+KU5pzIMK5WPcpqP+xOuMhlykOCJvwJH8qU9FZQ==

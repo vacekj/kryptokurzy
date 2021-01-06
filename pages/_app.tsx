@@ -4,8 +4,10 @@ import Head from "next/head";
 import CookieConsent from "react-cookie-consent";
 import { DefaultSeo } from "next-seo";
 import SEO from "../util/DefaultSEO";
-
+import { usePlatform } from "caphooks/platform";
 function MyApp({ Component, pageProps }) {
+	const { platform } = usePlatform();
+
 	return (
 		<ChakraProvider theme={theme}>
 			<Head>
@@ -42,14 +44,16 @@ function MyApp({ Component, pageProps }) {
 				<meta charSet="UTF-8" />
 				<meta
 					name="viewport"
-					content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+					content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover"
 				/>
-				<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+				<meta httpEquiv="X-UA-Compatible" content="ie=edge" />
 			</Head>
 			<DefaultSeo {...SEO} />
-			<CookieConsent buttonText="OK">
-				Tento web používá cookies
-			</CookieConsent>
+			{platform === "web" && (
+				<CookieConsent buttonText="OK">
+					Tento web používá cookies
+				</CookieConsent>
+			)}
 			<Component {...pageProps} />
 		</ChakraProvider>
 	);
