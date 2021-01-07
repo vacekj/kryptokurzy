@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }) {
 	const { platform } = usePlatform();
 
 	return (
-		<ChakraProvider theme={theme}>
+		<>
 			<Head>
 				<link
 					rel="apple-touch-icon"
@@ -54,8 +54,10 @@ function MyApp({ Component, pageProps }) {
 					Tento web používá cookies
 				</CookieConsent>
 			)}
-			<Component {...pageProps} />
-		</ChakraProvider>
+			<ChakraProvider theme={theme}>
+				<Component {...pageProps} />
+			</ChakraProvider>
+		</>
 	);
 }
 

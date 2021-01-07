@@ -19,7 +19,7 @@ const components = {
 	Button: {
 		variants: {
 			brand: {
-				bg: "brand.400",
+				bg: "brand.300",
 				color: "black",
 				_hover: {
 					bg: "brand.500",

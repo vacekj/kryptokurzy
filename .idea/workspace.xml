@@ -5,12 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="29e902be-cac6-49c5-a000-dbc345811b23" name="Default Changelist" comment="fix: meta description">
+      <change afterPath="$PROJECT_DIR$/components/CourseLayout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/api/consult.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/api/subscribe.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ChakraTheme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/ChakraTheme.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ConsultingForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ConsultingForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MailCTA.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/MailCTA.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/App/App/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/ios/App/App/Info.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/App/App/capacitor.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/ios/App/App/capacitor.config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/App/Jaknacrypto.cz.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/ios/App/Jaknacrypto.cz.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Search.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generate-fts-indexes.js" beforeDir="false" afterPath="$PROJECT_DIR$/generate-fts-indexes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indexes/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/indexes/index.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/courses/bitcoin/starter.mdx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/courses/index.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/courses/index.mdx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +67,7 @@
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
@@ -68,15 +79,23 @@
       <recent name="$PROJECT_DIR$/public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/components" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/pages/courses/bitcoin" />
       <recent name="$PROJECT_DIR$/pages" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="generate-fts-indexes.js" type="NodeJSConfigurationType" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/generate-fts-indexes.js" working-dir="$PROJECT_DIR$">
+  <component name="RunManager" selected="JavaScript Debug.Unnamed">
+    <configuration name="Unnamed" type="JavascriptDebugType" nameIsGenerated="true" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
+    <configuration name="generate-fts-indexes.js" type="NodeJSConfigurationType" nameIsGenerated="true" path-to-js-file="generate-fts-indexes.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="JavaScript Debug.Unnamed" />
+      <item itemvalue="Node.js.generate-fts-indexes.js" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -92,7 +111,8 @@
       <workItem from="1609768252773" duration="28000" />
       <workItem from="1609857800614" duration="16298000" />
       <workItem from="1609951412521" duration="58000" />
-      <workItem from="1609969115198" duration="2942000" />
+      <workItem from="1609969115198" duration="18819000" />
+      <workItem from="1610036169120" duration="1615000" />
     </task>
     <task id="LOCAL-00001" summary="postinstall">
       <created>1608915917969</created>
@@ -199,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609970643313</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="fix: inView hook that works serverside">
+      <created>1610015622459</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1610015622459</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,6 +261,7 @@
     <MESSAGE value="feat: capacitor, responsivity" />
     <MESSAGE value="feat: fix cap bugs, darkmode-aware status bar" />
     <MESSAGE value="fix: navbar error on web, rename xcode project" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: navbar error on web, rename xcode project" />
+    <MESSAGE value="fix: inView hook that works serverside" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: inView hook that works serverside" />
   </component>
 </project>

@@ -7,6 +7,7 @@ const mdx = require("remark-mdx");
 const html = require("remark-html");
 const vfile = require("vfile");
 const recursiveReadDir = require("recursive-readdir");
+const strip = require("remark-strip-html");
 
 async function main() {
 	const pages = await recursiveReadDir(path.dirname("pages/"));
@@ -15,18 +16,19 @@ async function main() {
 		.filter((page) => page.match(/\.mdx$/))
 		.map((page) => {
 			const file = fs.readFileSync(`${process.cwd()}/${page}`);
+
 			return {
 				...matter(file),
-				url: page.split(".")[0].slice(6),
+				url: page.split(".")[0].slice(6).split("index").join(""),
 			};
 		})
 		.map(flattenObject)
 		.map(async (page) => {
 			/** @type {vfile.VFile} */
-			const md = await remark().use(mdx).use(html).process(page.content);
+			const md = await remark().use(mdx).use(strip).process(page.content);
 			return {
 				...page,
-				content: striptags(md.contents.toString()),
+				content: md.contents.toString(),
 			};
 		});
 

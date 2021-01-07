@@ -5,6 +5,7 @@ import {
 	IconButton,
 	Link,
 	useColorMode,
+	Image,
 } from "@chakra-ui/react";
 import { HiOutlineMoon, HiOutlineSearch, HiOutlineSun } from "react-icons/hi";
 import NextLink from "next/link";
@@ -18,7 +19,7 @@ import { useInView } from "react-intersection-observer";
 
 const { StatusBar } = Plugins;
 
-export default function NavBar() {
+export default function Navbar() {
 	const { colorMode, toggleColorMode } = useColorMode();
 	const [searchOpen, setSearchOpen] = useState(false);
 	const clickRef = useRef(null);
@@ -53,7 +54,11 @@ export default function NavBar() {
 				<HStack spacing={5}>
 					<NextLink href={"/"}>
 						<Link py={-3} mb={-1}>
-							<img src={"/logo_inverted.svg"} alt={"Logo"} />
+							<Image
+								h={7}
+								src={"/logo_inverted.svg"}
+								alt={"Logo"}
+							/>
 						</Link>
 					</NextLink>
 					<Button

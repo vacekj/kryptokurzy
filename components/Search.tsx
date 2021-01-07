@@ -97,6 +97,7 @@ export default function Search(props: { isOpen: boolean }) {
 											.split("/")
 											.map((crumb, i, arr) => (
 												<BreadcrumbItem
+													key={i}
 													color={"gray.500"}
 													fontSize={"sm"}
 												>

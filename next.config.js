@@ -1,6 +1,7 @@
 const withPlugins = require("next-compose-plugins");
-const withMDX = require("@next/mdx")({
-	extension: /\.mdx?$/,
+const frontmatter = require("remark-frontmatter");
+const withMDX = require("next-mdx-enhanced")({
+	fileExtensions: ["mdx"],
 });
 
 module.exports = withPlugins([
