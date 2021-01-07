@@ -13,8 +13,8 @@ import Search from "./Search";
 import { useClickAway } from "use-click-away";
 import { Plugins, StatusBarStyle } from "@capacitor/core";
 import styles from "./navbar.module.css";
-import useVisibilitySensor from "@rooks/use-visibility-sensor";
 import { usePlatform } from "../caphooks/platform";
+import { useInView } from "react-intersection-observer";
 
 const { StatusBar } = Plugins;
 
@@ -22,11 +22,8 @@ export default function NavBar() {
 	const { colorMode, toggleColorMode } = useColorMode();
 	const [searchOpen, setSearchOpen] = useState(false);
 	const clickRef = useRef(null);
-	const visRef = useRef(null);
-	const { isVisible: isNavBarInView } = useVisibilitySensor(visRef, {
-		intervalCheck: 100,
-		scrollCheck: true,
-		resizeCheck: true,
+	const { ref, inView: isNavBarInView } = useInView({
+		initialInView: true,
 	});
 	useClickAway(clickRef, () => {
 		setSearchOpen(false);
@@ -47,7 +44,7 @@ export default function NavBar() {
 		<>
 			<div className={styles.navbar} />
 			<HStack
-				ref={visRef}
+				ref={ref}
 				bg={"black"}
 				p={3}
 				px={[3, 6]}

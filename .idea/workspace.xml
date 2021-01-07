@@ -7,11 +7,11 @@
     <list default="true" id="29e902be-cac6-49c5-a000-dbc345811b23" name="Default Changelist" comment="fix: meta description">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/App/App.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/ios/App/Jaknacrypto.cz.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/App/App.xcodeproj/project.xcworkspace/contents.xcworkspacedata" beforeDir="false" afterPath="$PROJECT_DIR$/ios/App/Jaknacrypto.cz.xcodeproj/project.xcworkspace/contents.xcworkspacedata" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/App/App.xcworkspace/contents.xcworkspacedata" beforeDir="false" afterPath="$PROJECT_DIR$/ios/App/App.xcworkspace/contents.xcworkspacedata" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/DefaultSEO.ts" beforeDir="false" afterPath="$PROJECT_DIR$/util/DefaultSEO.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/App/App/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/ios/App/App/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/App/App/capacitor.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/ios/App/App/capacitor.config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/App/Jaknacrypto.cz.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/ios/App/Jaknacrypto.cz.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +92,7 @@
       <workItem from="1609768252773" duration="28000" />
       <workItem from="1609857800614" duration="16298000" />
       <workItem from="1609951412521" duration="58000" />
-      <workItem from="1609969115198" duration="1002000" />
+      <workItem from="1609969115198" duration="2942000" />
     </task>
     <task id="LOCAL-00001" summary="postinstall">
       <created>1608915917969</created>
@@ -192,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609945352393</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="fix: navbar error on web, rename xcode project">
+      <created>1609970643313</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1609970643313</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,6 +233,7 @@
     <MESSAGE value="fix: meta description" />
     <MESSAGE value="feat: capacitor, responsivity" />
     <MESSAGE value="feat: fix cap bugs, darkmode-aware status bar" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: fix cap bugs, darkmode-aware status bar" />
+    <MESSAGE value="fix: navbar error on web, rename xcode project" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: navbar error on web, rename xcode project" />
   </component>
 </project>
