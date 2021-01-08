@@ -125,6 +125,7 @@ export default function ConsultingForm() {
 								/>
 							</FormControl>
 							<FormControl>
+								<FormLabel htmlFor={""}>Poptávám pro</FormLabel>
 								<Controller
 									control={control}
 									name="type"
@@ -134,17 +135,18 @@ export default function ConsultingForm() {
 											value={value}
 											onChange={onChange}
 										>
-											<FormLabel>Poptávám pro</FormLabel>
 											<Stack direction="row">
 												<Radio
 													colorScheme={"brand"}
 													defaultChecked={true}
 													value="individual"
+													id={"individual"}
 												>
 													jednotlivce
 												</Radio>
 												<Radio
 													value="company"
+													id={"company"}
 													colorScheme={"brand"}
 												>
 													firmu

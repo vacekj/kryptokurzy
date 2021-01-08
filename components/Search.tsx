@@ -43,6 +43,7 @@ export default function Search(props: { isOpen: boolean }) {
 					bg={"white"}
 					overflow={"hidden"}
 					type="text"
+					aria-label={"hledat"}
 					onChange={(e) => {
 						e.target.focus();
 						search(e.target.value);

@@ -45,7 +45,10 @@ export default function Footer() {
 					</VStack>
 					<VStack>
 						<HStack spacing={5}>
-							<a href={"https://t.me/joinchat/SW9rdfYLrF5zhrqO"}>
+							<a
+								aria-label={"Jaknacrypto.cz Telegram skupina"}
+								href={"https://t.me/joinchat/SW9rdfYLrF5zhrqO"}
+							>
 								<Icon
 									color={"white"}
 									h={5}
@@ -53,7 +56,10 @@ export default function Footer() {
 									as={FaTelegramPlane}
 								/>
 							</a>
-							<a>
+							<a
+								aria-label={"Jaknacrypto.cz Twitter stránka"}
+								href={"https://twitter.com/jaknacrypto"}
+							>
 								<Icon
 									color={"white"}
 									w={5}
@@ -61,22 +67,22 @@ export default function Footer() {
 									as={FaTwitter}
 								/>
 							</a>
-							<a>
-								<Icon
-									color={"white"}
-									w={5}
-									h={5}
-									as={FaYoutube}
-								/>
-							</a>
-							<a>
-								<Icon
-									color={"white"}
-									w={5}
-									h={5}
-									as={FaInstagram}
-								/>
-							</a>
+							{/*<a>*/}
+							{/*	<Icon*/}
+							{/*		color={"white"}*/}
+							{/*		w={5}*/}
+							{/*		h={5}*/}
+							{/*		as={FaYoutube}*/}
+							{/*	/>*/}
+							{/*</a>*/}
+							{/*<a>*/}
+							{/*	<Icon*/}
+							{/*		color={"white"}*/}
+							{/*		w={5}*/}
+							{/*		h={5}*/}
+							{/*		as={FaInstagram}*/}
+							{/*	/>*/}
+							{/*</a>*/}
 						</HStack>
 					</VStack>
 				</Stack>

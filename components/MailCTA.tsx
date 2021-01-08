@@ -16,7 +16,7 @@ import {
 } from "@chakra-ui/react";
 
 import { useForm } from "react-hook-form";
-import { useState } from "react";
+import React, { useState } from "react";
 
 export const qs = (params) =>
 	Object.keys(params)
@@ -76,6 +76,8 @@ export default function MailCTA() {
 				>
 					<Image
 						boxSize={"150px"}
+						width={"150px"}
+						height={"150px"}
 						display={["none", "block"]}
 						src={"/mailcta-light.svg"}
 						alt={"Ilustrace"}
@@ -108,6 +110,9 @@ export default function MailCTA() {
 									placeholder="vas@email.cz"
 									borderRightRadius={0}
 									mr={0}
+									aria-label={
+										"Emailová adresa pro odběr novinek"
+									}
 								/>
 								<Button
 									variant={"brand"}
