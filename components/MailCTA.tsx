@@ -110,7 +110,6 @@ export default function MailCTA() {
 									mr={0}
 								/>
 								<Button
-									disabled={!formState.isValid}
 									variant={"brand"}
 									ml={0}
 									size="lg"

@@ -55,14 +55,21 @@ export default function Navbar() {
 					<NextLink href={"/"}>
 						<Link py={-3} mb={-1}>
 							<Image
+								display={["none", "block"]}
 								h={7}
 								src={"/logo_inverted.svg"}
+								alt={"Logo"}
+							/>
+							<Image
+								display={["block", "none"]}
+								h={7}
+								src={"/glyph_inverted.svg"}
 								alt={"Logo"}
 							/>
 						</Link>
 					</NextLink>
 					<Button
-						display={["none", "block"]}
+						display={["block"]}
 						h={9}
 						variant={"solid"}
 						colorScheme={"green"}

@@ -1,30 +1,28 @@
 import {
-	Textarea,
 	Box,
+	Button,
 	Container,
+	FormControl,
+	FormHelperText,
+	FormLabel,
 	Heading,
 	HStack,
 	Input,
-	Text,
-	FormControl,
-	FormLabel,
-	Stack,
-	FormHelperText,
 	Radio,
 	RadioGroup,
+	Stack,
+	Textarea,
 	useColorModeValue,
-	VStack,
-	Button,
 	useToast,
+	VStack,
 } from "@chakra-ui/react";
 import { useState } from "react";
-import { useForm, Controller } from "react-hook-form";
+import { Controller, useForm } from "react-hook-form";
 import { qs } from "./MailCTA";
 
 export default function ConsultingForm() {
 	const dark = useColorModeValue(false, true);
-	const [radioValue, setRadioValue] = useState("individual");
-	const { register, handleSubmit, control } = useForm({
+	const { register, handleSubmit, control, formState } = useForm({
 		mode: "onChange",
 	});
 	const [loading, setLoading] = useState(false);
@@ -85,6 +83,7 @@ export default function ConsultingForm() {
 							dostat na vyšší úroveň? Jsme experti na investice,
 							portfolio management, obchodování a blockchain
 							development.
+							{JSON.stringify(process.env.NODE_ENV)}
 						</Box>
 						<VStack
 							onSubmit={handleSubmit(onSubmit)}
@@ -96,7 +95,7 @@ export default function ConsultingForm() {
 								<FormLabel>Emailová adresa</FormLabel>
 								<Input
 									name={"email"}
-									autocomplete={"email"}
+									autoComplete={"email"}
 									ref={register({
 										required: true,
 										minLength: 5,
@@ -156,6 +155,7 @@ export default function ConsultingForm() {
 								/>
 							</FormControl>
 							<Button
+								disabled={!formState.isValid}
 								variant={"brand"}
 								alignSelf={"start"}
 								size="lg"
