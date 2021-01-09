@@ -6,12 +6,19 @@ import { DefaultSeo } from "next-seo";
 import SEO from "util/DefaultSEO";
 import { usePlatform } from "caphooks/platform";
 import { init } from "util/sentry";
+import { hotjar } from "react-hotjar";
 
 init();
 
 function MyApp({ Component, pageProps, err }) {
 	const { platform } = usePlatform();
 
+	if (
+		process.env.NODE_ENV === "production" &&
+		typeof window !== "undefined"
+	) {
+		hotjar.initialize(2188656, 6);
+	}
 	return (
 		<>
 			<Head>
@@ -59,7 +66,7 @@ function MyApp({ Component, pageProps, err }) {
 				</CookieConsent>
 			)}
 			<ChakraProvider theme={theme}>
-				// Workaround for https://github.com/vercel/next.js/issues/8592
+				{/*// Workaround for https://github.com/vercel/next.js/issues/8592*/}
 				<Component {...pageProps} err={err} />
 			</ChakraProvider>
 		</>

@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="29e902be-cac6-49c5-a000-dbc345811b23" name="Default Changelist" comment="fix: meta description">
-      <change afterPath="$PROJECT_DIR$/pages/_error.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/sentry.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ConsultingForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ConsultingForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/subscribe.ts" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/subscribe.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -105,7 +100,7 @@
       <workItem from="1610104007999" duration="87000" />
       <workItem from="1610104111241" duration="938000" />
       <workItem from="1610126003626" duration="8255000" />
-      <workItem from="1610223113991" duration="2222000" />
+      <workItem from="1610223113991" duration="2846000" />
     </task>
     <task id="LOCAL-00001" summary="postinstall">
       <created>1608915917969</created>
@@ -240,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610133858388</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="feat: sentry">
+      <created>1610226952104</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1610226952104</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,6 +281,7 @@
     <MESSAGE value="feat: hubspot integration" />
     <MESSAGE value="feat: new logo, icons and splashscreens&#10;&#10;prototype a way to get correct api location for capacitor api calls to work." />
     <MESSAGE value="fix: various lighthouse fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: various lighthouse fixes" />
+    <MESSAGE value="feat: sentry" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: sentry" />
   </component>
 </project>
