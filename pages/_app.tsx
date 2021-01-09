@@ -25,32 +25,28 @@ function MyApp({ Component, pageProps, err }) {
 				<link
 					rel="apple-touch-icon"
 					sizes="180x180"
-					href="/apple-touch-icon.png"
+					href="/apple-touch-icon.png?v=qAMa3JvPw7"
 				/>
 				<link
 					rel="icon"
 					type="image/png"
 					sizes="32x32"
-					href="/favicon-32x32.png"
+					href="/favicon-32x32.png?v=qAMa3JvPw7"
 				/>
 				<link
 					rel="icon"
 					type="image/png"
 					sizes="16x16"
-					href="/favicon-16x16.png"
+					href="/favicon-16x16.png?v=qAMa3JvPw7"
 				/>
-				<link rel="manifest" href="/site.webmanifest" />
+				<link rel="manifest" href="/site.webmanifest?v=qAMa3JvPw7" />
 				<link
 					rel="mask-icon"
-					href="/safari-pinned-tab.svg"
+					href="/safari-pinned-tab.svg?v=qAMa3JvPw7"
 					color="#5bbad5"
 				/>
-				<meta
-					name="apple-mobile-web-app-title"
-					content="JakNaCrypto.cz"
-				/>
-				<meta name="application-name" content="JakNaCrypto.cz" />
-				<meta name="msapplication-TileColor" content="#ffffff" />
+				<link rel="shortcut icon" href="/favicon.ico?v=qAMa3JvPw7" />
+				<meta name="msapplication-TileColor" content="#2b5797" />
 				<meta name="theme-color" content="#ffffff" />
 				<meta charSet="UTF-8" />
 				<meta

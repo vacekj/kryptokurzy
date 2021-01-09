@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="29e902be-cac6-49c5-a000-dbc345811b23" name="Default Changelist" comment="fix: meta description">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +97,7 @@
       <workItem from="1610104007999" duration="87000" />
       <workItem from="1610104111241" duration="938000" />
       <workItem from="1610126003626" duration="8255000" />
-      <workItem from="1610223113991" duration="2846000" />
+      <workItem from="1610223113991" duration="3190000" />
     </task>
     <task id="LOCAL-00001" summary="postinstall">
       <created>1608915917969</created>
@@ -242,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610226952104</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="feat: hotjar">
+      <created>1610227563246</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1610227563246</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,6 +286,7 @@
     <MESSAGE value="feat: new logo, icons and splashscreens&#10;&#10;prototype a way to get correct api location for capacitor api calls to work." />
     <MESSAGE value="fix: various lighthouse fixes" />
     <MESSAGE value="feat: sentry" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: sentry" />
+    <MESSAGE value="feat: hotjar" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: hotjar" />
   </component>
 </project>
