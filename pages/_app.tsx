@@ -3,9 +3,13 @@ import { ChakraProvider } from "@chakra-ui/react";
 import Head from "next/head";
 import CookieConsent from "react-cookie-consent";
 import { DefaultSeo } from "next-seo";
-import SEO from "../util/DefaultSEO";
+import SEO from "util/DefaultSEO";
 import { usePlatform } from "caphooks/platform";
-function MyApp({ Component, pageProps }) {
+import { init } from "util/sentry";
+
+init();
+
+function MyApp({ Component, pageProps, err }) {
 	const { platform } = usePlatform();
 
 	return (
@@ -55,7 +59,8 @@ function MyApp({ Component, pageProps }) {
 				</CookieConsent>
 			)}
 			<ChakraProvider theme={theme}>
-				<Component {...pageProps} />
+				// Workaround for https://github.com/vercel/next.js/issues/8592
+				<Component {...pageProps} err={err} />
 			</ChakraProvider>
 		</>
 	);

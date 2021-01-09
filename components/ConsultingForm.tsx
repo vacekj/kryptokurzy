@@ -83,7 +83,6 @@ export default function ConsultingForm() {
 							dostat na vyšší úroveň? Jsme experti na investice,
 							portfolio management, obchodování a blockchain
 							development.
-							{JSON.stringify(process.env.NODE_ENV)}
 						</Box>
 						<VStack
 							onSubmit={handleSubmit(onSubmit)}
