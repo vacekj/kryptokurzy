@@ -11,7 +11,6 @@ import {
 import Navbar from "components/Navbar";
 import Footer from "components/Footer";
 import MailCTA from "../components/MailCTA";
-import NextLink from "next/link";
 import Head from "next/head";
 import { NextSeo } from "next-seo";
 
@@ -19,11 +18,11 @@ export default function Showcase() {
 	return (
 		<>
 			<Head>
-				<html lang={"cs"} />
 				<NextSeo
-					title="jaknacrypto.cz - Podmínky používání"
+					title="Podmínky používání - Jaknacrypto.cz"
 					description="Jaknacrypto.cz je Váš ověřený zdroj informací o kryptoměnách, decentralizovaných financích a novinek ze světa crypta"
 				/>
+				<title>Podmínky používání - Jaknacrypto.cz</title>
 			</Head>
 			<Navbar />
 			<Container maxW={"3xl"} as={VStack} alignItems={"start"} my={10}>

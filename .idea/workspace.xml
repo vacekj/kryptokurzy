@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="29e902be-cac6-49c5-a000-dbc345811b23" name="Default Changelist" comment="fix: meta description">
+      <change afterPath="$PROJECT_DIR$/pages/team.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/avatars/dominik.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/avatars/pepa.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ConsultingForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ConsultingForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MailCTA.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/MailCTA.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/legal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/legal.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +46,7 @@
     <property name="PluginDummyText.Genre" value="latin" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="add_unversioned_files" value="$PROJECT_DIR$/.env.local" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/.env.local&#10;/Users/pepa/Programming/jaknacrypto.cz/node_modules/@chakra-ui/react/dist/types/index.d.ts" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -48,7 +57,7 @@
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
@@ -60,6 +69,7 @@
       <recent name="$PROJECT_DIR$/public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/avatars" />
       <recent name="$PROJECT_DIR$/components" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/pages/courses/bitcoin" />
@@ -97,7 +107,8 @@
       <workItem from="1610104007999" duration="87000" />
       <workItem from="1610104111241" duration="938000" />
       <workItem from="1610126003626" duration="8255000" />
-      <workItem from="1610223113991" duration="3190000" />
+      <workItem from="1610223113991" duration="3910000" />
+      <workItem from="1610228646353" duration="7316000" />
     </task>
     <task id="LOCAL-00001" summary="postinstall">
       <created>1608915917969</created>
@@ -246,7 +257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610227563246</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="feat: update favicon">
+      <created>1610228100022</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1610228100022</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,6 +305,7 @@
     <MESSAGE value="fix: various lighthouse fixes" />
     <MESSAGE value="feat: sentry" />
     <MESSAGE value="feat: hotjar" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: hotjar" />
+    <MESSAGE value="feat: update favicon" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: update favicon" />
   </component>
 </project>

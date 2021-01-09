@@ -101,6 +101,7 @@ export default function ConsultingForm() {
 										maxLength: 60,
 										pattern: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
 									})}
+									bg={"white"}
 									placeholder={"vas@email.cz"}
 									maxW={"md"}
 									type="email"
@@ -115,6 +116,7 @@ export default function ConsultingForm() {
 								<Textarea
 									minH={"150px"}
 									w={"full"}
+									bg={"white"}
 									name={"text"}
 									ref={register({
 										minLength: 1,

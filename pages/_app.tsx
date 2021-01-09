@@ -22,6 +22,7 @@ function MyApp({ Component, pageProps, err }) {
 	return (
 		<>
 			<Head>
+				<html lang={"cs"} />
 				<link
 					rel="apple-touch-icon"
 					sizes="180x180"

@@ -105,6 +105,7 @@ export default function MailCTA() {
 									focusBorderColor={"brand.400"}
 									size={"lg"}
 									w={"full"}
+									bg={"white"}
 									type={"email"}
 									autoComplete={"email"}
 									placeholder="vas@email.cz"
