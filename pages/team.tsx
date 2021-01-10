@@ -5,23 +5,13 @@ import Head from "next/head";
 import ConsultingForm from "../components/ConsultingForm";
 import { NextSeo } from "next-seo";
 import {
-	Box,
-	Button,
-	Container,
-	FormControl,
 	Avatar,
-	AvatarBadge,
-	FormHelperText,
-	FormLabel,
+	Box,
+	Container,
 	Heading,
-	HStack,
-	Input,
-	Radio,
-	RadioGroup,
 	Stack,
 	Text,
 	useColorModeValue,
-	useToast,
 	VStack,
 } from "@chakra-ui/react";
 import { motion, useTransform, useViewportScroll } from "framer-motion";

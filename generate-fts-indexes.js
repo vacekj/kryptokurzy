@@ -1,11 +1,8 @@
 const matter = require("gray-matter");
 const fs = require("fs-extra");
 const path = require("path");
-const striptags = require("striptags");
 const remark = require("remark");
 const mdx = require("remark-mdx");
-const html = require("remark-html");
-const vfile = require("vfile");
 const recursiveReadDir = require("recursive-readdir");
 const strip = require("remark-strip-html");
 

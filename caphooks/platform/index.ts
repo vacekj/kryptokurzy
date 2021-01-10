@@ -1,1 +1,1 @@
-export * from './usePlatform';
+export * from "./usePlatform";

@@ -1,41 +1,46 @@
-import { useState, useEffect } from 'react';
-import { Plugins, NetworkStatus } from '@capacitor/core';
-import { AvailableResult, notAvailable } from '../util/models';
-import { isFeatureAvailable } from '../util/feature-check';
+import { useState, useEffect } from "react";
+import { Plugins, NetworkStatus } from "@capacitor/core";
+import { AvailableResult, notAvailable } from "../util/models";
+import { isFeatureAvailable } from "../util/feature-check";
 
-interface NetworkStatusResult extends AvailableResult { networkStatus?: NetworkStatus }
+interface NetworkStatusResult extends AvailableResult {
+	networkStatus?: NetworkStatus;
+}
 
 export const availableFeatures = {
-  getStatus: isFeatureAvailable('Network', 'getStatus')
+	getStatus: isFeatureAvailable("Network", "getStatus"),
 };
 
 export function useStatus(): NetworkStatusResult {
-  const { Network } = Plugins;
-  
-  if(!availableFeatures.getStatus) {
-    return notAvailable;
-  }
+	const { Network } = Plugins;
 
-  const [ networkStatus, setStatus ] = useState<NetworkStatus>();
+	if (!availableFeatures.getStatus) {
+		return notAvailable;
+	}
 
-  useEffect(() => {
-    async function getStatus() {
-      const status = await Network.getStatus();
-      setStatus(status);
-    }
-    getStatus();
-  }, [ Network, setStatus ]);
+	const [networkStatus, setStatus] = useState<NetworkStatus>();
 
-  useEffect(() => {
-    const listener = Network.addListener('networkStatusChange', (status: NetworkStatus) => {
-      setStatus(status);
-    });
+	useEffect(() => {
+		async function getStatus() {
+			const status = await Network.getStatus();
+			setStatus(status);
+		}
+		getStatus();
+	}, [Network, setStatus]);
 
-    return () => listener.remove()
-  }, [ Network, setStatus ]);
+	useEffect(() => {
+		const listener = Network.addListener(
+			"networkStatusChange",
+			(status: NetworkStatus) => {
+				setStatus(status);
+			}
+		);
 
-  return {
-    networkStatus,
-    isAvailable: true
-  }
+		return () => listener.remove();
+	}, [Network, setStatus]);
+
+	return {
+		networkStatus,
+		isAvailable: true,
+	};
 }

@@ -1,9 +1,5 @@
 import {
-	Button,
 	Container,
-	HStack,
-	Box,
-	Link,
 	Text,
 	Heading,
 	VStack,

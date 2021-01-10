@@ -5,12 +5,9 @@ import CookieConsent from "react-cookie-consent";
 import { DefaultSeo } from "next-seo";
 import SEO from "util/DefaultSEO";
 import { usePlatform } from "caphooks/platform";
-import { init } from "util/sentry";
 import { hotjar } from "react-hotjar";
 
-init();
-
-function MyApp({ Component, pageProps, err }) {
+function MyApp({ Component, pageProps }) {
 	const { platform } = usePlatform();
 
 	if (
@@ -63,8 +60,7 @@ function MyApp({ Component, pageProps, err }) {
 				</CookieConsent>
 			)}
 			<ChakraProvider theme={theme}>
-				{/*// Workaround for https://github.com/vercel/next.js/issues/8592*/}
-				<Component {...pageProps} err={err} />
+				<Component {...pageProps} />
 			</ChakraProvider>
 		</>
 	);

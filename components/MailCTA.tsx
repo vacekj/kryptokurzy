@@ -9,12 +9,8 @@ import {
 	Image,
 	useColorModeValue,
 	VStack,
-	Alert,
-	AlertIcon,
-	AlertTitle,
 	useToast,
 } from "@chakra-ui/react";
-
 import { useForm } from "react-hook-form";
 import React, { useState } from "react";
 
@@ -28,11 +24,12 @@ export const qs = (params) =>
 
 export default function MailCTA() {
 	const dark = useColorModeValue(false, true);
-	const { register, handleSubmit, formState, errors } = useForm({
+	const { register, handleSubmit } = useForm({
 		mode: "onChange",
 	});
 	const [loading, setLoading] = useState(false);
 	const toast = useToast();
+	const inputBg = useColorModeValue("white", "gray.700");
 
 	function onSubmit(data) {
 		setLoading(true);
@@ -105,7 +102,7 @@ export default function MailCTA() {
 									focusBorderColor={"brand.400"}
 									size={"lg"}
 									w={"full"}
-									bg={"white"}
+									bg={inputBg}
 									type={"email"}
 									autoComplete={"email"}
 									placeholder="vas@email.cz"

@@ -5,16 +5,56 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="29e902be-cac6-49c5-a000-dbc345811b23" name="Default Changelist" comment="fix: meta description">
-      <change afterPath="$PROJECT_DIR$/pages/team.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/avatars/dominik.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/avatars/pepa.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.eslintignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/snapshots/visual.test.ts/Visual Regression Testing -- index.snap.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cypress/snapshots/visual.test.ts/Visual Regression Testing -- team.snap.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierignore" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caphooks/accessibility/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/caphooks/accessibility/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caphooks/accessibility/useAccessibility.ts" beforeDir="false" afterPath="$PROJECT_DIR$/caphooks/accessibility/useAccessibility.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caphooks/app/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/caphooks/app/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caphooks/browser/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/caphooks/browser/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caphooks/browser/useBrowser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/caphooks/browser/useBrowser.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caphooks/camera/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/caphooks/camera/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caphooks/camera/useCamera.ts" beforeDir="false" afterPath="$PROJECT_DIR$/caphooks/camera/useCamera.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caphooks/clipboard/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/caphooks/clipboard/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caphooks/clipboard/useClipboard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/caphooks/clipboard/useClipboard.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caphooks/device/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/caphooks/device/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caphooks/device/useDevice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/caphooks/device/useDevice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caphooks/filesystem/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/caphooks/filesystem/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caphooks/filesystem/useFileSystem.ts" beforeDir="false" afterPath="$PROJECT_DIR$/caphooks/filesystem/useFileSystem.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caphooks/filesystem/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/caphooks/filesystem/utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caphooks/geolocation/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/caphooks/geolocation/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caphooks/geolocation/useGeolocation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/caphooks/geolocation/useGeolocation.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caphooks/keyboard/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/caphooks/keyboard/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caphooks/keyboard/useKeyboard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/caphooks/keyboard/useKeyboard.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caphooks/network/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/caphooks/network/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caphooks/network/useNetwork.ts" beforeDir="false" afterPath="$PROJECT_DIR$/caphooks/network/useNetwork.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caphooks/platform/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/caphooks/platform/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caphooks/platform/usePlatform.ts" beforeDir="false" afterPath="$PROJECT_DIR$/caphooks/platform/usePlatform.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caphooks/react-app-env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/caphooks/react-app-env.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caphooks/storage/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/caphooks/storage/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caphooks/storage/useStorage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/caphooks/storage/useStorage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caphooks/util/models.ts" beforeDir="false" afterPath="$PROJECT_DIR$/caphooks/util/models.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/ConsultingForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ConsultingForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Footer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/MailCTA.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/MailCTA.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Search.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/navbar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/components/navbar.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/integration/404.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/integration/404.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/integration/visual.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/integration/visual.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generate-fts-indexes.js" beforeDir="false" afterPath="$PROJECT_DIR$/generate-fts-indexes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_error.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/legal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/legal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/team.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/team.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/sentry.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +72,9 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="1m9oG3lRsZWlXpEnxssC0wtLGsw" />
   <component name="ProjectLevelVcsManager">
@@ -57,7 +100,8 @@
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
@@ -76,17 +120,33 @@
       <recent name="$PROJECT_DIR$/pages" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.Unnamed">
+  <component name="RunManager" selected="npm.lint">
     <configuration name="Unnamed" type="JavascriptDebugType" nameIsGenerated="true" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
     <configuration name="generate-fts-indexes.js" type="NodeJSConfigurationType" nameIsGenerated="true" path-to-js-file="generate-fts-indexes.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
+    <configuration name="lint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="lint" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="JavaScript Debug.Unnamed" />
       <item itemvalue="Node.js.generate-fts-indexes.js" />
+      <item itemvalue="npm.lint" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.lint" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -108,7 +168,10 @@
       <workItem from="1610104111241" duration="938000" />
       <workItem from="1610126003626" duration="8255000" />
       <workItem from="1610223113991" duration="3910000" />
-      <workItem from="1610228646353" duration="7316000" />
+      <workItem from="1610228646353" duration="7919000" />
+      <workItem from="1610277616134" duration="73000" />
+      <workItem from="1610277760054" duration="620000" />
+      <workItem from="1610299240528" duration="3930000" />
     </task>
     <task id="LOCAL-00001" summary="postinstall">
       <created>1608915917969</created>
@@ -264,7 +327,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610228100022</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="feat: team page WIP">
+      <created>1610236029906</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1610236029906</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -306,6 +376,8 @@
     <MESSAGE value="feat: sentry" />
     <MESSAGE value="feat: hotjar" />
     <MESSAGE value="feat: update favicon" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: update favicon" />
+    <MESSAGE value="feat: team page WIP" />
+    <MESSAGE value="feat: remove sentry, update e2e tests, add eslint, format everything with prettier" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: remove sentry, update e2e tests, add eslint, format everything with prettier" />
   </component>
 </project>

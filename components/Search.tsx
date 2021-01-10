@@ -7,8 +7,7 @@ import { Breadcrumb, BreadcrumbItem } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { Tag } from "@chakra-ui/react";
 import { BiChevronRight } from "react-icons/bi";
-import React, { forwardRef, MutableRefObject, useRef } from "react";
-import { useClickAway } from "use-click-away";
+import React from "react";
 
 type Index = {
 	"data.title": string;

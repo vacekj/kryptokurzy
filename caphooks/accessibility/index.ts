@@ -1,1 +1,1 @@
-export * from './useAccessibility';
+export * from "./useAccessibility";

@@ -1,4 +1,4 @@
-let checkedLinks = [];
+const checkedLinks = [];
 
 describe("Test for unwanted 404s", function () {
 	it("should not get 404s on any links on our page", function () {
@@ -25,7 +25,8 @@ function ensureNot404(url: string) {
 		const urls = links
 			.toArray()
 			.map((el) => el.href)
-			.filter((url) => url !== window.location.search);
+			.filter((url) => url !== window.location.search)
+			.filter((url) => url.indexOf("localhost") !== -1);
 
 		urls.forEach((url) => ensureNot404(url));
 	});

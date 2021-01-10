@@ -27,7 +27,7 @@ export default function ConsultingForm() {
 	});
 	const [loading, setLoading] = useState(false);
 	const toast = useToast();
-
+	const inputBg = useColorModeValue("white", "gray.700");
 	function onSubmit(data) {
 		setLoading(true);
 		fetch("/api/consult?" + qs(data), {
@@ -45,7 +45,7 @@ export default function ConsultingForm() {
 					isClosable: true,
 				});
 			})
-			.catch((err) => {
+			.catch(() => {
 				toast({
 					title: "Vyskytla se chyba",
 					description: "Kontaktujte prosím podporu",
@@ -101,7 +101,7 @@ export default function ConsultingForm() {
 										maxLength: 60,
 										pattern: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
 									})}
-									bg={"white"}
+									bg={inputBg}
 									placeholder={"vas@email.cz"}
 									maxW={"md"}
 									type="email"
@@ -116,7 +116,7 @@ export default function ConsultingForm() {
 								<Textarea
 									minH={"150px"}
 									w={"full"}
-									bg={"white"}
+									bg={inputBg}
 									name={"text"}
 									ref={register({
 										minLength: 1,

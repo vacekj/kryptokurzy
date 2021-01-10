@@ -11,10 +11,8 @@ import {
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 import {
-	FaInstagram,
 	FaTelegramPlane,
 	FaTwitter,
-	FaYoutube,
 } from "react-icons/fa";
 
 export default function Footer() {

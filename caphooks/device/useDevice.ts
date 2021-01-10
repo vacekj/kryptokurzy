@@ -1,57 +1,61 @@
-import { useState, useEffect } from 'react';
-import { Plugins, DeviceInfo } from '@capacitor/core';
-import { AvailableResult, notAvailable } from '../util/models';
-import { isFeatureAvailable } from '../util/feature-check';
+import { useState, useEffect } from "react";
+import { Plugins, DeviceInfo } from "@capacitor/core";
+import { AvailableResult, notAvailable } from "../util/models";
+import { isFeatureAvailable } from "../util/feature-check";
 
-interface GetInfoResult extends AvailableResult { info?: DeviceInfo };
-interface GetLanguageCodeResult extends AvailableResult { languageCode?: string };
-
-export const availableFeatures = {
-  getInfo: isFeatureAvailable('Device', 'getInfo'),
-  getLanguageCode: isFeatureAvailable('Device', 'getLanguageCode')
+interface GetInfoResult extends AvailableResult {
+	info?: DeviceInfo;
+}
+interface GetLanguageCodeResult extends AvailableResult {
+	languageCode?: string;
 }
 
+export const availableFeatures = {
+	getInfo: isFeatureAvailable("Device", "getInfo"),
+	getLanguageCode: isFeatureAvailable("Device", "getLanguageCode"),
+};
+
 export function useGetInfo(): GetInfoResult {
-  const { Device } = Plugins;
+	const { Device } = Plugins;
 
-  if (!availableFeatures.getInfo) {
-    return notAvailable;
-  }
-  const [info, setInfo] = useState<DeviceInfo>();
+	if (!availableFeatures.getInfo) {
+		return notAvailable;
+	}
+	const [info, setInfo] = useState<DeviceInfo>();
 
-  useEffect(() => {
-    async function getInfo() {
-      const data = await Device.getInfo();
-      setInfo(data);
-    }
-    getInfo();
-  }, [Device, setInfo]);
+	useEffect(() => {
+		async function getInfo() {
+			const data = await Device.getInfo();
+			setInfo(data);
+		}
+		getInfo();
+	}, [Device, setInfo]);
 
-  return {
-    info,
-    isAvailable: true
-  }
+	return {
+		info,
+		isAvailable: true,
+	};
 }
 
 export function useGetLanguageCode(): GetLanguageCodeResult {
-  const { Device } = Plugins;
-  
-  if (!availableFeatures.getLanguageCode) {
-    return notAvailable;
-  }
+	const { Device } = Plugins;
 
-  const [languageCode, setLanguageCode] = useState<string>();
+	if (!availableFeatures.getLanguageCode) {
+		return notAvailable;
+	}
 
-  useEffect(() => {
-    async function getLanguageCode() {
-      const data = await Device.getLanguageCode();
-      setLanguageCode(data.value);
-    }
-    getLanguageCode();
-  }, [Device, setLanguageCode]);
+	const [languageCode, setLanguageCode] = useState<string>();
 
-  return {
-    languageCode,
-    isAvailable: true
-  };
+	useEffect(() => {
+		async function getLanguageCode() {
+			const data = await Device.getLanguageCode();
+			setLanguageCode(data.value);
+		}
+		getLanguageCode();
+	}, [Device, setLanguageCode]);
+
+	return {
+		languageCode,
+		isAvailable: true,
+	};
 }
