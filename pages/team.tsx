@@ -101,7 +101,7 @@ export default function Team() {
 						direction={["column"]}
 					>
 						<Avatar
-							name={"Josef Vacek"}
+							name={"Domink Clemente"}
 							boxSize={"200px"}
 							src={"/avatars/dominik.jpg"}
 						/>
