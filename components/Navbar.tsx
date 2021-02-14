@@ -66,14 +66,18 @@ export default function Navbar() {
 							alt={"Logo"}
 						/>
 					</NextChakraLink>
-					<Button
-						display={["block"]}
-						h={9}
-						variant={"solid"}
-						colorScheme={"green"}
-					>
-						Začněte zde
-					</Button>
+					<NextChakraLink href={"/courses/zacnete-zde"} _hover={{
+						textDecoration: "none",
+					}}>
+						<Button
+							display={["block"]}
+							h={9}
+							variant={"solid"}
+							colorScheme={"green"}
+						>
+								Začněte zde									
+						</Button>
+					</NextChakraLink>
 				</HStack>
 				<HStack spacing={1}>
 					<HStack spacing={0} ref={clickRef}>
