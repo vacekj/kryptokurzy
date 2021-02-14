@@ -9,7 +9,7 @@ import {
 	Text,
 	VStack,
 } from "@chakra-ui/react";
-import NextLink from "next/link";
+import { NextChakraLink } from "./NextChakraLink";
 import { FaTelegramPlane, FaTwitter } from "react-icons/fa";
 
 export default function Footer() {
@@ -22,23 +22,36 @@ export default function Footer() {
 					justifyContent="space-between"
 					alignItems="start"
 				>
-					<VStack spacing={4} alignItems={"end"}>
-						<NextLink href={"/"}>
-							<Link py={-3} mb={-1}>
-								<img src={"/logo_inverted.svg"} alt={"Logo"} />
-							</Link>
-						</NextLink>
-						<Text pt={[4, 0]} color={"gray.100"}>
-							&copy; Dominik Clemente, Josef Vacek 2020
-						</Text>
-					</VStack>
-					<VStack spacing={8}>
+					<VStack spacing={4} alignItems={"start"}>
 						<Button h={9} variant={"solid"} colorScheme={"green"}>
 							Začněte zde
 						</Button>
-						{/*TODO: linky na sekce*/}
+						<VStack
+							fontWeight={"semibold"}
+							pl={1}
+							spacing={3}
+							alignItems={"left"}
+							textColor={"white"}
+						>
+							{/*TODO: linky na sekce*/}
+							<NextChakraLink href={"/courses"}>
+								Všechny kurzy
+							</NextChakraLink>
+							<NextChakraLink href={"/team"}>
+								Tým Jaknacrypto.cz
+							</NextChakraLink>
+							<NextChakraLink href={"/legal"}>
+								Podmínky používání
+							</NextChakraLink>
+						</VStack>
 					</VStack>
-					<VStack>
+					<VStack spacing={4} alignItems={"end"}>
+						<NextChakraLink href={"/"}>
+							<img src={"/logo_inverted.svg"} alt={"Logo"} />
+						</NextChakraLink>
+						<Text pt={[4, 0]} color={"gray.100"}>
+							&copy; Dominik Clemente, Josef Vacek 2021
+						</Text>
 						<HStack spacing={5}>
 							<a
 								aria-label={"Jaknacrypto.cz Telegram skupina"}

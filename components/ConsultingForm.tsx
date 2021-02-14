@@ -126,11 +126,18 @@ export default function ConsultingForm() {
 								/>
 							</FormControl>
 							<FormControl>
-								<FormLabel htmlFor={""}>Poptávám pro</FormLabel>
+								<FormLabel htmlFor={"type"}>
+									Poptávám pro
+								</FormLabel>
 								<Controller
 									control={control}
 									name="type"
-									render={({ onChange, onBlur, value }) => (
+									render={({
+										onChange,
+										onBlur,
+										value,
+										ref,
+									}) => (
 										<RadioGroup
 											onBlur={onBlur}
 											value={value}
@@ -139,16 +146,17 @@ export default function ConsultingForm() {
 											<Stack direction="row">
 												<Radio
 													colorScheme={"brand"}
-													defaultChecked={true}
 													value="individual"
 													id={"individual"}
+													name={"type"}
 												>
 													jednotlivce
 												</Radio>
 												<Radio
-													value="company"
-													id={"company"}
 													colorScheme={"brand"}
+													value="company"
+													name={"type"}
+													id={"company"}
 												>
 													firmu
 												</Radio>

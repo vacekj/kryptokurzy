@@ -8,7 +8,7 @@ import {
 	Image,
 } from "@chakra-ui/react";
 import { HiOutlineMoon, HiOutlineSearch, HiOutlineSun } from "react-icons/hi";
-import NextLink from "next/link";
+import { NextChakraLink } from "./NextChakraLink";
 import React, { useEffect, useRef, useState } from "react";
 import Search from "./Search";
 import { useClickAway } from "use-click-away";
@@ -52,22 +52,20 @@ export default function Navbar() {
 				justifyContent="space-between"
 			>
 				<HStack spacing={5}>
-					<NextLink href={"/"}>
-						<Link py={-3} mb={-1}>
-							<Image
-								display={["none", "block"]}
-								h={7}
-								src={"/logo_inverted.svg"}
-								alt={"Logo"}
-							/>
-							<Image
-								display={["block", "none"]}
-								h={7}
-								src={"/glyph_inverted.svg"}
-								alt={"Logo"}
-							/>
-						</Link>
-					</NextLink>
+					<NextChakraLink py={-3} mb={-1} href={"/"}>
+						<Image
+							display={["none", "block"]}
+							h={7}
+							src={"/logo_inverted.svg"}
+							alt={"Logo"}
+						/>
+						<Image
+							display={["block", "none"]}
+							h={7}
+							src={"/glyph_inverted.svg"}
+							alt={"Logo"}
+						/>
+					</NextChakraLink>
 					<Button
 						display={["block"]}
 						h={9}
