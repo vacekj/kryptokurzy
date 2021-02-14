@@ -4,21 +4,25 @@ tags: btc eth bitcoin crypto začátečník
 ---
 
 import CourseLayout from "../../components/CourseLayout";
-import { Heading } from "@chakra-ui/react";
+import {NextChakraLink} from "../../components/NextChakraLink";
+import { Heading, Button } from "@chakra-ui/react";
 
 <CourseLayout>
 
-<Heading as="h1"> Úvod </Heading>
+<Heading as="h1" size="2xl">
+Vítejte na jaknacrypto.cz 👋
+</Heading>
 
-Vítejte na jaknacrypto.cz,
 
 Zde se dozvíte všechno co budete potřebovat aby jste se dostali do světa blockchainu a kryptoměn. Jsme na misi vzdělávat masy o transformačním potenciálu těchto technologií. Víme, že na začátku to může být trochu těžké, ale vše je přizpůsobené začátečníkům a obecné veřejnosti.
 
+
 Zavedeme v této sekci všechny potřebné termíny a pojmy aby jste se mohli vyznat ve světě blockchainu a kryptoměn.
+
 
 Pojďme tedy začít!
 
-<Heading as="h1">Co je to kryptoměna?</Heading>
+<Heading as="h1" size="2xl">Co je to kryptoměna?</Heading>
 Kryptoměny si můžeme představit jako digitální peníze, můžeme si za ně koupit pivo
 v hospodě, koupit si za ně něco pěkného, můžeme si s nimi objednat výlet do zahraničí
 a rezervovat hotel nebo si uchovat pro horší časy a získávat na nich úrok.
@@ -34,7 +38,8 @@ U kryptoměn nejsou organizace co by spravovali jejich průběh, ale samotní ú
 
 Na to aby jste používali kryptoměny nepotřebujete se zaregistrovat na nějaké webové stránce. Stačí si stáhnout aplikaci na chytrý telefon a po pár minutách můžete ji začít používat.
 
-## Proč jméno kryptoměna?
+<Heading as="h2" size="lg"> Proč jméno kryptoměna? </Heading>
+
 
 Kryptoměna se odvozuje z kombinace slov kryptografie a měna. Kryptografie je věda která se zabývá šifrováním zpráv, aby byly čitelné pouze za speciálních podmínek. Abychom toho dosáhli, potřebujeme hodně složitou matematiku, ale ta je již vepsaná v programech co běží na kryptoměnových sítí a tudíž uživatelé se tím vůbec nemusí trápit.
 
@@ -46,15 +51,31 @@ Odolné vůči cenzuře - Díky struktuře blockchainových sítí (infrastruktu
 
 Levné a rychlé převody - Můžete posílat peníze kamkoliv do světa během sekund a za téměř nulové poplatky narozdíl od mezinárodních bankovních převodů co si za své služby vybírají procentuální poplatky a trvají mnohokrát déle jak 2 týdny.
 
-# Bitcoin
+<Heading as="h1" size="2xl">Bitcoin</Heading>
 
-Co je ₿ Bitcoin? Vidím na internetu články o tom a nevím co si mám pod tím představit.
+Co je <b style={{color:"#ff9900"}}>₿</b> Bitcoin? Vidím na internetu články o tom a nevím co si mám pod tím představit.
 
 Bitcoin je první kryptoměna co kdy vznikla a dodnes je to největší a nejpopulárnější kryptoměna na trhu.
 
-_Link to article about Bitcoin_
+**Link to article about Bitcoin**
 
-## Kdo vymyslel Bitcoin?
+<NextChakraLink
+						href={"/courses/bitcoin"}
+						_hover={{
+							textDecoration: "none",
+						}}
+					>
+						<Button
+							display={["block"]}
+							h={9}
+							variant={"solid"}
+							colorScheme={"orange"}
+						>
+                            Bitcoin
+						</Button>
+</NextChakraLink>
+
+<Heading as="h2" size="lg">Kdo vymyslel Bitcoin?</Heading>
 
 Zajímavé na Bitcoinu je, že nikdo neví kdo ho vymyslel. Jenom víme, že tvůrce se vydával na internetu pod anonymním pseudonymem Satoshi Nakamoto. Satoshi může být člověk, skupina lidí nebo podle některých konspiračních teorií, mimozemšťané.
 
@@ -70,7 +91,7 @@ Dříve než investujete své peníze do konkrétního projektu, ujistěte se, �
 
 V následující sekci se budeme zabývat technologií na které je postavena většina kryptoměn, tj. blockchain (/blokčejn/).
 
-# Co je blockchain?
+<Heading as="h1" size="2xl"> Co je blockchain? </Heading>
 
 Blockchain je typ databáze neboli datová struktura která není nijak složitá, ale dají se s ní vytvořit překvapivě zajímavé věci.
 
@@ -84,12 +105,13 @@ Tady tento domino efekt kde jeden blok je navázaný na další a má otisk pře
 
 Když někdo vyšle transakci do sítě, dejme tomu, že Pepa chce poslat Honzovi 2 BTC a Jana chce poslat Dagmar 1 BTC, tak účastníci Bitcoinové síti kteří na svých počítačích mají spuštěný Bitcoinový software mohou tyhle transakce dát do bloku a připsat ho do blockchainu.
 
-## Co brání lidem podvádět na Bitcoinové sítí?
+<Heading as="h2" size="lg">Co brání lidem podvádět na Bitcoinové sítí?</Heading>
 
 Na to aby se transakce vůbec vyslala z nějaké Bitcoinové adresy, tak ta transakce musí být podepsaná otiskem privátního klíče (více o tomto později), takže jen majitel daných bitcoinů může vyslat transakci z jeho adresy a ne nikdo jiný. Všechny verifikace těchto transakcí probíhají přes tzv. Consensus (shodovým) algoritmem.
 
-_links to more articles_
+**links to more articles**
 
-Investování
+<Heading as="h1" size="2xl">Investování</Heading>
+
 
 </CourseLayout>
