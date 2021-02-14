@@ -3,7 +3,6 @@ import {
 	HStack,
 	Icon,
 	IconButton,
-	Link,
 	useColorMode,
 	Image,
 } from "@chakra-ui/react";
@@ -66,16 +65,19 @@ export default function Navbar() {
 							alt={"Logo"}
 						/>
 					</NextChakraLink>
-					<NextChakraLink href={"/courses/zacnete-zde"} _hover={{
-						textDecoration: "none",
-					}}>
+					<NextChakraLink
+						href={"/courses/zacnete-zde"}
+						_hover={{
+							textDecoration: "none",
+						}}
+					>
 						<Button
 							display={["block"]}
 							h={9}
 							variant={"solid"}
 							colorScheme={"green"}
 						>
-								Začněte zde									
+							Začněte zde
 						</Button>
 					</NextChakraLink>
 				</HStack>

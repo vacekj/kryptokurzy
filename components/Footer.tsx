@@ -4,7 +4,6 @@ import {
 	Container,
 	HStack,
 	Icon,
-	Link,
 	Stack,
 	Text,
 	VStack,
