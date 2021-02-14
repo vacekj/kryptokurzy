@@ -13,6 +13,7 @@ import {
 	Text,
 	useColorModeValue,
 	VStack,
+	Link,
 } from "@chakra-ui/react";
 import { motion, useTransform, useViewportScroll } from "framer-motion";
 
@@ -87,7 +88,22 @@ export default function Team() {
 					justifyContent={"flex-end"}
 					direction={["column", "row"]}
 				>
-					<Text fontSize={"3xl"}>Dominik je prostě borec.</Text>
+					<Text fontSize={"3xl"}>
+						Dominik je blockchain vývojář a krypto konzultant který
+						má rozsáhlé zkušenosti v oboru díky aktivní účastí na
+						krypto trzích od konce roku 2017. Mimo jaknacrypto, také
+						je tržní výzkumník a programátor v
+						<Link
+							href="https://academy.ivanontech.com/"
+							color="blue.500"
+							fontWeight="500"
+							isExternal
+						>
+							<span> </span>Ivan on Tech Academy
+						</Link>
+						, což je největší vzdělávácí platforma pro crypto a
+						blockchain na světě.
+					</Text>
 					<Stack
 						as={motion.div}
 						style={{
@@ -103,15 +119,13 @@ export default function Team() {
 						<Avatar
 							name={"Domink Clemente"}
 							boxSize={"200px"}
-							src={"/avatars/dominik.jpg"}
+							src={"/avatars/dominik.png"}
 						/>
 						<VStack spacing={0}>
 							<Text fontWeight={"semibold"} fontSize={"2xl"}>
 								Dominik Clemente
 							</Text>
-							<Text fontSize={"xl"}>
-								Co-founder & Cryptobaron
-							</Text>
+							<Text fontSize={"xl"}>Co-founder & CEO</Text>
 						</VStack>
 					</Stack>
 				</Stack>
