@@ -2,7 +2,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { Box } from "@chakra-ui/react";
 
-export default function CourseLayout(props: { children: JSX.Element }) {
+export default function CourseLayout(props: { children: React.ReactNode }) {
 	return (
 		<>
 			<Navbar />
