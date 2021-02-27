@@ -1,8 +1,3 @@
-//---
-//title: Bitcoin
-//tags: btc bitcoin krypto crypto začátečník
-//---
-//
 import CourseLayout from "../../components/CourseLayout";
 import { Heading } from "@chakra-ui/react";
 

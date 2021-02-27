@@ -1,8 +1,3 @@
-//---
-//title: Decentralizované Finance
-//tags: krypto crypto začátečník defi decentralizované finance
-//---
-
 import CourseLayout from "../../components/CourseLayout";
 import { Heading } from "@chakra-ui/react";
 
@@ -11,8 +6,10 @@ export const metaData = {
 	tags: "defi,decentralizované finance,krypto,crypto,začátečník",
 };
 
-<CourseLayout>
-	<Heading as="h1" size="2xl">
-		Decentralizované finance
-	</Heading>
-</CourseLayout>;
+export default function DeFi() {
+	<CourseLayout>
+		<Heading as="h1" size="2xl">
+			Decentralizované finance
+		</Heading>
+	</CourseLayout>;
+}
