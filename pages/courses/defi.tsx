@@ -7,9 +7,11 @@ export const metaData = {
 };
 
 export default function DeFi() {
-	<CourseLayout>
-		<Heading as="h1" size="2xl">
-			Decentralizované finance
-		</Heading>
-	</CourseLayout>;
+	return (
+		<CourseLayout>
+			<Heading as="h1" size="2xl">
+				Decentralizované finance
+			</Heading>
+		</CourseLayout>
+	);
 }

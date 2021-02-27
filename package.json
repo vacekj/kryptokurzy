@@ -35,7 +35,7 @@
 		"gray-matter": "^4.0.2",
 		"husky": "^4.3.6",
 		"minisearch": "^3.0.2",
-		"next": "^10.0.4",
+		"next": "^10.0.7",
 		"next-compose-plugins": "^2.2.1",
 		"next-mdx-enhanced": "^5.0.0",
 		"next-seo": "^4.17.0",

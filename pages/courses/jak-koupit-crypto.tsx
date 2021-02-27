@@ -7,9 +7,11 @@ export const metaData = {
 };
 
 export default function JakKoupitCrypto() {
-	<CourseLayout>
-		<Heading as="h1" size="2xl">
-			Jak nakoupit crypto?
-		</Heading>
-	</CourseLayout>;
+	return (
+		<CourseLayout>
+			<Heading as="h1" size="2xl">
+				Jak nakoupit crypto?
+			</Heading>
+		</CourseLayout>
+	);
 }

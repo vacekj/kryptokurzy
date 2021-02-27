@@ -7,13 +7,15 @@ export const metaData = {
 };
 
 export default function Ethereum() {
-	<CourseLayout>
-		<Heading as="h1" size="2xl">
-			Ethereum{" "}
-			<Image
-				src="https://pbs.twimg.com/profile_images/1084788308595617793/DOnqq1OM.jpg"
-				alt="Ethereum 2.0"
-			/>
-		</Heading>
-	</CourseLayout>;
+	return (
+		<CourseLayout>
+			<Heading as="h1" size="2xl">
+				Ethereum{" "}
+				<Image
+					src="https://pbs.twimg.com/profile_images/1084788308595617793/DOnqq1OM.jpg"
+					alt="Ethereum 2.0"
+				/>
+			</Heading>
+		</CourseLayout>
+	);
 }
