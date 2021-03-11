@@ -15,6 +15,7 @@ import { Plugins, StatusBarStyle } from "@capacitor/core";
 import styles from "./navbar.module.css";
 import { usePlatform } from "../caphooks/platform";
 import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
 const { StatusBar } = Plugins;
 
@@ -42,15 +43,15 @@ export default function Navbar() {
 
 	return (
 		<>
-			<div className={styles.navbar} />
+			<div className={styles.navbar} ref={ref} />
 			<HStack
-				ref={ref}
+				ref={clickRef}
 				bg={"black"}
 				p={3}
 				px={[3, 6]}
 				justifyContent="space-between"
 			>
-				<HStack spacing={5}>
+				<HStack flexShrink={2} overflow={"hidden"}>
 					<NextChakraLink py={-3} mb={-1} href={"/"}>
 						<Image
 							display={["none", "block"]}
@@ -65,14 +66,18 @@ export default function Navbar() {
 							alt={"Logo"}
 						/>
 					</NextChakraLink>
+
 					<NextChakraLink
+						minW={0}
 						href={"/courses/zacnete-zde"}
 						_hover={{
 							textDecoration: "none",
 						}}
 					>
 						<Button
-							display={["block"]}
+							flexShrink={2}
+							minW={0}
+							overflow={"hidden"}
 							h={9}
 							variant={"solid"}
 							colorScheme={"green"}

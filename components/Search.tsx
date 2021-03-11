@@ -1,29 +1,40 @@
 import { useMiniSearch } from "react-minisearch";
-import index from "indexes/index.json";
+import index from "indexes/index";
 import NextLink from "next/link";
-import { Input } from "@chakra-ui/react";
+import { Input, useColorModeValue } from "@chakra-ui/react";
 import { Divider, Box, Link, VStack, HStack, Icon } from "@chakra-ui/react";
 import { Breadcrumb, BreadcrumbItem } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { Tag } from "@chakra-ui/react";
 import { BiChevronRight } from "react-icons/bi";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
-type Index = {
-	"data.title": string;
-	"data.tags": string;
-	content: string;
+export type Index = {
+	/** Title of the page, capitalized*/
+	title: string;
+	/** comma-separated, can have spaces
+	 * @example btc,bitcoin,bitcoin starter*/
+	tags: string;
+	/** without leading slash
+	 * @example  courses/bitcoin*/
 	url: string;
-	isEmpty: boolean;
 };
 
 export default function Search(props: { isOpen: boolean }) {
 	const { search, searchResults } = useMiniSearch(index as Index[], {
-		fields: ["content", "data.title", "data.tags"],
+		fields: ["title", "tags"],
 		storeFields: ["url"],
 		idField: "url",
 		searchOptions: { fuzzy: 0.2 },
 	});
+
+	const inputRef = useRef(null);
+	useEffect(() => {
+		inputRef.current?.focus();
+	}, [props.isOpen]);
+
+	const searchResultsBg = useColorModeValue("white", "gray.900");
+	const hoverBg = useColorModeValue("gray.50", "gray.800");
 
 	return (
 		<Box position={"relative"}>
@@ -38,8 +49,9 @@ export default function Search(props: { isOpen: boolean }) {
 				initial={false}
 			>
 				<Input
-					w={"64"}
-					bg={"white"}
+					ref={inputRef}
+					w={[64]}
+					bg={searchResultsBg}
 					overflow={"hidden"}
 					type="text"
 					aria-label={"hledat"}
@@ -59,7 +71,7 @@ export default function Search(props: { isOpen: boolean }) {
 				left={0}
 				zIndex={10}
 				top={0}
-				bg={"white"}
+				bg={searchResultsBg}
 				shadow={"lg"}
 				w={"full"}
 				mt={12}
@@ -73,19 +85,19 @@ export default function Search(props: { isOpen: boolean }) {
 								cursor={"pointer"}
 								p={4}
 								_hover={{
-									bg: "gray.50",
+									bg: hoverBg,
 								}}
 								key={result.url}
 								alignItems={"start"}
 							>
 								<NextLink href={"/" + result.url} key={i}>
 									<Link fontWeight={"bold"} fontSize={"lg"}>
-										{result["data.title"]}
+										{result.title}
 									</Link>
 								</NextLink>
 								<HStack>
 									<Breadcrumb
-										spacing="8px"
+										spacing="4px"
 										separator={
 											<Icon
 												as={BiChevronRight}
@@ -123,13 +135,13 @@ export default function Search(props: { isOpen: boolean }) {
 											))}
 									</Breadcrumb>
 								</HStack>
-								<HStack>
-									{result["data.tags"] &&
-										result["data.tags"]
-											.split(" ")
-											.map((tag) => (
-												<Tag key={tag}>{tag}</Tag>
-											))}
+								<HStack maxW={"full"} flexWrap={"wrap"}>
+									{result.tags &&
+										result.tags.split(",").map((tag) => (
+											<Tag marginBottom={"4px"} key={tag}>
+												{tag}
+											</Tag>
+										))}
 								</HStack>
 							</VStack>
 							{i < searchResults.length - 1 && <Divider />}

@@ -7,8 +7,6 @@
 		"lint": "eslint components pages util --fix",
 		"build": "next build",
 		"start": "next start",
-		"index": "node generate-fts-indexes.js",
-		"prebuild": "yarn index",
 		"cy:run": "yarn run cypress run",
 		"e2e": "start-server-and-test dev http://localhost:3000 cy:run",
 		"e2e:update": "yarn run cypress run --env updateSnapshots=true",
