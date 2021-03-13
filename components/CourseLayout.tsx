@@ -14,21 +14,18 @@ import {
 	IconButton,
 } from "@chakra-ui/react";
 import { MenuItemLink } from "./ToC/MobileNav";
-import { Index } from "./Search";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import NextLink from "next/link";
-import { VscChevronLeft, VscChevronRight } from "react-icons/vsc";
+import { VscChevronRight } from "react-icons/vsc";
 import index from "../indexes";
-import {
-	motion,
-	useMotionTemplate,
-	useTransform,
-	useViewportScroll,
-} from "framer-motion";
+import { motion, useTransform, useViewportScroll } from "framer-motion";
 import { FaChevronLeft } from "react-icons/fa";
 import { ToC } from "./ToC/TableOfContents";
 import { useRouter } from "next/router";
-import { router } from "next/client";
+import readingTime, { Stats } from "@danieldietrich/reading-time";
+import { formatDuration } from "date-fns";
+import cs from "date-fns/locale/cs";
+import { HiOutlineClock } from "react-icons/hi";
 
 const difficulties = {
 	1: "Začátečník",
@@ -58,6 +55,14 @@ export default function CourseLayout(props: {
 	const [scroll, setScroll] = useState(0);
 	scrollY.onChange((s) => setScroll(s));
 	const router = useRouter();
+
+	const courseRef = useRef<HTMLDivElement | null>(null);
+	const [readingStats, setReadingStats] = useState<Stats | null>();
+	useEffect(() => {
+		if (courseRef.current) {
+			setReadingStats(readingTime(courseRef.current.innerText));
+		}
+	}, [courseRef.current]);
 
 	return (
 		<>
@@ -151,6 +156,13 @@ export default function CourseLayout(props: {
 					{indexEntry.title}
 				</Heading>
 				<HStack spacing={3}>
+					{indexEntry.tags.split(",").map((tag) => (
+						<Tag variant={"subtle"} colorScheme={"gray"}>
+							{tag}
+						</Tag>
+					))}
+				</HStack>
+				<HStack alignItems={"center"} spacing={5}>
 					<Tag
 						variant={"subtle"}
 						fontSize={["sm", "md"]}
@@ -158,11 +170,17 @@ export default function CourseLayout(props: {
 					>
 						{difficulties[indexEntry.difficulty]}
 					</Tag>
-					{indexEntry.tags.split(",").map((tag) => (
-						<Tag variant={"subtle"} colorScheme={"gray"}>
-							{tag}
-						</Tag>
-					))}
+					<HStack>
+						<Icon as={HiOutlineClock} />
+						<Box>
+							{formatDuration(
+								{
+									minutes: readingStats?.minutes ?? 0,
+								},
+								{ locale: cs }
+							)}
+						</Box>
+					</HStack>
 				</HStack>
 				<Image
 					rounded={10}
@@ -172,7 +190,7 @@ export default function CourseLayout(props: {
 					src={props.imgUrl}
 					alt={"Bitcoin"}
 				/>
-				<Box pb={10} position={"relative"}>
+				<Box ref={courseRef} pb={10} position={"relative"}>
 					{props.children}
 				</Box>
 			</VStack>

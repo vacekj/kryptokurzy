@@ -1,6 +1,5 @@
 import CourseLayout from "../../components/CourseLayout";
-import { Heading, Link } from "@chakra-ui/react";
-import index from "../../indexes";
+import { Heading } from "@chakra-ui/react";
 
 export default function Bitcoin() {
 	return (

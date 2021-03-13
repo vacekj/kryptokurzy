@@ -8,11 +8,10 @@ import {
 	MenuItem,
 	MenuList,
 	Portal,
-	useBreakpoint,
 	useBreakpointValue,
 } from "@chakra-ui/react";
 import { MenuItemLink } from "./MobileNav";
-import { FaChevronDown, FaHamburger } from "react-icons/fa";
+import { FaChevronDown } from "react-icons/fa";
 import { IoMenu } from "react-icons/io5";
 export function ToC(
 	props: React.ComponentProps<"div"> & {

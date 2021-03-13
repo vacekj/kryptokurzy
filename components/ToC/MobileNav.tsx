@@ -2,7 +2,6 @@ import * as React from "react";
 import { motion } from "framer-motion";
 import { MenuItem } from "./MenuItem";
 import { Text, VStack } from "@chakra-ui/react";
-import styles from "./mobilenav.module.css";
 import { variants as v } from "./MenuItem";
 const variants = {
 	open: {
