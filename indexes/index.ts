@@ -4,7 +4,8 @@ const index: Index[] = [
 	{
 		url: "courses/bitcoin",
 		tags: "bitcoin,btc,bitcoin starter",
-		title: "Bitcoin"
+		title: "How to get started with Bitcoin",
+		difficulty: 1
 	}
 ];
 export default index;

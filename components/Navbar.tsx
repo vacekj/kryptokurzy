@@ -15,7 +15,6 @@ import { Plugins, StatusBarStyle } from "@capacitor/core";
 import styles from "./navbar.module.css";
 import { usePlatform } from "../caphooks/platform";
 import { useInView } from "react-intersection-observer";
-import { motion } from "framer-motion";
 
 const { StatusBar } = Plugins;
 
@@ -69,6 +68,7 @@ export default function Navbar() {
 
 					<NextChakraLink
 						minW={0}
+						pl={3}
 						href={"/courses/zacnete-zde"}
 						_hover={{
 							textDecoration: "none",

@@ -18,6 +18,8 @@ export type Index = {
 	/** without leading slash
 	 * @example  courses/bitcoin*/
 	url: string;
+	/** difficulty in numeric form, 1 - 3 */
+	difficulty: 1 | 2 | 3;
 };
 
 export default function Search(props: { isOpen: boolean }) {
@@ -82,6 +84,8 @@ export default function Search(props: { isOpen: boolean }) {
 					searchResults.map((result, i) => (
 						<React.Fragment key={result.url}>
 							<VStack
+								as={"a"}
+								href={result.url}
 								cursor={"pointer"}
 								p={4}
 								_hover={{
