@@ -10,10 +10,10 @@ export default function Showcase() {
 		<>
 			<Head>
 				<NextSeo
-					title="Podmínky používání - Jaknacrypto.cz"
-					description="Jaknacrypto.cz je Váš ověřený zdroj informací o kryptoměnách, decentralizovaných financích a novinek ze světa crypta"
+					title="Podmínky používání - KryptoKurzy.cz"
+					description="KryptoKurzy.cz je Váš ověřený zdroj informací o kryptoměnách, decentralizovaných financích a novinek ze světa crypta"
 				/>
-				<title>Podmínky používání - Jaknacrypto.cz</title>
+				<title>Podmínky používání - KryptoKurzy.cz</title>
 			</Head>
 			<Navbar />
 			<Container maxW={"3xl"} as={VStack} alignItems={"start"} my={10}>

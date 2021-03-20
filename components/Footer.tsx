@@ -37,7 +37,7 @@ export default function Footer() {
 								Všechny kurzy
 							</NextChakraLink>
 							<NextChakraLink href={"/team"}>
-								Tým Jaknacrypto.cz
+								Tým kryptokurzy.cz
 							</NextChakraLink>
 							<NextChakraLink href={"/legal"}>
 								Podmínky používání
@@ -46,14 +46,14 @@ export default function Footer() {
 					</VStack>
 					<VStack spacing={4} alignItems={"end"}>
 						<NextChakraLink href={"/"}>
-							<img src={"/logo_inverted.svg"} alt={"Logo"} />
+							<img src={"/logo_white.svg"} alt={"Logo"} />
 						</NextChakraLink>
 						<Text pt={[4, 0]} color={"gray.100"}>
 							&copy; Dominik Clemente, Josef Vacek 2021
 						</Text>
 						<HStack spacing={5}>
 							<a
-								aria-label={"Jaknacrypto.cz Telegram skupina"}
+								aria-label={"kryptokurzy.cz Telegram skupina"}
 								href={"https://t.me/joinchat/SW9rdfYLrF5zhrqO"}
 							>
 								<Icon
@@ -64,8 +64,8 @@ export default function Footer() {
 								/>
 							</a>
 							<a
-								aria-label={"Jaknacrypto.cz Twitter stránka"}
-								href={"https://twitter.com/jaknacrypto"}
+								aria-label={"kryptokurzy.cz Twitter stránka"}
+								href={"https://twitter.com/kryptokurzy"}
 							>
 								<Icon
 									color={"white"}

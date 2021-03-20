@@ -16,7 +16,7 @@ export default function ZacneteZde() {
 	return (
 		<CourseLayout>
 			<Heading as="h1" size="2xl">
-				Vítejte na jaknacrypto.cz 👋
+				Vítejte na kryptokurzy.cz 👋
 			</Heading>
 			Zde se dozvíte všechno co budete potřebovat aby jste se dostali do
 			světa blockchainu a kryptoměn. Jsme na misi vzdělávat masy o

@@ -61,7 +61,7 @@ export default function Search(props: { isOpen: boolean }) {
 						e.target.focus();
 						search(e.target.value);
 					}}
-					placeholder="Prohledat jaknacrypto.cz"
+					placeholder="Prohledat KryptoKurzy.cz"
 				/>
 			</motion.div>
 			<Box

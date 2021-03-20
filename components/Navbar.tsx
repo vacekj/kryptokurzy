@@ -50,25 +50,30 @@ export default function Navbar() {
 				px={[3, 6]}
 				justifyContent="space-between"
 			>
-				<HStack flexShrink={2} overflow={"hidden"}>
-					<NextChakraLink py={-3} mb={-1} href={"/"}>
+				<HStack
+					flexShrink={2}
+					spacing={4}
+					overflow={"hidden"}
+					alignItems={"center"}
+				>
+					<NextChakraLink href={"/"} pl={[1, 0]}>
 						<Image
 							display={["none", "block"]}
 							h={7}
-							src={"/logo_inverted.svg"}
+							src={"/logo_white.svg"}
 							alt={"Logo"}
 						/>
 						<Image
 							display={["block", "none"]}
-							h={7}
-							src={"/glyph_inverted.svg"}
+							h={8}
+							src={"/glyph.svg"}
 							alt={"Logo"}
 						/>
 					</NextChakraLink>
 
 					<NextChakraLink
 						minW={0}
-						pl={3}
+						pl={[1, 3]}
 						href={"/courses/zacnete-zde"}
 						_hover={{
 							textDecoration: "none",
@@ -84,6 +89,24 @@ export default function Navbar() {
 						>
 							Začněte zde
 						</Button>
+					</NextChakraLink>
+
+					<NextChakraLink
+						fontSize={"lg"}
+						fontWeight={"medium"}
+						color={"white"}
+						href={"/team"}
+					>
+						Náš tým
+					</NextChakraLink>
+
+					<NextChakraLink
+						fontSize={"lg"}
+						fontWeight={"medium"}
+						color={"white"}
+						href={"/consult"}
+					>
+						Konzultace
 					</NextChakraLink>
 				</HStack>
 				<HStack spacing={1}>

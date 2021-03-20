@@ -28,6 +28,16 @@ const components = {
 					bg: "brand.600",
 				},
 			},
+			black: {
+				bg: "gray.900",
+				color: "white",
+				_hover: {
+					bg: "gray.700",
+				},
+				_active: {
+					bg: "gray.800",
+				},
+			},
 			brand_outline: {
 				bg: "white",
 				color: "black",

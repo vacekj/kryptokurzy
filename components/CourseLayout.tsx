@@ -12,6 +12,7 @@ import {
 	Image,
 	Icon,
 	IconButton,
+	useColorModeValue,
 } from "@chakra-ui/react";
 import { MenuItemLink } from "./ToC/MobileNav";
 import React, { useEffect, useRef, useState } from "react";
@@ -39,6 +40,19 @@ const difficultiesColors = {
 	3: "red",
 };
 
+export type Difficulty = 1 | 2 | 3;
+export function DifficultyTag(props: { difficulty: Difficulty }) {
+	return (
+		<Tag
+			variant={"subtle"}
+			fontSize={["sm", "md"]}
+			colorScheme={difficultiesColors[props.difficulty]}
+		>
+			{difficulties[props.difficulty]}
+		</Tag>
+	);
+}
+
 export default function CourseLayout(props: {
 	children: React.ReactNode;
 	links: MenuItemLink[];
@@ -63,21 +77,23 @@ export default function CourseLayout(props: {
 			setReadingStats(readingTime(courseRef.current.innerText));
 		}
 	}, [courseRef.current]);
+	const searchResultsBg = useColorModeValue("white", "gray.900");
 
 	return (
 		<>
 			<Navbar />
 			<HStack
 				position={"fixed"}
-				top={0}
 				left={0}
+				top={0}
 				as={motion.div}
 				initial={false}
 				w={"full"}
 				display={"flex"}
-				background={"white"}
+				background={searchResultsBg}
 				zIndex={100}
-				animate={{ height: scroll > 65 ? 73 : 0 }}
+				height={70}
+				animate={{ top: scroll > 65 ? 0 : -70 }}
 				shadow={"lg"}
 				px={[2]}
 				overflow={"hidden"}
@@ -115,6 +131,7 @@ export default function CourseLayout(props: {
 					}}
 				/>
 			</HStack>
+
 			<VStack
 				align={"start"}
 				maxW={["unset", "5xl"]}

@@ -64,19 +64,23 @@ export default function MailCTA() {
 	}
 
 	return (
-		<Box w={"full"} bg={dark ? "gray.800" : "gray.50"}>
-			<Container maxW={["full", "5xl"]} p={[4, 16]}>
+		<Box>
+			<Container
+				bg={dark ? "gray.800" : "gray.50"}
+				my={8}
+				rounded={"xl"}
+				maxW={["full", "5xl"]}
+				p={[4, 16]}
+			>
 				<HStack
-					spacing={[0, 16]}
-					justifyContent="space-between"
+					spacing={[0]}
+					justifyContent="space-around"
 					alignItems="center"
 				>
 					<Image
-						boxSize={"150px"}
-						width={"150px"}
 						height={"150px"}
 						display={["none", "block"]}
-						src={"/mailcta-light.svg"}
+						src={"/illustrations/email.svg"}
 						alt={"Ilustrace"}
 					/>
 					<VStack alignItems={"start"}>
