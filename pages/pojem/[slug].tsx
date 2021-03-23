@@ -6,10 +6,7 @@ import { MdxRemote } from "next-mdx-remote/types";
 import { Heading } from "@chakra-ui/react";
 import TermLayout from "../../components/TermLayout";
 import { Difficulty } from "../kurzy/[slug]";
-
-export const Components = {
-	h1: (props) => <Heading mt={5} as={"h1"} {...props} />,
-};
+import { Components } from "../../components/MarkdownComponents";
 
 export type Term = {
 	id: number;

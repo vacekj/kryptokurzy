@@ -5,10 +5,7 @@ import fetch from "node-fetch";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { MdxRemote } from "next-mdx-remote/types";
 import { Heading } from "@chakra-ui/react";
-
-export const Components = {
-	h1: (props) => <Heading mt={5} as={"h1"} {...props} />,
-};
+import { Components } from "../../components/MarkdownComponents";
 
 type KurzyProps = {
 	article: Article;

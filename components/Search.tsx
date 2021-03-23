@@ -10,6 +10,7 @@ import React, { useEffect, useRef } from "react";
 import useSWR from "swr";
 import { Article, STRAPI_URL } from "../pages/kurzy/[slug]";
 
+// @ts-ignore
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 export default function Search(props: { isOpen: boolean }) {

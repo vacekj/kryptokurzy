@@ -36,7 +36,7 @@ export default function Terms(props: { terms: Term[] }) {
 				/>
 				<VStack alignItems={"flex-start"}>
 					<Heading fontSize={"4xl"}>
-						Blockchain, DeFi, Proof of Work??
+						Blockchain, DeFi, Proof of Stake??
 					</Heading>
 					<Text
 						color={dark ? "gray.200" : "gray.800"}
