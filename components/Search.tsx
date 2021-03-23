@@ -1,5 +1,4 @@
 import { useMiniSearch } from "react-minisearch";
-import index from "indexes/index";
 import NextLink from "next/link";
 import { Input, useColorModeValue } from "@chakra-ui/react";
 import { Divider, Box, Link, VStack, HStack, Icon } from "@chakra-ui/react";
@@ -8,26 +7,29 @@ import { motion } from "framer-motion";
 import { Tag } from "@chakra-ui/react";
 import { BiChevronRight } from "react-icons/bi";
 import React, { useEffect, useRef } from "react";
+import useSWR from "swr";
+import { Article, STRAPI_URL } from "../pages/kurzy/[slug]";
 
-export type Index = {
-	/** Title of the page, capitalized*/
-	title: string;
-	/** comma-separated, can have spaces
-	 * @example btc,bitcoin,bitcoin starter*/
-	tags: string;
-	/** without leading slash
-	 * @example  courses/bitcoin*/
-	url: string;
-	/** difficulty in numeric form, 1 - 3 */
-	difficulty: 1 | 2 | 3;
-};
+const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 export default function Search(props: { isOpen: boolean }) {
-	const { search, searchResults } = useMiniSearch(index as Index[], {
-		fields: ["title", "tags"],
-		storeFields: ["url"],
-		idField: "url",
-		searchOptions: { fuzzy: 0.2 },
+	const { data } = useSWR<Article[]>(STRAPI_URL + "/articles", fetcher);
+	const index = data
+		? data.map((article) => {
+				return {
+					...article,
+					tags: article.tags.map((t) => t.name),
+					url: "/kurzy/" + article.slug,
+				};
+		  })
+		: [];
+	const { search, searchResults } = useMiniSearch(index, {
+		fields: ["title", "tags", "content"],
+		storeFields: ["slug", "title", "tags", "url"],
+		idField: "id",
+		searchOptions: {
+			fuzzy: 0.2,
+		},
 	});
 
 	const inputRef = useRef(null);
@@ -52,7 +54,7 @@ export default function Search(props: { isOpen: boolean }) {
 			>
 				<Input
 					ref={inputRef}
-					w={[64]}
+					w={[64, 80]}
 					bg={searchResultsBg}
 					overflow={"hidden"}
 					type="text"
@@ -80,7 +82,7 @@ export default function Search(props: { isOpen: boolean }) {
 				borderRadius={4}
 				overflow={"hidden"}
 			>
-				{searchResults && searchResults.length ? (
+				{searchResults && searchResults.length > 0 ? (
 					searchResults.map((result, i) => (
 						<React.Fragment key={result.url}>
 							<VStack
@@ -110,6 +112,7 @@ export default function Search(props: { isOpen: boolean }) {
 										}
 									>
 										{result.url
+											.slice(1)
 											.split("/")
 											.map((crumb, i, arr) => (
 												<BreadcrumbItem
@@ -132,6 +135,10 @@ export default function Search(props: { isOpen: boolean }) {
 																	/^\w/,
 																	(c) =>
 																		c.toUpperCase()
+																)
+																.replaceAll(
+																	"-",
+																	" "
 																)}
 														</Link>
 													</NextLink>
@@ -140,12 +147,11 @@ export default function Search(props: { isOpen: boolean }) {
 									</Breadcrumb>
 								</HStack>
 								<HStack maxW={"full"} flexWrap={"wrap"}>
-									{result.tags &&
-										result.tags.split(",").map((tag) => (
-											<Tag marginBottom={"4px"} key={tag}>
-												{tag}
-											</Tag>
-										))}
+									{result.tags.map((tag) => (
+										<Tag key={tag} marginBottom={"4px"}>
+											{tag}
+										</Tag>
+									))}
 								</HStack>
 							</VStack>
 							{i < searchResults.length - 1 && <Divider />}

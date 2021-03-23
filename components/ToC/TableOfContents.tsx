@@ -33,7 +33,7 @@ export function ToC(
 				<Portal>
 					<MenuList zIndex={1000000}>
 						{props.links.map((l) => (
-							<MenuItem>
+							<MenuItem key={l.href}>
 								<Link href={l.href}>{l.text}</Link>
 							</MenuItem>
 						))}

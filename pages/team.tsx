@@ -1,6 +1,5 @@
 import Navbar from "components/Navbar";
 import Footer from "components/Footer";
-import MailCTA from "../components/MailCTA";
 import Head from "next/head";
 import ConsultingForm from "../components/ConsultingForm";
 import { NextSeo } from "next-seo";
@@ -15,7 +14,6 @@ import {
 	VStack,
 	Link,
 	HStack,
-	Image,
 } from "@chakra-ui/react";
 import { motion, useTransform, useViewportScroll } from "framer-motion";
 

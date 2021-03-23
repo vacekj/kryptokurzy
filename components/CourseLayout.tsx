@@ -2,64 +2,33 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import {
 	Box,
-	Breadcrumb,
-	BreadcrumbItem,
 	Heading,
 	HStack,
-	Link,
-	Tag,
-	VStack,
-	Image,
 	Icon,
 	IconButton,
+	Image,
+	Tag,
 	useColorModeValue,
+	VStack,
 } from "@chakra-ui/react";
 import { MenuItemLink } from "./ToC/MobileNav";
-import React, { useEffect, useRef, useState } from "react";
-import NextLink from "next/link";
-import { VscChevronRight } from "react-icons/vsc";
-import index from "../indexes";
+import React, { useState } from "react";
 import { motion, useTransform, useViewportScroll } from "framer-motion";
 import { FaChevronLeft } from "react-icons/fa";
 import { ToC } from "./ToC/TableOfContents";
 import { useRouter } from "next/router";
-import readingTime, { Stats } from "@danieldietrich/reading-time";
+import readingTime from "@danieldietrich/reading-time";
 import { formatDuration } from "date-fns";
 import cs from "date-fns/locale/cs";
 import { HiOutlineClock } from "react-icons/hi";
-
-const difficulties = {
-	1: "Začátečník",
-	2: "Pokročilý",
-	3: "Expert",
-};
-
-const difficultiesColors = {
-	1: "green",
-	2: "orange",
-	3: "red",
-};
-
-export type Difficulty = 1 | 2 | 3;
-export function DifficultyTag(props: { difficulty: Difficulty }) {
-	return (
-		<Tag
-			variant={"subtle"}
-			fontSize={["sm", "md"]}
-			colorScheme={difficultiesColors[props.difficulty]}
-		>
-			{difficulties[props.difficulty]}
-		</Tag>
-	);
-}
+import { Article } from "../pages/kurzy/[slug]";
+import { difficulties, difficultiesColors } from "./DifficultyTag";
 
 export default function CourseLayout(props: {
 	children: React.ReactNode;
 	links: MenuItemLink[];
-	pageUrl: string;
-	imgUrl: string;
+	article: Article;
 }) {
-	const indexEntry = index.find((i) => i.url === props.pageUrl);
 	const { scrollYProgress, scrollY } = useViewportScroll();
 	const width = useTransform(
 		scrollYProgress,
@@ -70,13 +39,7 @@ export default function CourseLayout(props: {
 	scrollY.onChange((s) => setScroll(s));
 	const router = useRouter();
 
-	const courseRef = useRef<HTMLDivElement | null>(null);
-	const [readingStats, setReadingStats] = useState<Stats | null>();
-	useEffect(() => {
-		if (courseRef.current) {
-			setReadingStats(readingTime(courseRef.current.innerText));
-		}
-	}, [courseRef.current]);
+	const readingStats = readingTime(props.article.content).minutes;
 	const searchResultsBg = useColorModeValue("white", "gray.900");
 
 	return (
@@ -104,7 +67,7 @@ export default function CourseLayout(props: {
 					justifyContent={"space-between"}
 					maxW={["full", "5xl"]}
 				>
-					<HStack>
+					<HStack spacing={8}>
 						<IconButton
 							aria-label={"Zpět"}
 							onClick={() => router.back()}
@@ -112,7 +75,7 @@ export default function CourseLayout(props: {
 							<Icon as={FaChevronLeft} />
 						</IconButton>
 						<Box fontSize={["sm", "lg"]} fontWeight={"medium"}>
-							{indexEntry.title}
+							{props.article.title}
 						</Box>
 					</HStack>
 
@@ -140,42 +103,46 @@ export default function CourseLayout(props: {
 				p={5}
 				mt={[2, 10]}
 			>
-				<Breadcrumb
-					fontSize={["md", "lg"]}
-					spacing="8px"
-					separator={<Icon as={VscChevronRight} />}
-				>
-					<BreadcrumbItem>
-						<NextLink href={"/"}>Domů</NextLink>
-					</BreadcrumbItem>
-					{indexEntry.url.split("/").map((crumb, i, arr) => (
-						<BreadcrumbItem key={i}>
-							<NextLink
-								href={indexEntry.url.substring(
-									0,
-									indexEntry.url.indexOf(arr[i + 1])
-								)}
-							>
-								<Link>
-									{crumb
-										.trim()
-										.replace(/^\w/, (c) => c.toUpperCase())}
-								</Link>
-							</NextLink>
-						</BreadcrumbItem>
-					))}
-				</Breadcrumb>
+				{/*<Breadcrumb*/}
+				{/*	fontSize={["md", "lg"]}*/}
+				{/*	spacing="8px"*/}
+				{/*	separator={<Icon as={VscChevronRight} />}*/}
+				{/*>*/}
+				{/*	<BreadcrumbItem>*/}
+				{/*		<NextLink href={"/"}>Domů</NextLink>*/}
+				{/*	</BreadcrumbItem>*/}
+				{/*	{indexEntry.url.split("/").map((crumb, i, arr) => (*/}
+				{/*		<BreadcrumbItem key={i}>*/}
+				{/*			<NextLink*/}
+				{/*				href={indexEntry.url.substring(*/}
+				{/*					0,*/}
+				{/*					indexEntry.url.indexOf(arr[i + 1])*/}
+				{/*				)}*/}
+				{/*			>*/}
+				{/*				<Link>*/}
+				{/*					{crumb*/}
+				{/*						.trim()*/}
+				{/*						.replace(/^\w/, (c) => c.toUpperCase())}*/}
+				{/*				</Link>*/}
+				{/*			</NextLink>*/}
+				{/*		</BreadcrumbItem>*/}
+				{/*	))}*/}
+				{/*</Breadcrumb>*/}
 				<Heading
 					as={"h1"}
 					fontWeight={"bold"}
 					fontSize={["3xl", "5xl"]}
 				>
-					{indexEntry.title}
+					{props.article.title}
 				</Heading>
 				<HStack spacing={3}>
-					{indexEntry.tags.split(",").map((tag) => (
-						<Tag variant={"subtle"} colorScheme={"gray"}>
-							{tag}
+					{props.article.tags.map((tag) => (
+						<Tag
+							key={tag.id}
+							variant={"subtle"}
+							colorScheme={"gray"}
+						>
+							{tag.name}
 						</Tag>
 					))}
 				</HStack>
@@ -183,16 +150,18 @@ export default function CourseLayout(props: {
 					<Tag
 						variant={"subtle"}
 						fontSize={["sm", "md"]}
-						colorScheme={difficultiesColors[indexEntry.difficulty]}
+						colorScheme={
+							difficultiesColors[props.article.difficulty]
+						}
 					>
-						{difficulties[indexEntry.difficulty]}
+						{difficulties[props.article.difficulty]}
 					</Tag>
 					<HStack>
 						<Icon as={HiOutlineClock} />
 						<Box>
 							{formatDuration(
 								{
-									minutes: readingStats?.minutes ?? 0,
+									minutes: readingStats,
 								},
 								{ locale: cs }
 							)}
@@ -204,10 +173,10 @@ export default function CourseLayout(props: {
 					w={"full"}
 					objectFit={"cover"}
 					h={[40, "80"]}
-					src={props.imgUrl}
-					alt={"Bitcoin"}
+					src={props.article.cover.url}
+					alt={props.article.title}
 				/>
-				<Box ref={courseRef} pb={10} position={"relative"}>
+				<Box fontSize={"xl"} pb={10} position={"relative"}>
 					{props.children}
 				</Box>
 			</VStack>

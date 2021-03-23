@@ -2,7 +2,6 @@ import Navbar from "components/Navbar";
 import Footer from "components/Footer";
 import MailCTA from "../components/MailCTA";
 import Head from "next/head";
-import ConsultingForm from "../components/ConsultingForm";
 import { NextSeo } from "next-seo";
 import {
 	Box,
@@ -14,7 +13,6 @@ import {
 	Icon,
 	Image,
 	SimpleGrid,
-	Tag,
 	useColorModeValue,
 	VStack,
 } from "@chakra-ui/react";
@@ -22,17 +20,31 @@ import { HiOutlineClock } from "react-icons/hi";
 import React from "react";
 import { NextChakraLink } from "../components/NextChakraLink";
 import NextLink from "next/link";
-import { Difficulty, DifficultyTag } from "../components/CourseLayout";
+import { STRAPI_URL } from "pages/kurzy/[slug]";
 import Dunno from "../components/Dunno";
+import { Article } from "./kurzy/[slug]";
+import { GetStaticProps } from "next";
+import fetch from "node-fetch";
+import { DifficultyTag } from "../components/DifficultyTag";
+import { getReadingTime } from "../components/ReadingTime";
+import { getCourseUrl } from "../components/CourseUrl";
+import { Term } from "./pojem/[slug]";
+import Terms from "../components/Terms";
 
-export default function Showcase() {
+type IndexProps = {
+	articles: Article[];
+	terms: Term[];
+	recommendedArticle: Article;
+};
+
+export default function Index(props: IndexProps) {
 	const recommendedPageBg = useColorModeValue("gray.50", "gray.900");
 
 	return (
 		<>
 			<Head>
 				<NextSeo
-					title="kryptokurzy.cz - Podmínky používání"
+					title="kryptokurzy.cz"
 					description="KryptoKurzy.cz je Váš ověřený zdroj informací o kryptoměnách, decentralizovaných financích a novinek ze světa crypta"
 				/>
 				<title>KryptoKurzy.cz</title>
@@ -61,7 +73,7 @@ export default function Showcase() {
 						covered.
 					</Box>
 					<NextChakraLink
-						href={"/courses/zacnete-zde"}
+						href={getCourseUrl(props.recommendedArticle)}
 						_hover={{
 							textDecoration: "none",
 						}}
@@ -80,7 +92,7 @@ export default function Showcase() {
 					</NextChakraLink>
 				</VStack>
 				{/**/}
-				<NextLink href={"/courses/zacnete-zde"}>
+				<NextLink href={getCourseUrl(props.recommendedArticle)}>
 					<VStack
 						cursor={"pointer"}
 						alignItems={"start"}
@@ -98,23 +110,22 @@ export default function Showcase() {
 							w={"full"}
 							objectFit={"cover"}
 							h={[40, "80"]}
-							src={"/courses/btc.jpeg"}
-							alt={"Bitcoin"}
+							src={props.recommendedArticle.cover.url}
+							alt={props.recommendedArticle.title}
 						/>
 						<Box fontWeight={"bold"} fontSize={"2xl"}>
-							Co je to Bitcoin?
+							{props.recommendedArticle.title}
 						</Box>
 						<HStack>
 							<Icon as={HiOutlineClock} />
-							<Box>5 minut</Box>
-							<Tag
-								variant={"subtle"}
-								p={2}
-								fontSize={["sm", "md"]}
-								colorScheme={"green"}
-							>
-								Začátečník
-							</Tag>
+							<Box>
+								{getReadingTime(
+									props.recommendedArticle.content
+								)}
+							</Box>
+							<DifficultyTag
+								difficulty={props.recommendedArticle.difficulty}
+							/>
 						</HStack>
 					</VStack>
 				</NextLink>
@@ -138,54 +149,64 @@ export default function Showcase() {
 					<Divider flexShrink={2} />{" "}
 				</HStack>
 				<SimpleGrid columns={[1, 2, 3]} spacing={[4, 8]}>
-					<CourseCard
-						course={{
-							difficulty: 1,
-							url: "bitcoin",
-							title: "Bitcoin snadně",
-							readingTime: 5,
-							image: "btc.jpeg",
-						}}
-					/>
-					<CourseCard
-						course={{
-							difficulty: 1,
-							url: "ethereum",
-							title: "Ethereum pro debily",
-							readingTime: 10,
-							image: "ethereum.jpeg",
-						}}
-					/>
-					<CourseCard
-						course={{
-							difficulty: 3,
-							url: "xrp",
-							title: "kRipple pro úplné dementy",
-							readingTime: 1,
-							image: "kripl.jpeg",
-						}}
-					/>
+					{props.articles.map((a) => (
+						<ArticleCard article={a} key={a.id} />
+					))}
 				</SimpleGrid>
 			</VStack>
 			<MailCTA />
+			<VStack
+				alignItems={"start"}
+				mx={"auto"}
+				maxW={["unset", "1200px"]}
+				p={[4, 10]}
+			>
+				<SimpleGrid columns={[5, 6, 7]} spacing={[4, 8]}>
+					{props.terms.map((t) => (
+						<VStack key={t.id}></VStack>
+					))}
+				</SimpleGrid>
+			</VStack>
+			<Terms terms={props.terms} />
 			<Dunno />
 			<Footer />
 		</>
 	);
 }
 
-type Course = {
-	title: string;
-	difficulty: Difficulty;
-	url: string;
-	readingTime: number;
-	image: string;
+export const getStaticProps: GetStaticProps<IndexProps> = async (ctx) => {
+	const articles: Article[] = await fetch(
+		STRAPI_URL + "/articles"
+	).then((e) => e.json());
+
+	const recommendedArticle: { id: number; article: Article } = await fetch(
+		STRAPI_URL + "/index-recommended-article"
+	).then((e) => e.json());
+
+	const terms: Term[] = await fetch(STRAPI_URL + "/terms").then((e) =>
+		e.json()
+	);
+
+	return {
+		props: {
+			articles,
+			terms,
+			recommendedArticle: recommendedArticle.article,
+		},
+		revalidate: 1,
+	};
 };
-function CourseCard(props: { course: Course }) {
+
+function ArticleCard(props: { article: Article }) {
 	return (
-		<NextLink href={"/courses/" + props.course.url}>
+		<NextLink href={"/kurzy/" + props.article.slug}>
 			<VStack
+				transitionDuration={"300ms"}
+				transitionTimingFunction={"ease-in-out"}
 				shadow={"lg"}
+				_hover={{
+					shadow: "2xl",
+				}}
 				cursor={"pointer"}
 				alignItems={"start"}
 				rounded={"xl"}
@@ -197,18 +218,18 @@ function CourseCard(props: { course: Course }) {
 					w={"full"}
 					objectFit={"cover"}
 					h={[40, "80"]}
-					src={"/courses/" + props.course.image}
-					alt={"Bitcoin"}
+					src={props.article.cover.url}
+					alt={props.article.title}
 					shadow={"xl"}
 				/>
 				<VStack p={5} spacing={4} w={"full"} alignItems={"start"}>
 					<Box fontWeight={"bold"} fontSize={"2xl"}>
-						{props.course.title}
+						{props.article.title}
 					</Box>
 					<HStack>
 						<Icon as={HiOutlineClock} />
-						<Box>{props.course.readingTime} minut</Box>
-						<DifficultyTag difficulty={props.course.difficulty} />
+						<Box>{getReadingTime(props.article.content)}</Box>
+						<DifficultyTag difficulty={props.article.difficulty} />
 					</HStack>
 				</VStack>
 			</VStack>

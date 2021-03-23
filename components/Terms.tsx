@@ -3,15 +3,16 @@ import {
 	Container,
 	Heading,
 	HStack,
-	Text,
 	Image,
+	Text,
 	useColorModeValue,
 	VStack,
 } from "@chakra-ui/react";
-import React from "react";
 import { NextChakraLink } from "./NextChakraLink";
+import React from "react";
+import { Term } from "../pages/pojem/[slug]";
 
-export default function Dunno() {
+export default function Terms(props: { terms: Term[] }) {
 	const dark = useColorModeValue(false, true);
 
 	return (
@@ -28,22 +29,24 @@ export default function Dunno() {
 				alignItems="start"
 			>
 				<Image
-					height={200}
+					height={"250px"}
 					display={["none", "block"]}
-					src={"/illustrations/error.svg"}
-					alt={"Ilustrace"}
+					src={"/illustrations/books.svg"}
+					alt={"Ilustrace knih"}
 				/>
 				<VStack alignItems={"flex-start"}>
-					<Heading fontSize={"4xl"}>Ztraceni? Nezoufejte</Heading>
+					<Heading fontSize={"4xl"}>
+						Blockchain, DeFi, Proof of Work??
+					</Heading>
 					<Text
 						color={dark ? "gray.200" : "gray.800"}
 						fontSize={"2xl"}
 					>
-						Nezoufejte. S naším kurzem pro začátečníky se rychle
-						zorientujete.
+						Vysvětlíme vám kterýkoliv {props.terms.length} pojmů
+						tak, že už se v krypto slangu neztratíte.
 					</Text>
 					<NextChakraLink
-						href={"/courses/zacnete-zde"}
+						href={"/slovnik"}
 						_hover={{
 							textDecoration: "none",
 						}}
@@ -57,9 +60,9 @@ export default function Dunno() {
 							p={6}
 							fontSize={"xl"}
 							variant={"solid"}
-							colorScheme={"green"}
+							colorScheme={"brand"}
 						>
-							Začněte zde
+							Slovník
 						</Button>
 					</NextChakraLink>
 				</VStack>

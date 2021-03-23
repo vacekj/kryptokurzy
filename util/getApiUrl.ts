@@ -1,4 +1,5 @@
 import { Capacitor } from "@capacitor/core";
+import { STRAPI_URL, StrapiImage } from "../pages/kurzy/[slug]";
 
 export function getApiUrl() {
 	const isMobile = Capacitor.getPlatform() !== "web";
@@ -14,3 +15,16 @@ export function getApiUrl() {
 	}
 	return "/";
 }
+
+export function getAssetUrl(asset: StrapiImage) {
+	if (asset.provider === "local") {
+		return STRAPI_URL + asset.url;
+	}
+}
+
+export const propName = (obj) =>
+	new Proxy(obj, {
+		get(_, key) {
+			return key;
+		},
+	});

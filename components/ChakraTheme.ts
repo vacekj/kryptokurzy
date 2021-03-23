@@ -54,4 +54,11 @@ const components = {
 	},
 };
 
-export const theme = extendTheme({ colors, components });
+export const theme = extendTheme({
+	colors,
+	components,
+	fonts: {
+		heading: "IBM Plex Sans",
+		body: "IBM Plex Sans",
+	},
+});

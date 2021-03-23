@@ -1,51 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="10" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29e902be-cac6-49c5-a000-dbc345811b23" name="Default Changelist" comment="feat: YUGE UPDATE #2">
-      <change afterPath="$PROJECT_DIR$/components/Dunno.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/consult.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/android-chrome-384x384.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/avatars/spolecna.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/courses/btc.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/courses/ethereum.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/courses/kripl.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/illustrations/cryptocurrency.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/illustrations/email.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/illustrations/error.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/logo_black.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/logo_white.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jaknacrypto.cz.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kryptokurzy.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="29e902be-cac6-49c5-a000-dbc345811b23" name="Default Changelist" comment="term">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/2e505752-56cf-4a87-a1b4-a0d2ad23ab68.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/2e505752-56cf-4a87-a1b4-a0d2ad23ab68/storage_v2/_src_/database/strapi.SULVyg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/2e505752-56cf-4a87-a1b4-a0d2ad23ab68/storage_v2/_src_/database/strapi.SULVyg/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/2e505752-56cf-4a87-a1b4-a0d2ad23ab68/storage_v2/_src_/database/strapi.SULVyg/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/2e505752-56cf-4a87-a1b4-a0d2ad23ab68/storage_v2/_src_/database/strapi.SULVyg/schema/public.abK9xQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/CourseUrl.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/DifficultyTag.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ReadingTime.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/TermLayout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Terms.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/kurzy/[slug].tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/pojem/[slug].tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/slovnik.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/fonts/RobotoSlab.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/illustrations/books.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/illustrations/education.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/ChakraTheme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/ChakraTheme.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ConsultingForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ConsultingForm.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/CourseLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/CourseLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Dunno.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Dunno.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/MailCTA.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/MailCTA.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navbar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Search.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ToC/TableOfContents.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ToC/TableOfContents.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/indexes/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/courses/zacnete-zde.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/courses/zacnete-zde.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/consult.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/consult.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/courses/bitcoin.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/courses/defi.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/courses/ethereum.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/courses/jak-koupit-crypto.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/courses/zacnete-zde.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/legal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/legal.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/team.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/team.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/android-chrome-192x192.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/android-chrome-192x192.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/apple-touch-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/apple-touch-icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avatars/dominik.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/avatars/pepa.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/avatars/pepa.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/browserconfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/public/browserconfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon-16x16.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon-16x16.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon-32x32.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon-32x32.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/glyph.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/glyph.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo_inverted.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mstile-150x150.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/mstile-150x150.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/safari-pinned-tab.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/safari-pinned-tab.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/site.webmanifest" beforeDir="false" afterPath="$PROJECT_DIR$/public/site.webmanifest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/DefaultSEO.ts" beforeDir="false" afterPath="$PROJECT_DIR$/util/DefaultSEO.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/android-chrome-512x512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/courses/bitcoin.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/courses/btc.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/courses/ethereum.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/courses/kripl.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/getApiUrl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/util/getApiUrl.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,9 +73,6 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
-  </component>
-  <component name="ProblemsViewState">
-    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="1m9oG3lRsZWlXpEnxssC0wtLGsw" />
   <component name="ProjectLevelVcsManager">
@@ -87,7 +93,7 @@
     <property name="add_unversioned_files" value="$PROJECT_DIR$/.env.local&#10;/Users/pepa/Programming/jaknacrypto.cz/node_modules/@chakra-ui/react/dist/types/index.d.ts" />
     <property name="javascript.nodejs.core.library.configured.version" value="14.15.4" />
     <property name="javascript.nodejs.core.library.typings.version" value="14.14.32" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pages" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/illustrations" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -98,30 +104,31 @@
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Console Font" />
+    <property name="settings.editor.selected.configurable" value="preferences.intentionPowerPack" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+    <property name="ts.rename.search.for.js.occurrences" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/illustrations" />
+      <recent name="$PROJECT_DIR$/components" />
       <recent name="$PROJECT_DIR$/pages" />
       <recent name="$PROJECT_DIR$/public" />
-      <recent name="$PROJECT_DIR$/components" />
       <recent name="$PROJECT_DIR$/pages/courses" />
-      <recent name="$PROJECT_DIR$/pages/courses/bitcoin" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pages" />
       <recent name="$PROJECT_DIR$/components/ToC" />
       <recent name="$PROJECT_DIR$/public/avatars" />
       <recent name="$PROJECT_DIR$/components" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/pages/courses/bitcoin" />
+    </key>
+    <key name="es6.move.members.recent.items">
+      <recent name="$PROJECT_DIR$/components/DifficultyTag.tsx" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.Frontend debug">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="Frontend debug" type="JavascriptDebugType" uri="http://localhost:3000">
-      <method v="2" />
-    </configuration>
-    <configuration name="generate-fts-indexes.js" type="NodeJSConfigurationType" nameIsGenerated="true" path-to-js-file="generate-fts-indexes.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
     <configuration name="dev" type="js.build_tools.npm" nameIsGenerated="true">
@@ -136,7 +143,6 @@
     </configuration>
     <list>
       <item itemvalue="JavaScript Debug.Frontend debug" />
-      <item itemvalue="Node.js.generate-fts-indexes.js" />
       <item itemvalue="npm.dev" />
     </list>
   </component>
@@ -191,7 +197,12 @@
       <workItem from="1616067452399" duration="598000" />
       <workItem from="1616087968132" duration="611000" />
       <workItem from="1616110144955" duration="598000" />
-      <workItem from="1616164984220" duration="15377000" />
+      <workItem from="1616164984220" duration="19235000" />
+      <workItem from="1616254149809" duration="13899000" />
+      <workItem from="1616366101471" duration="9000" />
+      <workItem from="1616436658427" duration="1329000" />
+      <workItem from="1616439697273" duration="141000" />
+      <workItem from="1616439861871" duration="15203000" />
     </task>
     <task id="LOCAL-00001" summary="postinstall">
       <created>1608915917969</created>
@@ -389,7 +400,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615664534950</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="HELLO GUYS THIS IS PEPA AND WELCOME TO THE BIGGEST KKCZ UPDATE EVER&#10;hope you enjoy UwU">
+      <created>1616245436656</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1616245436656</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -411,8 +429,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: lets go" />
-    <MESSAGE value="dummy dum" />
     <MESSAGE value="feat: search" />
     <MESSAGE value="feat: better search" />
     <MESSAGE value="test: visual regression testing" />
@@ -436,6 +452,8 @@
     <MESSAGE value="fix: visual bugs, wip: ToC" />
     <MESSAGE value="feat: YUGE UPDATE, LAUNCH DAY IS NEAR, BRACE YOURSELVES" />
     <MESSAGE value="feat: YUGE UPDATE #2" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: YUGE UPDATE #2" />
+    <MESSAGE value="HELLO GUYS THIS IS PEPA AND WELCOME TO THE BIGGEST KKCZ UPDATE EVER&#10;hope you enjoy UwU" />
+    <MESSAGE value="term" />
+    <option name="LAST_COMMIT_MESSAGE" value="term" />
   </component>
 </project>

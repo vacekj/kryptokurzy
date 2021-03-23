@@ -1,11 +1,9 @@
 import Navbar from "components/Navbar";
 import Footer from "components/Footer";
-import MailCTA, { qs } from "../components/MailCTA";
+import { qs } from "../components/MailCTA";
 import Head from "next/head";
-import ConsultingForm from "../components/ConsultingForm";
 import { NextSeo } from "next-seo";
 import {
-	Avatar,
 	Box,
 	Container,
 	Heading,
@@ -13,9 +11,7 @@ import {
 	Text,
 	useColorModeValue,
 	VStack,
-	Link,
 	HStack,
-	Image,
 	useToast,
 	FormControl,
 	FormLabel,
@@ -26,7 +22,6 @@ import {
 	Radio,
 	Button,
 } from "@chakra-ui/react";
-import { motion, useTransform, useViewportScroll } from "framer-motion";
 import { Controller, useForm } from "react-hook-form";
 import React, { useState } from "react";
 

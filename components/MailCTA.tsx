@@ -1,5 +1,4 @@
 import {
-	Box,
 	Button,
 	Container,
 	Heading,
@@ -64,73 +63,69 @@ export default function MailCTA() {
 	}
 
 	return (
-		<Box>
-			<Container
-				bg={dark ? "gray.800" : "gray.50"}
-				my={8}
-				rounded={"xl"}
-				maxW={["full", "5xl"]}
-				p={[4, 16]}
+		<Container
+			bg={dark ? "gray.800" : "gray.50"}
+			my={8}
+			rounded={"xl"}
+			maxW={["full", "5xl"]}
+			p={[4, 16]}
+		>
+			<HStack
+				spacing={[0]}
+				justifyContent="space-around"
+				alignItems="center"
 			>
-				<HStack
-					spacing={[0]}
-					justifyContent="space-around"
-					alignItems="center"
-				>
-					<Image
-						height={"150px"}
-						display={["none", "block"]}
-						src={"/illustrations/email.svg"}
-						alt={"Ilustrace"}
-					/>
-					<VStack alignItems={"start"}>
-						<Heading fontSize={"4xl"}>
-							Crypto ve vaší emailové schránce
-						</Heading>
-						<Text
-							color={dark ? "gray.200" : "gray.800"}
-							fontSize={"2xl"}
-						>
-							Crypto novinky doručené do vaší emailové schránky
-						</Text>
-						<form onSubmit={handleSubmit(onSubmit)}>
-							<HStack w="full" spacing={0}>
-								<Input
-									ref={register({
-										required: true,
-										minLength: 5,
-										maxLength: 60,
-										pattern: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
-									})}
-									name={"email"}
-									focusBorderColor={"brand.400"}
-									size={"lg"}
-									w={"full"}
-									bg={inputBg}
-									type={"email"}
-									autoComplete={"email"}
-									placeholder="vas@email.cz"
-									borderRightRadius={0}
-									mr={0}
-									aria-label={
-										"Emailová adresa pro odběr novinek"
-									}
-								/>
-								<Button
-									variant={"brand"}
-									ml={0}
-									size="lg"
-									type={"submit"}
-									isLoading={loading}
-									borderLeftRadius={0}
-								>
-									Odebírat
-								</Button>
-							</HStack>
-						</form>
-					</VStack>
-				</HStack>
-			</Container>
-		</Box>
+				<Image
+					height={"150px"}
+					display={["none", "block"]}
+					src={"/illustrations/email.svg"}
+					alt={"Ilustrace"}
+				/>
+				<VStack alignItems={"start"}>
+					<Heading fontSize={"4xl"}>
+						Crypto ve vaší emailové schránce
+					</Heading>
+					<Text
+						color={dark ? "gray.200" : "gray.800"}
+						fontSize={"2xl"}
+					>
+						Crypto novinky doručené do vaší emailové schránky
+					</Text>
+					<form onSubmit={handleSubmit(onSubmit)}>
+						<HStack w="full" spacing={0}>
+							<Input
+								ref={register({
+									required: true,
+									minLength: 5,
+									maxLength: 60,
+									pattern: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+								})}
+								name={"email"}
+								focusBorderColor={"brand.400"}
+								size={"lg"}
+								w={"full"}
+								bg={inputBg}
+								type={"email"}
+								autoComplete={"email"}
+								placeholder="vas@email.cz"
+								borderRightRadius={0}
+								mr={0}
+								aria-label={"Emailová adresa pro odběr novinek"}
+							/>
+							<Button
+								variant={"brand"}
+								ml={0}
+								size="lg"
+								type={"submit"}
+								isLoading={loading}
+								borderLeftRadius={0}
+							>
+								Odebírat
+							</Button>
+						</HStack>
+					</form>
+				</VStack>
+			</HStack>
+		</Container>
 	);
 }

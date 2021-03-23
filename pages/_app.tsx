@@ -6,7 +6,7 @@ import { DefaultSeo } from "next-seo";
 import SEO from "util/DefaultSEO";
 import { usePlatform } from "caphooks/platform";
 import { hotjar } from "react-hotjar";
-
+import { Global } from "@emotion/react";
 function MyApp({ Component, pageProps }) {
 	const { platform } = usePlatform();
 
@@ -46,6 +46,12 @@ function MyApp({ Component, pageProps }) {
 				<link rel="shortcut icon" href="/favicon.ico?v=m2njO944N0" />
 				<meta name="msapplication-TileColor" content="#000000" />
 				<meta name="theme-color" content="#ffffff" />
+				<meta charSet="UTF-8" />
+				<meta
+					name="viewport"
+					content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+				/>
+				<meta httpEquiv="X-UA-Compatible" content="ie=edge" />
 			</Head>
 			<DefaultSeo {...SEO} />
 			{platform === "web" && (
@@ -54,9 +60,18 @@ function MyApp({ Component, pageProps }) {
 				</CookieConsent>
 			)}
 			<ChakraProvider theme={theme}>
+				<Fonts />
 				<Component {...pageProps} />
 			</ChakraProvider>
 		</>
+	);
+}
+
+function Fonts() {
+	return (
+		<Global
+			styles={`@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&display=swap');`}
+		/>
 	);
 }
 
