@@ -46,13 +46,11 @@ export const getStaticProps: GetStaticProps<PojemProps> = async (context) => {
 		components: Components,
 		provider: MarkdownChakraProvider,
 	});
-	return { props: { pojem, mdxSource } };
+	return { props: { pojem, mdxSource }, revalidate: 1 };
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-	const terms: Term[] =
-		(await strapiFetch("/terms").then((e) => e.json())) ?? [];
-
+	const terms: Term[] = await strapiFetch("/terms").then((e) => e.json());
 	const slugs = terms.map((a) => {
 		return {
 			params: {

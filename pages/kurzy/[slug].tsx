@@ -42,12 +42,13 @@ export const getStaticProps: GetStaticProps<KurzyProps> = async (context) => {
 		provider: MarkdownChakraProvider,
 	});
 	const headings = extractHeadingsFromMarkdown(article.content);
-	return { props: { article, mdxSource, headings } };
+	return { props: { article, mdxSource, headings }, revalidate: 1 };
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-	const articles: Article[] =
-		(await strapiFetch("/articles").then((e) => e.json())) ?? [];
+	const articles: Article[] = await strapiFetch("/articles").then((e) =>
+		e.json()
+	);
 
 	const slugs = articles.map((a) => {
 		return {
