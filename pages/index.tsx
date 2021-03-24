@@ -18,9 +18,8 @@ import {
 } from "@chakra-ui/react";
 import { HiOutlineClock } from "react-icons/hi";
 import React from "react";
-import { NextChakraLink } from "../components/NextChakraLink";
+import { NextChakraLink, StrapiImage } from "../components/NextChakraLink";
 import NextLink from "next/link";
-import { STRAPI_URL } from "pages/kurzy/[slug]";
 import Dunno from "../components/Dunno";
 import { Article } from "./kurzy/[slug]";
 import { GetStaticProps } from "next";
@@ -30,6 +29,7 @@ import { getReadingTime } from "../components/ReadingTime";
 import { getCourseUrl } from "../components/CourseUrl";
 import { Term } from "./pojem/[slug]";
 import Terms from "../components/Terms";
+import { STRAPI_URL, strapiFetch } from "../util/getApiUrl";
 
 type IndexProps = {
 	articles: Article[];
@@ -42,13 +42,10 @@ export default function Index(props: IndexProps) {
 
 	return (
 		<>
-			<Head>
-				<NextSeo
-					title="kryptokurzy.cz"
-					description="KryptoKurzy.cz je Váš ověřený zdroj informací o kryptoměnách, decentralizovaných financích a novinek ze světa crypta"
-				/>
-				<title>KryptoKurzy.cz</title>
-			</Head>
+			<NextSeo
+				title="kryptokurzy.cz"
+				description="KryptoKurzy.cz je Váš ověřený zdroj informací o kryptoměnách, decentralizovaných financích a novinek ze světa crypta"
+			/>
 			<Navbar />
 			<Flex
 				direction={["column", "row"]}
@@ -105,7 +102,7 @@ export default function Index(props: IndexProps) {
 						<Box fontWeight={"medium"} textTransform={"uppercase"}>
 							Doporučený článek
 						</Box>
-						<Image
+						<StrapiImage
 							rounded={10}
 							w={"full"}
 							objectFit={"cover"}
@@ -175,17 +172,16 @@ export default function Index(props: IndexProps) {
 }
 
 export const getStaticProps: GetStaticProps<IndexProps> = async (ctx) => {
-	const articles: Article[] = await fetch(
-		STRAPI_URL + "/articles"
-	).then((e) => e.json());
-
-	const recommendedArticle: { id: number; article: Article } = await fetch(
-		STRAPI_URL + "/index-recommended-article"
-	).then((e) => e.json());
-
-	const terms: Term[] = await fetch(STRAPI_URL + "/terms").then((e) =>
+	const articles: Article[] = await strapiFetch("/articles").then((e) =>
 		e.json()
 	);
+
+	const recommendedArticle: {
+		id: number;
+		article: Article;
+	} = await strapiFetch("/index-recommended-article").then((e) => e.json());
+
+	const terms: Term[] = await strapiFetch("/terms").then((e) => e.json());
 
 	return {
 		props: {
@@ -213,7 +209,7 @@ function ArticleCard(props: { article: Article }) {
 				spacing={4}
 				flexBasis={"50%"}
 			>
-				<Image
+				<StrapiImage
 					rounded={10}
 					w={"full"}
 					objectFit={"cover"}

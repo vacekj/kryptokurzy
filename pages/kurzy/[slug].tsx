@@ -4,49 +4,52 @@ import CourseLayout from "../../components/CourseLayout";
 import fetch from "node-fetch";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { MdxRemote } from "next-mdx-remote/types";
-import { Components } from "../../components/MarkdownComponents";
+import {
+	Components,
+	MarkdownChakraProvider,
+} from "../../components/MarkdownComponents";
+import unified from "unified";
+import markdown from "remark-parse";
+import toString from "mdast-util-to-string";
+import { Heading, Root } from "mdast";
+import { STRAPI_URL, strapiFetch } from "../../util/getApiUrl";
 
 type KurzyProps = {
 	article: Article;
 	mdxSource: MdxRemote.Source;
+	headings: string[];
 };
+
 export default function KurzySlug(props: KurzyProps) {
 	const content = hydrate(props.mdxSource, {
 		components: Components,
+		provider: MarkdownChakraProvider,
 	});
 	return (
-		<CourseLayout
-			article={props.article}
-			links={[
-				{ href: "#co", text: "Co je bitcoin?" },
-				{ href: "#kcemu", text: "K čemu se používá?" },
-				{ href: "#hodnota", text: "Proč má bitcoin hodnotu?" },
-			]}
-		>
+		<CourseLayout article={props.article} headings={props.headings}>
 			{content}
 		</CourseLayout>
 	);
 }
 
-export const STRAPI_URL =
-	process.env.NEXT_PUBLIC_API_URL || "http://localhost:1337";
-
 export const getStaticProps: GetStaticProps<KurzyProps> = async (context) => {
-	const article: Article = await fetch(
-		STRAPI_URL + "/articles?slug=" + context.params.slug
+	const article: Article = await strapiFetch(
+		"/articles?slug=" + context.params.slug
 	)
 		.then((e) => e.json())
 		.then((articles) => articles[0]);
 	const mdxSource = await renderToString(article.content, {
 		components: Components,
+		provider: MarkdownChakraProvider,
 	});
-	return { props: { article, mdxSource } };
+	const headings = extractHeadingsFromMarkdown(article.content);
+	return { props: { article, mdxSource, headings } };
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-	const articles: Article[] = await fetch(
-		STRAPI_URL + "/articles"
-	).then((e) => e.json());
+	const articles: Article[] = await strapiFetch("/articles").then((e) =>
+		e.json()
+	);
 
 	const slugs = articles.map((a) => {
 		return {
@@ -61,6 +64,14 @@ export const getStaticPaths: GetStaticPaths = async () => {
 		fallback: false,
 	};
 };
+
+function extractHeadingsFromMarkdown(source: string) {
+	return (unified().use(markdown).parse(source) as Root).children
+		.filter((node) => node.type === "heading")
+		.filter((node) => (node as Heading).children.length > 0)
+		.map((h) => h.children[0])
+		.map((h) => toString(h));
+}
 
 export type Difficulty = 1 | 2 | 3;
 

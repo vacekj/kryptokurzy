@@ -13,18 +13,15 @@ import {
 import { MenuItemLink } from "./MobileNav";
 import { FaChevronDown } from "react-icons/fa";
 import { IoMenu } from "react-icons/io5";
-export function ToC(
-	props: React.ComponentProps<"div"> & {
-		links: MenuItemLink[];
-	}
-) {
+import slugify from "slugify";
+export function ToC(props: { headings: string[] }) {
 	const isMobile = useBreakpointValue({ base: true, md: false });
 
 	return (
 		<>
 			<Menu>
 				<MenuButton
-					display={["none", "flex"]}
+					display={"flex"}
 					as={Button}
 					rightIcon={isMobile ? null : <Icon as={FaChevronDown} />}
 				>
@@ -32,9 +29,19 @@ export function ToC(
 				</MenuButton>
 				<Portal>
 					<MenuList zIndex={1000000}>
-						{props.links.map((l) => (
-							<MenuItem key={l.href}>
-								<Link href={l.href}>{l.text}</Link>
+						{props.headings.map((l) => (
+							<MenuItem key={l}>
+								<Link
+									w={"full"}
+									href={
+										"#" +
+										slugify(l, {
+											lower: true,
+										})
+									}
+								>
+									{l}
+								</Link>
 							</MenuItem>
 						))}
 					</MenuList>

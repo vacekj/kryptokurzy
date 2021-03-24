@@ -8,7 +8,8 @@ import { Tag } from "@chakra-ui/react";
 import { BiChevronRight } from "react-icons/bi";
 import React, { useEffect, useRef } from "react";
 import useSWR from "swr";
-import { Article, STRAPI_URL } from "../pages/kurzy/[slug]";
+import { Article } from "../pages/kurzy/[slug]";
+import { STRAPI_URL } from "../util/getApiUrl";
 
 // @ts-ignore
 const fetcher = (...args) => fetch(...args).then((res) => res.json());

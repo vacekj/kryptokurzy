@@ -15,10 +15,10 @@ import React, { useRef } from "react";
 import { Term } from "pages/pojem/[slug]";
 import { GetStaticProps } from "next";
 import fetch from "node-fetch";
-import { STRAPI_URL } from "./kurzy/[slug]";
 import { useMiniSearch } from "react-minisearch";
 import _ from "lodash";
 import { NextChakraLink } from "../components/NextChakraLink";
+import { STRAPI_URL, strapiFetch } from "../util/getApiUrl";
 
 type TermsProps = {
 	terms: Term[];
@@ -146,9 +146,7 @@ export default function Terms(props: TermsProps) {
 }
 
 export const getStaticProps: GetStaticProps<TermsProps> = async (ctx) => {
-	const terms: Term[] = await fetch(STRAPI_URL + "/terms").then((e) =>
-		e.json()
-	);
+	const terms: Term[] = await strapiFetch("/terms").then((e) => e.json());
 
 	return {
 		props: {

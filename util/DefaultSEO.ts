@@ -1,4 +1,6 @@
-export default {
+import { NextSeoProps } from "next-seo";
+
+const defaultSeo: NextSeoProps = {
 	description:
 		"KryptoKurzy.cz je první blockchainová a crypto vzdělávací platforma v češtině. Naše strukturované kurzy Vás provedou tím, jak tyto technologie fungují, jak do nich bezpečně investovat, jak s kryptoměnami obchodovat a jak programovat na blockchainu.",
 	openGraph: {
@@ -13,3 +15,5 @@ export default {
 		cardType: "summary_large_image",
 	},
 };
+
+export default defaultSeo;

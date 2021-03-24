@@ -61,4 +61,11 @@ export const theme = extendTheme({
 		heading: "IBM Plex Sans",
 		body: "IBM Plex Sans",
 	},
+	styles: {
+		global: {
+			html: {
+				scrollBehavior: "smooth",
+			},
+		},
+	},
 });

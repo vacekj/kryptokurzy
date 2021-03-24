@@ -11,7 +11,6 @@ import {
 	useColorModeValue,
 	VStack,
 } from "@chakra-ui/react";
-import { MenuItemLink } from "./ToC/MobileNav";
 import React, { useState } from "react";
 import { motion, useTransform, useViewportScroll } from "framer-motion";
 import { FaChevronLeft } from "react-icons/fa";
@@ -23,10 +22,14 @@ import cs from "date-fns/locale/cs";
 import { HiOutlineClock } from "react-icons/hi";
 import { Article } from "../pages/kurzy/[slug]";
 import { difficulties, difficultiesColors } from "./DifficultyTag";
+import { StrapiImage } from "./NextChakraLink";
+import { NextSeo } from "next-seo";
+import NextHead from "next/head";
+import removeMd from "remove-markdown";
 
 export default function CourseLayout(props: {
 	children: React.ReactNode;
-	links: MenuItemLink[];
+	headings: string[];
 	article: Article;
 }) {
 	const { scrollYProgress, scrollY } = useViewportScroll();
@@ -44,6 +47,10 @@ export default function CourseLayout(props: {
 
 	return (
 		<>
+			<NextSeo
+				title={props.article.title}
+				description={removeMd(props.article.content).slice(0, 150)}
+			/>
 			<Navbar />
 			<HStack
 				position={"fixed"}
@@ -67,19 +74,19 @@ export default function CourseLayout(props: {
 					justifyContent={"space-between"}
 					maxW={["full", "5xl"]}
 				>
-					<HStack spacing={8}>
+					<HStack spacing={[4, 8]}>
 						<IconButton
 							aria-label={"Zpět"}
 							onClick={() => router.back()}
 						>
 							<Icon as={FaChevronLeft} />
 						</IconButton>
-						<Box fontSize={["sm", "lg"]} fontWeight={"medium"}>
+						<Box fontSize={["md", "lg"]} fontWeight={"medium"}>
 							{props.article.title}
 						</Box>
 					</HStack>
 
-					<ToC links={props.links}>{props.links}</ToC>
+					<ToC headings={props.headings} />
 				</HStack>
 
 				<motion.div
@@ -168,7 +175,7 @@ export default function CourseLayout(props: {
 						</Box>
 					</HStack>
 				</HStack>
-				<Image
+				<StrapiImage
 					rounded={10}
 					w={"full"}
 					objectFit={"cover"}

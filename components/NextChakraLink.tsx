@@ -5,6 +5,8 @@ import {
 	Link as ChakraLink,
 	LinkProps as ChakraLinkProps,
 } from "@chakra-ui/react";
+import { getStrapiUrl } from "../util/getApiUrl";
+import { Image } from "@chakra-ui/react";
 
 export type NextChakraLinkProps = PropsWithChildren<
 	NextLinkProps & Omit<ChakraLinkProps, "as">
@@ -34,4 +36,8 @@ export const NextChakraLink = ({
 			<ChakraLink {...chakraProps}>{children}</ChakraLink>
 		</NextLink>
 	);
+};
+
+export const StrapiImage = ({ src, ...chakraProps }) => {
+	return <Image src={getStrapiUrl() + src} {...chakraProps} />;
 };

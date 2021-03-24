@@ -10,37 +10,12 @@ import { Global } from "@emotion/react";
 
 function MyApp({ Component, pageProps }) {
 	const { platform } = usePlatform();
-
-	if (
-		process.env.NODE_ENV === "production" &&
-		typeof window !== "undefined"
-	) {
+	if (process.env.NODE_ENV === "production" && process.browser) {
 		hotjar.initialize(2188656, 6);
 	}
 	return (
 		<>
 			<Head>
-				{process.env.NODE_ENV === "production" && process.browser && (
-					<>
-						<script
-							async
-							src="https://www.googletagmanager.com/gtag/js?id=G-SE7E1WDWEL"
-						/>
-						<script
-							async
-							dangerouslySetInnerHTML={{
-								__html: `
-								  window.dataLayer = window.dataLayer || [];
-								  function gtag(){dataLayer.push(arguments);}
-								  gtag('js', new Date());
-								
-								  gtag('config', 'G-SE7E1WDWEL');
-								`,
-							}}
-						/>
-					</>
-				)}
-				<html lang={"cs"} />
 				<link
 					rel="apple-touch-icon"
 					sizes="180x180"
@@ -73,6 +48,7 @@ function MyApp({ Component, pageProps }) {
 					content="width=device-width, initial-scale=1.0, viewport-fit=cover"
 				/>
 				<meta httpEquiv="X-UA-Compatible" content="ie=edge" />
+				<title>KryptoKurzy.cz</title>
 			</Head>
 			<DefaultSeo {...SEO} />
 			{platform === "web" && (
@@ -93,6 +69,34 @@ function Fonts() {
 		<Global
 			styles={`@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&display=swap');`}
 		/>
+	);
+}
+
+function GoogleAnalytics() {
+	return (
+		<>
+			s
+			{process.env.NODE_ENV === "production" && process.browser && (
+				<>
+					<script
+						async
+						src="https://www.googletagmanager.com/gtag/js?id=G-SE7E1WDWEL"
+					/>
+					<script
+						async
+						dangerouslySetInnerHTML={{
+							__html: `
+								  window.dataLayer = window.dataLayer || [];
+								  function gtag(){dataLayer.push(arguments);}
+								  gtag('js', new Date());
+								
+								  gtag('config', 'G-SE7E1WDWEL');
+								`,
+						}}
+					/>
+				</>
+			)}
+		</>
 	);
 }
 
