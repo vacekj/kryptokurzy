@@ -6,7 +6,6 @@ import {
 	HStack,
 	Icon,
 	IconButton,
-	Image,
 	Tag,
 	useColorModeValue,
 	VStack,
@@ -24,7 +23,6 @@ import { Article } from "../pages/kurzy/[slug]";
 import { difficulties, difficultiesColors } from "./DifficultyTag";
 import { StrapiImage } from "./NextChakraLink";
 import { NextSeo } from "next-seo";
-import NextHead from "next/head";
 import removeMd from "remove-markdown";
 
 export default function CourseLayout(props: {

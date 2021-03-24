@@ -1,4 +1,3 @@
-import { Capacitor } from "@capacitor/core";
 
 export function getApiUrl() {
 	const isDevelopment = process.env.NODE_ENV === "development";

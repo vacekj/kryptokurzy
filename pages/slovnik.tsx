@@ -14,11 +14,10 @@ import {
 import React, { useRef } from "react";
 import { Term } from "pages/pojem/[slug]";
 import { GetStaticProps } from "next";
-import fetch from "node-fetch";
 import { useMiniSearch } from "react-minisearch";
 import _ from "lodash";
 import { NextChakraLink } from "../components/NextChakraLink";
-import { STRAPI_URL, strapiFetch } from "../util/getApiUrl";
+import { strapiFetch } from "../util/getApiUrl";
 
 type TermsProps = {
 	terms: Term[];

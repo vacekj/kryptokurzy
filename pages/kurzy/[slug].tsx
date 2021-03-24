@@ -1,7 +1,6 @@
 import renderToString from "next-mdx-remote/render-to-string";
 import hydrate from "next-mdx-remote/hydrate";
 import CourseLayout from "../../components/CourseLayout";
-import fetch from "node-fetch";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { MdxRemote } from "next-mdx-remote/types";
 import {
@@ -12,7 +11,7 @@ import unified from "unified";
 import markdown from "remark-parse";
 import toString from "mdast-util-to-string";
 import { Heading, Root } from "mdast";
-import { STRAPI_URL, strapiFetch } from "../../util/getApiUrl";
+import { strapiFetch } from "../../util/getApiUrl";
 
 type KurzyProps = {
 	article: Article;
@@ -47,9 +46,8 @@ export const getStaticProps: GetStaticProps<KurzyProps> = async (context) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-	const articles: Article[] = await strapiFetch("/articles").then((e) =>
-		e.json()
-	);
+	const articles: Article[] =
+		(await strapiFetch("/articles").then((e) => e.json())) ?? [];
 
 	const slugs = articles.map((a) => {
 		return {

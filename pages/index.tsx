@@ -1,7 +1,6 @@
 import Navbar from "components/Navbar";
 import Footer from "components/Footer";
 import MailCTA from "../components/MailCTA";
-import Head from "next/head";
 import { NextSeo } from "next-seo";
 import {
 	Box,
@@ -11,7 +10,6 @@ import {
 	Heading,
 	HStack,
 	Icon,
-	Image,
 	SimpleGrid,
 	useColorModeValue,
 	VStack,
@@ -23,13 +21,12 @@ import NextLink from "next/link";
 import Dunno from "../components/Dunno";
 import { Article } from "./kurzy/[slug]";
 import { GetStaticProps } from "next";
-import fetch from "node-fetch";
 import { DifficultyTag } from "../components/DifficultyTag";
 import { getReadingTime } from "../components/ReadingTime";
 import { getCourseUrl } from "../components/CourseUrl";
 import { Term } from "./pojem/[slug]";
 import Terms from "../components/Terms";
-import { STRAPI_URL, strapiFetch } from "../util/getApiUrl";
+import { strapiFetch } from "../util/getApiUrl";
 
 type IndexProps = {
 	articles: Article[];

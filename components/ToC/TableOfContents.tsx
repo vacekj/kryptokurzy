@@ -10,7 +10,6 @@ import {
 	Portal,
 	useBreakpointValue,
 } from "@chakra-ui/react";
-import { MenuItemLink } from "./MobileNav";
 import { FaChevronDown } from "react-icons/fa";
 import { IoMenu } from "react-icons/io5";
 import slugify from "slugify";

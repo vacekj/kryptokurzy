@@ -1,6 +1,5 @@
 import renderToString from "next-mdx-remote/render-to-string";
 import hydrate from "next-mdx-remote/hydrate";
-import fetch from "node-fetch";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { MdxRemote } from "next-mdx-remote/types";
 import TermLayout from "../../components/TermLayout";
@@ -51,7 +50,8 @@ export const getStaticProps: GetStaticProps<PojemProps> = async (context) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-	const terms: Term[] = await strapiFetch("/terms").then((e) => e.json());
+	const terms: Term[] =
+		(await strapiFetch("/terms").then((e) => e.json())) ?? [];
 
 	const slugs = terms.map((a) => {
 		return {
