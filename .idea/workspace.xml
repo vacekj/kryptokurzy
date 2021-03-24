@@ -7,12 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29e902be-cac6-49c5-a000-dbc345811b23" name="Default Changelist" comment="term">
-      <change afterPath="$PROJECT_DIR$/components/MarkdownComponents.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
+    <list default="true" id="29e902be-cac6-49c5-a000-dbc345811b23" name="Default Changelist" comment="something something we launching soon or what?">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Search.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Terms.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Terms.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/kurzy/[slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/kurzy/[slug].tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/pojem/[slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/pojem/[slug].tsx" afterDir="false" />
     </list>
@@ -162,7 +159,7 @@
       <workItem from="1616366101471" duration="9000" />
       <workItem from="1616436658427" duration="1329000" />
       <workItem from="1616439697273" duration="141000" />
-      <workItem from="1616439861871" duration="17597000" />
+      <workItem from="1616439861871" duration="20199000" />
     </task>
     <task id="LOCAL-00001" summary="postinstall">
       <created>1608915917969</created>
@@ -374,7 +371,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616500113008</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="something something we launching soon or what?">
+      <created>1616511192259</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1616511192259</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -396,7 +400,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: search" />
     <MESSAGE value="feat: better search" />
     <MESSAGE value="test: visual regression testing" />
     <MESSAGE value="test: check for 404s recursively starting from index" />
@@ -421,6 +424,7 @@
     <MESSAGE value="feat: YUGE UPDATE #2" />
     <MESSAGE value="HELLO GUYS THIS IS PEPA AND WELCOME TO THE BIGGEST KKCZ UPDATE EVER&#10;hope you enjoy UwU" />
     <MESSAGE value="term" />
-    <option name="LAST_COMMIT_MESSAGE" value="term" />
+    <MESSAGE value="something something we launching soon or what?" />
+    <option name="LAST_COMMIT_MESSAGE" value="something something we launching soon or what?" />
   </component>
 </project>

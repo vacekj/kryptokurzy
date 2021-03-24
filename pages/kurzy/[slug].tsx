@@ -4,7 +4,6 @@ import CourseLayout from "../../components/CourseLayout";
 import fetch from "node-fetch";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { MdxRemote } from "next-mdx-remote/types";
-import { Heading } from "@chakra-ui/react";
 import { Components } from "../../components/MarkdownComponents";
 
 type KurzyProps = {

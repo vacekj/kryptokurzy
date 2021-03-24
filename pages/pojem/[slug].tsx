@@ -3,7 +3,6 @@ import hydrate from "next-mdx-remote/hydrate";
 import fetch from "node-fetch";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { MdxRemote } from "next-mdx-remote/types";
-import { Heading } from "@chakra-ui/react";
 import TermLayout from "../../components/TermLayout";
 import { Difficulty } from "../kurzy/[slug]";
 import { Components } from "../../components/MarkdownComponents";

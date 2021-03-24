@@ -7,6 +7,7 @@ import SEO from "util/DefaultSEO";
 import { usePlatform } from "caphooks/platform";
 import { hotjar } from "react-hotjar";
 import { Global } from "@emotion/react";
+
 function MyApp({ Component, pageProps }) {
 	const { platform } = usePlatform();
 
@@ -52,6 +53,22 @@ function MyApp({ Component, pageProps }) {
 					content="width=device-width, initial-scale=1.0, viewport-fit=cover"
 				/>
 				<meta httpEquiv="X-UA-Compatible" content="ie=edge" />
+				<script
+					async
+					src="https://www.googletagmanager.com/gtag/js?id=G-SE7E1WDWEL"
+				/>
+				<script
+					dangerouslySetInnerHTML={{
+						__html: `
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SE7E1WDWEL');
+</script>`,
+					}}
+				/>
 			</Head>
 			<DefaultSeo {...SEO} />
 			{platform === "web" && (
