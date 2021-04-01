@@ -81,7 +81,7 @@ export type Article = {
 	difficulty: Difficulty;
 	tags: Tag[];
 	slug: string;
-	cover: StrapiImage;
+	cover: StrapiImageType;
 	published_at: string;
 	created_at: string;
 	updated_at: string;
@@ -95,7 +95,7 @@ export type Tag = {
 	updated_at: string;
 };
 
-export interface StrapiImage {
+export interface StrapiImageType {
 	id: number;
 	name: string;
 	alternativeText: string;

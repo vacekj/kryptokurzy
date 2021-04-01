@@ -10,7 +10,11 @@ export function getApiUrl() {
 export function getStrapiUrl() {
 	const isDevelopment = process.env.NODE_ENV === "development";
 	if (isDevelopment) {
-		return `http://${process.env.NEXT_PUBLIC_HOSTNAME ?? "localhost"}:1337`;
+		return `http://${
+			Boolean(process.env.NEXT_PUBLIC_HOSTNAME)
+				? process.env.NEXT_PUBLIC_HOSTNAME
+				: "localhost"
+		}:1337`;
 	} else {
 		return "https://api.kryptokurzy.cz";
 	}

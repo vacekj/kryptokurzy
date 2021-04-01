@@ -178,7 +178,7 @@ export default function CourseLayout(props: {
 					w={"full"}
 					objectFit={"cover"}
 					h={[40, "80"]}
-					src={props.article.cover.url}
+					strapiImage={props.article.cover}
 					alt={props.article.title}
 				/>
 				<Box fontSize={"xl"} pb={10} position={"relative"}>
