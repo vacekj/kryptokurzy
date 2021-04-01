@@ -7,12 +7,17 @@ import SEO from "util/DefaultSEO";
 import { usePlatform } from "caphooks/platform";
 import { hotjar } from "react-hotjar";
 import { Global } from "@emotion/react";
+import { useEffect } from "react";
 
 function MyApp({ Component, pageProps }) {
 	const { platform } = usePlatform();
-	if (process.env.NODE_ENV === "production" && process.browser) {
-		hotjar.initialize(2188656, 6);
-	}
+
+	useEffect(() => {
+		if (process.env.NODE_ENV === "production" && process.browser) {
+			hotjar.initialize(2188656, 6);
+			console.log("hj init");
+		}
+	}, [process.browser]);
 	return (
 		<>
 			<Head>

@@ -104,7 +104,7 @@ export default function Index(props: IndexProps) {
 							w={"full"}
 							objectFit={"cover"}
 							h={[40, "80"]}
-							src={props.recommendedArticle.cover.url}
+							strapiImage={props.recommendedArticle.cover}
 							alt={props.recommendedArticle.title}
 						/>
 						<Box fontWeight={"bold"} fontSize={"2xl"}>
@@ -211,7 +211,7 @@ function ArticleCard(props: { article: Article }) {
 					w={"full"}
 					objectFit={"cover"}
 					h={[40, "80"]}
-					src={props.article.cover.url}
+					strapiImage={props.article.cover}
 					alt={props.article.title}
 					shadow={"xl"}
 				/>

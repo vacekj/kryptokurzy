@@ -2,11 +2,16 @@ import { PropsWithChildren } from "react";
 import NextLink from "next/link";
 import { LinkProps as NextLinkProps } from "next/dist/client/link";
 import {
+	chakra,
+	ChakraProps,
+	ImageProps,
 	Link as ChakraLink,
 	LinkProps as ChakraLinkProps,
 } from "@chakra-ui/react";
 import { getStrapiUrl } from "../util/getApiUrl";
 import { Image } from "@chakra-ui/react";
+import { StrapiImageType } from "../pages/kurzy/[slug]";
+import NextImage from "next/image";
 
 export type NextChakraLinkProps = PropsWithChildren<
 	NextLinkProps & Omit<ChakraLinkProps, "as">
@@ -38,6 +43,28 @@ export const NextChakraLink = ({
 	);
 };
 
-export const StrapiImage = ({ src, ...chakraProps }) => {
-	return <Image src={getStrapiUrl() + src} {...chakraProps} />;
+export const StrapiImageFactory = chakra(NextImage, {
+	shouldForwardProp: (prop) =>
+		["width", "height", "src", "alt"].includes(prop),
+});
+
+export const StrapiImage = (
+	props: {
+		strapiImage: StrapiImageType;
+	} & ImageProps
+) => {
+	return (
+		<StrapiImageFactory
+			width={props.strapiImage.width}
+			height={props.strapiImage.height}
+			src={getStrapiImageUrl(props.strapiImage)}
+			{...props}
+		/>
+	);
+};
+
+export const getStrapiImageUrl = (strapiImage: StrapiImageType) => {
+	return strapiImage.provider === "local"
+		? `${process.env.NEXT_PUBLIC_STRAPI_URL}${strapiImage.url}`
+		: strapiImage.url;
 };

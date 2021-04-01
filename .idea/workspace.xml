@@ -7,13 +7,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29e902be-cac6-49c5-a000-dbc345811b23" name="Default Changelist" comment="revert last commit">
-      <change afterPath="$PROJECT_DIR$/public/emailsig_vacekj.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+    <list default="true" id="29e902be-cac6-49c5-a000-dbc345811b23" name="Default Changelist" comment="upgrade next">
+      <change afterPath="$PROJECT_DIR$/.env.local.example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/CourseLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/CourseLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/NextChakraLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/NextChakraLink.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/kurzy/[slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/kurzy/[slug].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/getApiUrl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/util/getApiUrl.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +170,7 @@
       <workItem from="1616623765616" duration="2753000" />
       <workItem from="1617285553779" duration="126000" />
       <workItem from="1617285702253" duration="65000" />
-      <workItem from="1617285809160" duration="1923000" />
+      <workItem from="1617285809160" duration="4912000" />
     </task>
     <task id="LOCAL-00001" summary="postinstall">
       <created>1608915917969</created>
@@ -421,7 +424,21 @@
       <option name="project" value="LOCAL" />
       <updated>1616624794594</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="revert last commit">
+      <created>1617290506705</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1617290506705</updated>
+    </task>
+    <task id="LOCAL-00038" summary="upgrade next">
+      <created>1617290548886</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1617290548886</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -465,7 +482,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix: meta description" />
     <MESSAGE value="feat: capacitor, responsivity" />
     <MESSAGE value="feat: fix cap bugs, darkmode-aware status bar" />
     <MESSAGE value="fix: navbar error on web, rename xcode project" />
@@ -490,6 +506,7 @@
     <MESSAGE value="feat: address handling changes" />
     <MESSAGE value="fix: build failure when no courses or terms are present" />
     <MESSAGE value="revert last commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="revert last commit" />
+    <MESSAGE value="upgrade next" />
+    <option name="LAST_COMMIT_MESSAGE" value="upgrade next" />
   </component>
 </project>
