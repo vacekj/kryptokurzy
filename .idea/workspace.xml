@@ -8,8 +8,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="29e902be-cac6-49c5-a000-dbc345811b23" name="Default Changelist" comment="feat: upgrade image to use next/image and automatically infer correct url">
-      <change beforePath="$PROJECT_DIR$/components/NextChakraLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/NextChakraLink.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/getApiUrl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/util/getApiUrl.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2e505752-56cf-4a87-a1b4-a0d2ad23ab68.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2e505752-56cf-4a87-a1b4-a0d2ad23ab68.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/CourseLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/CourseLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Search.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ToC/MenuItem.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ToC/MenuToggle.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ToC/MobileNav.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ToC/TableOfContents.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/TableOfContents.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ToC/mobilenav.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/snapshots/visual.test.ts/Visual Regression Testing -- index.snap.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cypress/snapshots/visual.test.ts/Visual Regression Testing -- team.snap.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/slovnik.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/slovnik.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/team.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/team.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +73,7 @@
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.intentionPowerPack" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="ts.rename.search.for.js.occurrences" value="false" />
   </component>
@@ -72,10 +86,10 @@
       <recent name="$PROJECT_DIR$/public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/components" />
       <recent name="$PROJECT_DIR$/pages" />
       <recent name="$PROJECT_DIR$/components/ToC" />
       <recent name="$PROJECT_DIR$/public/avatars" />
-      <recent name="$PROJECT_DIR$/components" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="es6.move.members.recent.items">
@@ -163,7 +177,8 @@
       <workItem from="1616623765616" duration="2753000" />
       <workItem from="1617285553779" duration="126000" />
       <workItem from="1617285702253" duration="65000" />
-      <workItem from="1617285809160" duration="5186000" />
+      <workItem from="1617285809160" duration="10398000" />
+      <workItem from="1617455860852" duration="11232000" />
     </task>
     <task id="LOCAL-00001" summary="postinstall">
       <created>1608915917969</created>
@@ -438,7 +453,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617295159015</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="feat: upgrade image to use next/image and automatically infer correct url">
+      <created>1617295295780</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1617295295780</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

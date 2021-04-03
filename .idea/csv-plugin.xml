@@ -17,6 +17,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/components/ToC/MobileNav.tsx">
+          <value>
+            <Attribute>
+              <option name="separator" value="&#9;" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/pages/_app.tsx">
           <value>
             <Attribute>
@@ -25,6 +32,13 @@
           </value>
         </entry>
         <entry key="/pages/courses/bitcoin.tsx">
+          <value>
+            <Attribute>
+              <option name="separator" value="&#9;" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/pages/index.tsx">
           <value>
             <Attribute>
               <option name="separator" value="&#9;" />

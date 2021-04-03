@@ -1093,6 +1093,7 @@ sequence|table|33099|33101|1
     </sequence>
     <table id="47" parent="18" name="articles">
       <ObjectId>33057</ObjectId>
+      <Outdated>1</Outdated>
       <Owner>strapi</Owner>
       <StateNumber>1714</StateNumber>
     </table>

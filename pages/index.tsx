@@ -56,6 +56,7 @@ export default function Index(props: IndexProps) {
 					alignItems={"start"}
 					justifyContent={"center"}
 					spacing={4}
+					mb={[4, 0]}
 				>
 					<Heading fontSize={"5xl"} as={"h1"}>
 						Krypto vzdělání
@@ -96,7 +97,11 @@ export default function Index(props: IndexProps) {
 						p={8}
 						flexBasis={"50%"}
 					>
-						<Box fontWeight={"medium"} textTransform={"uppercase"}>
+						<Box
+							mb={[4, 0]}
+							fontWeight={"medium"}
+							textTransform={"uppercase"}
+						>
 							Doporučený článek
 						</Box>
 						<StrapiImage
@@ -220,8 +225,10 @@ function ArticleCard(props: { article: Article }) {
 						{props.article.title}
 					</Box>
 					<HStack>
-						<Icon as={HiOutlineClock} />
-						<Box>{getReadingTime(props.article.content)}</Box>
+						<Icon as={HiOutlineClock} mr={-1} />
+						<Box mr={2}>
+							{getReadingTime(props.article.content)}
+						</Box>
 						<DifficultyTag difficulty={props.article.difficulty} />
 					</HStack>
 				</VStack>

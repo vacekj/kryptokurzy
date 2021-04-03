@@ -10,6 +10,8 @@ import {
 	useColorModeValue,
 	Input,
 	Divider,
+	Link,
+	Stack,
 } from "@chakra-ui/react";
 import React, { useRef } from "react";
 import { Term } from "pages/pojem/[slug]";
@@ -38,15 +40,16 @@ export default function Terms(props: TermsProps) {
 				align={"start"}
 				maxW={["unset", "5xl"]}
 				mx={"auto"}
-				spacing={10}
+				spacing={[4, 10]}
 				p={5}
 			>
-				<HStack
+				<Stack
+					direction={["column", "row"]}
 					spacing={48}
 					w={"full"}
 					bg={recommendedPageBg}
 					rounded={"xl"}
-					p={10}
+					p={[6, 10]}
 				>
 					<Heading
 						as={"h1"}
@@ -59,44 +62,58 @@ export default function Terms(props: TermsProps) {
 						Nové přidáváme každý týden.
 					</Heading>
 					<Image
+						display={["none", "block"]}
 						rounded={10}
 						objectFit={"cover"}
 						h={[40, 60]}
 						src={"/illustrations/education.svg"}
 						alt={"Ilustrace"}
 					/>
-				</HStack>
-				<HStack
+				</Stack>
+				<Stack
+					direction={["column", "row"]}
 					bg={recommendedPageBg}
 					w={"full"}
 					rounded={"xl"}
 					p={5}
-					spacing={5}
+					spacing={[5]}
 				>
 					<TermSearch terms={props.terms} />
-					{indexLetters.map((letter) => (
-						<Box key={letter} fontSize={"xl"} fontWeight={"medium"}>
-							{letter}
-						</Box>
-					))}
-				</HStack>
+					<HStack flexWrap={"wrap"}>
+						{indexLetters.map((letter) => (
+							<Box
+								as={Link}
+								href={"#" + letter}
+								key={letter}
+								fontSize={"xl"}
+								fontWeight={"medium"}
+							>
+								{letter}
+							</Box>
+						))}
+					</HStack>
+				</Stack>
 
-				<VStack w={"full"} p={5} alignItems={"start"}>
-					{indexLetters.map((letter) => (
-						<HStack
+				<VStack w={"full"} p={[0, 5]} alignItems={"start"}>
+					{indexLetters.map((letter, i, arr) => (
+						<Stack
+							direction={["column", "row"]}
 							justifyContent={"space-between"}
 							alignItems={"flex-start"}
-							spacing={24}
-							p={10}
-							py={6}
+							spacing={[4, 24]}
+							p={[0, 10]}
+							py={[0, 6]}
 							w={"full"}
 						>
 							<Box
+								as={"a"}
+								id={letter}
 								key={letter}
-								fontSize={100}
+								fontSize={[48, 100]}
 								pt={4}
+								pl={[4, 0]}
 								fontWeight={"black"}
-								lineHeight={"100px"}
+								lineHeight={["initial", "100px"]}
 							>
 								{letter}
 							</Box>
@@ -109,7 +126,7 @@ export default function Terms(props: TermsProps) {
 									)
 									.map((term) => (
 										<NextChakraLink
-											p={5}
+											p={[4, 5]}
 											rounded={"xl"}
 											href={"/pojem/" + term.slug}
 											_hover={{
@@ -124,7 +141,7 @@ export default function Terms(props: TermsProps) {
 											>
 												<Box
 													fontWeight={"bold"}
-													fontSize={40}
+													fontSize={[24, 40]}
 												>
 													{term.name}
 												</Box>
@@ -135,7 +152,10 @@ export default function Terms(props: TermsProps) {
 										</NextChakraLink>
 									))}
 							</VStack>
-						</HStack>
+							{i !== arr.length - 1 && (
+								<Divider display={["block", "none"]} />
+							)}
+						</Stack>
 					))}
 				</VStack>
 			</VStack>
@@ -170,10 +190,10 @@ function TermSearch(props: { terms: Term[] }) {
 	const hoverBg = useColorModeValue("gray.50", "gray.800");
 
 	return (
-		<Box position={"relative"}>
+		<Box position={"relative"} w={["full", "initial"]}>
 			<Input
 				ref={inputRef}
-				w={[64, 80]}
+				w={["full", 80]}
 				bg={searchResultsBg}
 				overflow={"hidden"}
 				type="text"

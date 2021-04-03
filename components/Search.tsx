@@ -43,11 +43,11 @@ export default function Search(props: { isOpen: boolean }) {
 	const hoverBg = useColorModeValue("gray.50", "gray.800");
 
 	return (
-		<Box position={"relative"}>
+		<HStack justifyContent={"flex-end"} position={"relative"} w={"full"}>
 			<motion.div
 				transition={{ duration: 0.3, type: "tween" }}
 				animate={{
-					width: props.isOpen ? "initial" : 0,
+					width: props.isOpen ? "100%" : 0,
 				}}
 				style={{
 					overflow: "hidden",
@@ -56,7 +56,7 @@ export default function Search(props: { isOpen: boolean }) {
 			>
 				<Input
 					ref={inputRef}
-					w={[64, 80]}
+					w={["full", 80]}
 					bg={searchResultsBg}
 					overflow={"hidden"}
 					type="text"
@@ -165,6 +165,6 @@ export default function Search(props: { isOpen: boolean }) {
 					</Box>
 				)}
 			</Box>
-		</Box>
+		</HStack>
 	);
 }

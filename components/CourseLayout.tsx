@@ -13,7 +13,7 @@ import {
 import React, { useState } from "react";
 import { motion, useTransform, useViewportScroll } from "framer-motion";
 import { FaChevronLeft } from "react-icons/fa";
-import { ToC } from "./ToC/TableOfContents";
+import { ToC } from "./TableOfContents";
 import { useRouter } from "next/router";
 import readingTime from "@danieldietrich/reading-time";
 import { formatDuration } from "date-fns";
@@ -38,8 +38,8 @@ export default function CourseLayout(props: {
 	);
 	const [scroll, setScroll] = useState(0);
 	scrollY.onChange((s) => setScroll(s));
-	const router = useRouter();
 
+	const router = useRouter();
 	const readingStats = readingTime(props.article.content).minutes;
 	const searchResultsBg = useColorModeValue("white", "gray.900");
 

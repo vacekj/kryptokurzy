@@ -40,13 +40,13 @@ export default function Team() {
 			<Container maxW={"5xl"} p={[4, 16]}>
 				<HStack spacing={10}>
 					<VStack>
-						<Text fontSize={"5xl"} fontWeight={"bold"}>
+						<Text fontSize={["3xl", "5xl"]} fontWeight={"bold"}>
 							Jsme skupina nadšenců do crypta a technologií.{" "}
 						</Text>
 						<Box
-							fontSize={"3xl"}
+							fontSize={["xl", "3xl"]}
 							color={textColor}
-							fontWeight={"semibold"}
+							fontWeight={["medium", "semibold"]}
 						>
 							Naším cílem je předat Vám toto nadšení, společně se
 							zkušenostmi a dovednostmi.
@@ -57,13 +57,13 @@ export default function Team() {
 					Náš tým
 				</Heading>
 
-				<VStack spacing={[4, 20]}>
+				<VStack spacing={[10, 20]}>
 					<Stack
-						spacing={16}
+						spacing={[8, 16]}
 						justifyContent={"flex-end"}
-						direction={["column", "row"]}
+						direction={["column-reverse", "row"]}
 					>
-						<Text fontSize={"3xl"}>
+						<Text fontSize={["xl", "3xl"]}>
 							Dominik je blockchain vývojář a krypto konzultant s
 							rozsáhlými zkušenosti v oboru díky aktivní účastí na
 							krypto trzích od konce roku 2017. Mimo kryptokurzy
@@ -91,6 +91,7 @@ export default function Team() {
 							bg={cardBg}
 							spacing={7}
 							direction={["column"]}
+							alignItems={"center"}
 						>
 							<Avatar
 								name={"Domink Clemente"}
@@ -113,7 +114,7 @@ export default function Team() {
 						</Stack>
 					</Stack>
 
-					<Stack spacing={16} direction={["column", "row"]}>
+					<Stack spacing={[8, 16]} direction={["column", "row"]}>
 						<Stack
 							as={motion.div}
 							whileHover={{ scale: 1.05 }}
@@ -126,6 +127,7 @@ export default function Team() {
 							bg={cardBg}
 							spacing={7}
 							direction={["column"]}
+							alignItems={"center"}
 						>
 							<Avatar
 								name={"Josef Vacek"}
@@ -146,7 +148,7 @@ export default function Team() {
 								</Link>
 							</VStack>
 						</Stack>
-						<Text fontSize={"3xl"}>
+						<Text fontSize={["xl", "3xl"]}>
 							Pepa má na starosti vývoj webu a aplikace a veškeré
 							technické zázemí. <br /> Má za páskem řadu úspěčných
 							projektů ve školství, e-learningu, webdesignu a
