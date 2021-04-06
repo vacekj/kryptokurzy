@@ -59,7 +59,7 @@ export default function Terms(props: TermsProps) {
 						<Text color={"brand.500"}>
 							{props.terms.length} pojmů.
 						</Text>
-						Nové přidáváme každý týden.
+						Znáte je všechny?
 					</Heading>
 					<Image
 						display={["none", "block"]}
@@ -180,7 +180,7 @@ function TermSearch(props: { terms: Term[] }) {
 		storeFields: ["name", "slug", "id"],
 		idField: "id",
 		searchOptions: {
-			fuzzy: 0.2,
+			fuzzy: 0.4,
 		},
 	});
 

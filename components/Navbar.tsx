@@ -8,9 +8,6 @@ import {
 	Box,
 	VStack,
 	useBoolean,
-	useColorModeValue,
-	HTMLChakraProps,
-	chakra,
 } from "@chakra-ui/react";
 import { HiOutlineMoon, HiOutlineSearch, HiOutlineSun } from "react-icons/hi";
 import { NextChakraLink } from "./NextChakraLink";
@@ -21,8 +18,7 @@ import { StatusBarStyle, Plugins } from "@capacitor/core";
 import styles from "./navbar.module.css";
 import { usePlatform } from "../caphooks/platform";
 import { useInView } from "react-intersection-observer";
-import { HTMLMotionProps, motion, Variants } from "framer-motion";
-import { IoMenu } from "react-icons/io5";
+import { motion, Variants } from "framer-motion";
 import { FaTelegramPlane, FaTwitter } from "react-icons/fa";
 
 const { StatusBar } = Plugins;

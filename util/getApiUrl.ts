@@ -11,7 +11,7 @@ export function getStrapiUrl() {
 	const isDevelopment = process.env.NODE_ENV === "development";
 	if (isDevelopment) {
 		return `http://${
-			Boolean(process.env.NEXT_PUBLIC_HOSTNAME)
+			process.env.NEXT_PUBLIC_HOSTNAME
 				? process.env.NEXT_PUBLIC_HOSTNAME
 				: "localhost"
 		}:1337`;

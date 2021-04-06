@@ -99,7 +99,11 @@ export default function Team() {
 								src={"/avatars/dominik.png"}
 							/>
 							<VStack spacing={0}>
-								<Text fontWeight={"semibold"} fontSize={"2xl"}>
+								<Text
+									fontWeight={"semibold"}
+									fontSize={"2xl"}
+									whiteSpace={"nowrap"}
+								>
 									Dominik Clemente
 								</Text>
 								<Text fontSize={"xl"}>Co-founder & CEO</Text>
@@ -150,9 +154,12 @@ export default function Team() {
 						</Stack>
 						<Text fontSize={["xl", "3xl"]}>
 							Pepa má na starosti vývoj webu a aplikace a veškeré
-							technické zázemí. <br /> Má za páskem řadu úspěčných
+							technické zázemí. <br /> Má za páskem řadu úspěšných
 							projektů ve školství, e-learningu, webdesignu a
-							marketingu. <br />
+							marketingu. O kryptoměny a blockchainové technologie
+							se zajímá od roku 2015 a již druhým rokem do nich
+							aktivně investuje.
+							<br />
 						</Text>
 					</Stack>
 				</VStack>

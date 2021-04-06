@@ -42,7 +42,7 @@ export default function Terms(props: { terms: Term[] }) {
 						color={dark ? "gray.200" : "gray.800"}
 						fontSize={"2xl"}
 					>
-						Vysvětlíme vám kterýkoliv {props.terms.length} pojmů
+						Vysvětlíme vám kterýkoliv z {props.terms.length} pojmů
 						tak, že už se v krypto slangu neztratíte.
 					</Text>
 					<NextChakraLink

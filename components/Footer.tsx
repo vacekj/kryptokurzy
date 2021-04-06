@@ -39,8 +39,11 @@ export default function Footer() {
 							<NextChakraLink href={"/team"}>
 								Tým kryptokurzy.cz
 							</NextChakraLink>
-							<NextChakraLink href={"/legal"}>
-								Podmínky používání
+							<NextChakraLink href={"/legal#osobni-udaje"}>
+								Ochrana osobních údajů
+							</NextChakraLink>
+							<NextChakraLink href={"/legal#disclaimer"}>
+								prohlášení o vyloučení odpovědnosti
 							</NextChakraLink>
 						</VStack>
 					</VStack>
