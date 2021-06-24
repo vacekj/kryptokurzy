@@ -38,3 +38,6 @@ yarn-error.log*
 
 resources/ios
 resources/android
+
+.idea/dataSources
+.idea/dataSources.local.xml

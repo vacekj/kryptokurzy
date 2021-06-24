@@ -6,6 +6,14 @@
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/out" />
+      <excludeFolder url="file://$MODULE_DIR$/.husky/_" />
+      <excludeFolder url="file://$MODULE_DIR$/ios/App/App.xcworkspace/xcuserdata" />
+      <excludeFolder url="file://$MODULE_DIR$/ios/App/Jaknacrypto.cz.xcodeproj/xcuserdata" />
+      <excludeFolder url="file://$MODULE_DIR$/ios/App/Pods" />
+      <excludeFolder url="file://$MODULE_DIR$/ios/App/public" />
+      <excludeFolder url="file://$MODULE_DIR$/ios/capacitor-cordova-ios-plugins" />
+      <excludeFolder url="file://$MODULE_DIR$/resources/ios" />
+      <excludeFolder url="file://$MODULE_DIR$/.vercel" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

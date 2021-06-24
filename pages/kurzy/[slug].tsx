@@ -17,6 +17,7 @@ type KurzyProps = {
 	article: Article;
 	mdxSource: MdxRemote.Source;
 	headings: string[];
+	relatedArticles: Article[];
 };
 
 export default function KurzySlug(props: KurzyProps) {
@@ -25,7 +26,11 @@ export default function KurzySlug(props: KurzyProps) {
 		provider: MarkdownChakraProvider,
 	});
 	return (
-		<CourseLayout article={props.article} headings={props.headings}>
+		<CourseLayout
+			article={props.article}
+			headings={props.headings}
+			recommendedArticles={props.relatedArticles}
+		>
 			{content}
 		</CourseLayout>
 	);
@@ -37,12 +42,25 @@ export const getStaticProps: GetStaticProps<KurzyProps> = async (context) => {
 	)
 		.then((e) => e.json())
 		.then((articles) => articles[0]);
+
+	const course: Course = await strapiFetch(
+		"/courses/" + article.course.id
+	).then((e) => e.json());
+
 	const mdxSource = await renderToString(article.content, {
 		components: Components,
 		provider: MarkdownChakraProvider,
 	});
 	const headings = extractHeadingsFromMarkdown(article.content);
-	return { props: { article, mdxSource, headings }, revalidate: 1 };
+	return {
+		props: {
+			article,
+			mdxSource,
+			headings,
+			relatedArticles: course.articles.filter((a) => a.id !== article.id),
+		},
+		revalidate: 1,
+	};
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -85,6 +103,7 @@ export type Article = {
 	published_at: string;
 	created_at: string;
 	updated_at: string;
+	course: Course;
 };
 
 export type Tag = {
@@ -168,4 +187,13 @@ export interface Thumbnail {
 	size: number;
 	width: number;
 	height: number;
+}
+
+export interface Course {
+	id: string;
+	title: string;
+	published_at: string;
+	created_at: string;
+	updated_at: string;
+	articles: Article[];
 }

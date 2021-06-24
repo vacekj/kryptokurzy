@@ -83,13 +83,13 @@ export default function MailCTA() {
 				/>
 				<VStack alignItems={"start"}>
 					<Heading fontSize={"4xl"}>
-						Crypto ve vaší emailové schránce
+						Krypto ve vaší emailové schránce
 					</Heading>
 					<Text
 						color={dark ? "gray.200" : "gray.800"}
 						fontSize={"2xl"}
 					>
-						Crypto novinky doručené do vaší emailové schránky
+						Krypto novinky doručené do vaší emailové schránky
 					</Text>
 					<form onSubmit={handleSubmit(onSubmit)}>
 						<HStack w="full" spacing={0}>

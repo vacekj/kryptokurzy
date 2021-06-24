@@ -42,8 +42,8 @@ export default function Terms(props: { terms: Term[] }) {
 						color={dark ? "gray.200" : "gray.800"}
 						fontSize={"2xl"}
 					>
-						Vysvětlíme vám kterýkoliv z {props.terms.length} pojmů
-						tak, že už se v krypto slangu neztratíte.
+						Vysvětlíme vám {props.terms.length} pojmů tak, že už se
+						v krypto slangu neztratíte.
 					</Text>
 					<NextChakraLink
 						href={"/slovnik"}

@@ -77,7 +77,7 @@ export default function Team() {
 								<span> </span>Ivan on Tech Academy
 							</Link>
 							, což je největší globální vzdělávácí platforma pro
-							crypto a blockchain na světě.
+							krypto a blockchain na světě.
 						</Text>
 						<Stack
 							as={motion.div}

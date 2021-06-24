@@ -39,11 +39,10 @@ export default function Dunno() {
 						color={dark ? "gray.200" : "gray.800"}
 						fontSize={"2xl"}
 					>
-						Nezoufejte. S naším kurzem pro začátečníky se rychle
-						zorientujete.
+						S naším kurzem pro začátečníky se rychle zorientujete.
 					</Text>
 					<NextChakraLink
-						href={"/courses/zacnete-zde"}
+						href={"/kurzy/zacnete-zde"}
 						_hover={{
 							textDecoration: "none",
 						}}

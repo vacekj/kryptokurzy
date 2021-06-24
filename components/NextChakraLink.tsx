@@ -52,6 +52,8 @@ export const StrapiImage = (
 ) => {
 	return (
 		<StrapiImageFactory
+			// @ts-ignore
+			placeholder={"blur"}
 			width={props.strapiImage.width}
 			height={props.strapiImage.height}
 			src={getStrapiImageUrl(props.strapiImage)}

@@ -74,9 +74,9 @@ export default function Search(props: { isOpen: boolean }) {
 				}
 				flexDir={"column"}
 				position={"absolute"}
-				left={0}
+				left={-2}
 				zIndex={10}
-				top={0}
+				top={45}
 				bg={searchResultsBg}
 				shadow={"lg"}
 				w={"full"}

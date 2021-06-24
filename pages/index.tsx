@@ -27,16 +27,19 @@ import { getCourseUrl } from "../components/CourseUrl";
 import { Term } from "./pojem/[slug]";
 import Terms from "../components/Terms";
 import { strapiFetch } from "../util/getApiUrl";
+import { Course } from "./kurzy/[slug]";
 
 type IndexProps = {
 	articles: Article[];
 	terms: Term[];
 	recommendedArticle: Article;
+	courses: Course[];
 };
 
 export default function Index(props: IndexProps) {
 	const recommendedPageBg = useColorModeValue("gray.50", "gray.900");
-
+	const zacatek = props.courses.find((c) => c.id === "2");
+	const rest = props.courses.filter((c) => c.id !== "2");
 	return (
 		<>
 			<NextSeo
@@ -62,7 +65,7 @@ export default function Index(props: IndexProps) {
 						Krypto vzdělání
 					</Heading>
 					<Box maxW={["unset", "80"]} fontSize={"lg"}>
-						Your one-stop guide to all things crypto. Whether you're
+						Your one-stop guide to all things krypto. Whether you're
 						a rookie trying to understand mining or a veteran
 						looking to develop a trading strategy, we've got you
 						covered.
@@ -98,7 +101,7 @@ export default function Index(props: IndexProps) {
 						flexBasis={"50%"}
 					>
 						<Box
-							mb={[4, 0]}
+							mb={[4, 2]}
 							fontWeight={"medium"}
 							textTransform={"uppercase"}
 						>
@@ -116,7 +119,7 @@ export default function Index(props: IndexProps) {
 							{props.recommendedArticle.title}
 						</Box>
 						<HStack>
-							<Icon as={HiOutlineClock} />
+							<Icon as={HiOutlineClock} mr={-1} />
 							<Box>
 								{getReadingTime(
 									props.recommendedArticle.content
@@ -129,45 +132,13 @@ export default function Index(props: IndexProps) {
 					</VStack>
 				</NextLink>
 			</Flex>
-			<VStack
-				alignItems={"start"}
-				mx={"auto"}
-				maxW={["unset", "1200px"]}
-				p={[4, 10]}
-			>
-				<HStack w={"full"} pb={4}>
-					<Divider flexShrink={2} />
-					<Box
-						whiteSpace={"nowrap"}
-						px={2}
-						fontWeight={"medium"}
-						textTransform={"uppercase"}
-					>
-						Naše články
-					</Box>
-					<Divider flexShrink={2} />{" "}
-				</HStack>
-				<SimpleGrid columns={[1, 2, 3]} spacing={[4, 8]}>
-					{props.articles.map((a) => (
-						<ArticleCard article={a} key={a.id} />
-					))}
-				</SimpleGrid>
-			</VStack>
-			<MailCTA />
-			<VStack
-				alignItems={"start"}
-				mx={"auto"}
-				maxW={["unset", "1200px"]}
-				p={[4, 10]}
-			>
-				<SimpleGrid columns={[5, 6, 7]} spacing={[4, 8]}>
-					{props.terms.map((t) => (
-						<VStack key={t.id}></VStack>
-					))}
-				</SimpleGrid>
-			</VStack>
+			<CourseGrid course={zacatek} />
 			<Terms terms={props.terms} />
-			<Dunno />
+			<CourseGrid course={rest[0]} />
+			<MailCTA />
+			{rest.slice(1).map((course) => (
+				<CourseGrid course={course} />
+			))}
 			<Footer />
 		</>
 	);
@@ -175,6 +146,10 @@ export default function Index(props: IndexProps) {
 
 export const getStaticProps: GetStaticProps<IndexProps> = async (ctx) => {
 	const articles: Article[] = await strapiFetch("/articles").then((e) =>
+		e.json()
+	);
+
+	const courses: Course[] = await strapiFetch("/courses").then((e) =>
 		e.json()
 	);
 
@@ -190,12 +165,46 @@ export const getStaticProps: GetStaticProps<IndexProps> = async (ctx) => {
 			articles,
 			terms,
 			recommendedArticle: recommendedArticle.article,
+			courses,
 		},
 		revalidate: 1,
 	};
 };
 
-function ArticleCard(props: { article: Article }) {
+function CourseGrid(props: { course: Course }) {
+	return (
+		<VStack
+			alignItems={"start"}
+			mx={"auto"}
+			maxW={["unset", "1200px"]}
+			p={[4, 10]}
+		>
+			<HStack w={"full"} pb={4}>
+				<Divider flexShrink={2} />
+				<Box
+					whiteSpace={"nowrap"}
+					px={2}
+					fontWeight={"medium"}
+					textTransform={"uppercase"}
+				>
+					{props.course.title}
+				</Box>
+				<Divider flexShrink={2} />{" "}
+			</HStack>
+			<SimpleGrid
+				alignItems={"start"}
+				columns={[1, 2, 3]}
+				spacing={[4, 8]}
+			>
+				{props.course.articles.map((a) => (
+					<ArticleCard article={a} key={a.id} />
+				))}
+			</SimpleGrid>
+		</VStack>
+	);
+}
+
+export function ArticleCard(props: { article: Article }) {
 	return (
 		<NextLink href={"/kurzy/" + props.article.slug}>
 			<VStack
@@ -206,21 +215,25 @@ function ArticleCard(props: { article: Article }) {
 					shadow: "2xl",
 				}}
 				cursor={"pointer"}
-				alignItems={"start"}
+				alignItems={"stretch"}
 				rounded={"xl"}
-				spacing={4}
-				flexBasis={"50%"}
+				spacing={3}
+				overflow={"hidden"}
 			>
-				<StrapiImage
-					rounded={10}
+				<Box rounded={10}>
+					<StrapiImage
+						strapiImage={props.article.cover}
+						alt={props.article.title}
+						w={"full"}
+					/>
+				</Box>
+				<VStack
+					p={5}
+					pt={0}
+					spacing={4}
 					w={"full"}
-					objectFit={"cover"}
-					h={[40, "80"]}
-					strapiImage={props.article.cover}
-					alt={props.article.title}
-					shadow={"xl"}
-				/>
-				<VStack p={5} spacing={4} w={"full"} alignItems={"start"}>
+					alignItems={"start"}
+				>
 					<Box fontWeight={"bold"} fontSize={"2xl"}>
 						{props.article.title}
 					</Box>

@@ -7,15 +7,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29e902be-cac6-49c5-a000-dbc345811b23" name="Default Changelist" comment="feat: a lot of stuff, idk check the diffs">
+    <list default="true" id="29e902be-cac6-49c5-a000-dbc345811b23" name="Default Changelist" comment="feat: RC1">
+      <change afterPath="$PROJECT_DIR$/.husky/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.husky/pre-push" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sentry.client.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sentry.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sentry.server.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/csv-plugin.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2e505752-56cf-4a87-a1b4-a0d2ad23ab68.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2e505752-56cf-4a87-a1b4-a0d2ad23ab68.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2e505752-56cf-4a87-a1b4-a0d2ad23ab68/storage_v2/_src_/database/strapi.SULVyg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2e505752-56cf-4a87-a1b4-a0d2ad23ab68/storage_v2/_src_/database/strapi.SULVyg/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2e505752-56cf-4a87-a1b4-a0d2ad23ab68/storage_v2/_src_/database/strapi.SULVyg/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2e505752-56cf-4a87-a1b4-a0d2ad23ab68/storage_v2/_src_/database/strapi.SULVyg/schema/public.abK9xQ.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/CourseLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/CourseLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Dunno.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Dunno.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MailCTA.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/MailCTA.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/NextChakraLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/NextChakraLink.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Search.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Terms.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Terms.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/legal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/legal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/slovnik.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/slovnik.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next-env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next-env.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/consult.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/konzultace.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/kurzy/[slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/kurzy/[slug].tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/team.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/team.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/getApiUrl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/util/getApiUrl.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,12 +70,12 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="postgresql" />
-    <property name="PluginDummyText.Genre" value="latin" />
+    <property name="PluginDummyText.Genre" value="scifi" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/.env.local&#10;/Users/pepa/Programming/jaknacrypto.cz/node_modules/@chakra-ui/react/dist/types/index.d.ts" />
     <property name="javascript.nodejs.core.library.configured.version" value="14.15.4" />
-    <property name="javascript.nodejs.core.library.typings.version" value="14.14.32" />
+    <property name="javascript.nodejs.core.library.typings.version" value="14.14.41" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -90,6 +112,12 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
+    <configuration name="scratch#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch.http" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="scratch#2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch.http" index="2" runType="Run single request">
+      <method v="2" />
+    </configuration>
     <configuration name="Frontend debug" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
@@ -104,9 +132,17 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="HTTP Request.scratch#1" />
+      <item itemvalue="HTTP Request.scratch#2" />
       <item itemvalue="JavaScript Debug.Frontend debug" />
       <item itemvalue="npm.dev" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.scratch#2" />
+        <item itemvalue="HTTP Request.scratch#1" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -172,6 +208,20 @@
       <workItem from="1617285809160" duration="10398000" />
       <workItem from="1617455860852" duration="13998000" />
       <workItem from="1617693863222" duration="2747000" />
+      <workItem from="1618574162034" duration="347000" />
+      <workItem from="1620224247157" duration="1309000" />
+      <workItem from="1620843944624" duration="598000" />
+      <workItem from="1620927727043" duration="599000" />
+      <workItem from="1622100630271" duration="773000" />
+      <workItem from="1622645447400" duration="32000" />
+      <workItem from="1622645510777" duration="171000" />
+      <workItem from="1622742335159" duration="540000" />
+      <workItem from="1623146191562" duration="4570000" />
+      <workItem from="1623253741741" duration="16000" />
+      <workItem from="1623319912934" duration="5000" />
+      <workItem from="1624399109065" duration="2026000" />
+      <workItem from="1624471242506" duration="7818000" />
+      <workItem from="1624532505887" duration="238000" />
     </task>
     <task id="LOCAL-00001" summary="postinstall">
       <created>1608915917969</created>
@@ -504,7 +554,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix: navbar error on web, rename xcode project" />
     <MESSAGE value="fix: inView hook that works serverside" />
     <MESSAGE value="feat: hubspot integration" />
     <MESSAGE value="feat: new logo, icons and splashscreens&#10;&#10;prototype a way to get correct api location for capacitor api calls to work." />
@@ -529,6 +578,7 @@
     <MESSAGE value="upgrade next" />
     <MESSAGE value="feat: upgrade image to use next/image and automatically infer correct url" />
     <MESSAGE value="feat: a lot of stuff, idk check the diffs" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: a lot of stuff, idk check the diffs" />
+    <MESSAGE value="feat: RC1" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: RC1" />
   </component>
 </project>

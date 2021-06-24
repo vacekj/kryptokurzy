@@ -14,14 +14,11 @@ import { NextChakraLink } from "./NextChakraLink";
 import React, { useEffect, useRef, useState } from "react";
 import Search from "./Search";
 import { useClickAway } from "use-click-away";
-import { StatusBarStyle, Plugins } from "@capacitor/core";
 import styles from "./navbar.module.css";
 import { usePlatform } from "../caphooks/platform";
 import { useInView } from "react-intersection-observer";
 import { motion, Variants } from "framer-motion";
 import { FaTelegramPlane, FaTwitter } from "react-icons/fa";
-
-const { StatusBar } = Plugins;
 
 export default function Navbar() {
 	const { colorMode, toggleColorMode } = useColorMode();
@@ -33,17 +30,6 @@ export default function Navbar() {
 	useClickAway(clickRef, () => {
 		setSearchOpen(false);
 	});
-	const { platform } = usePlatform();
-	useEffect(() => {
-		if (platform !== "web") {
-			StatusBar.setStyle({
-				style:
-					colorMode === "dark" || isNavBarInView
-						? StatusBarStyle.Dark
-						: StatusBarStyle.Light,
-			});
-		}
-	}, [colorMode, isNavBarInView]);
 
 	return (
 		<>
@@ -82,7 +68,7 @@ export default function Navbar() {
 						minW={0}
 						pl={[1, 3]}
 						display={["block"]}
-						href={"/courses/zacnete-zde"}
+						href={"/kurzy/zacnete-zde"}
 						_hover={{
 							textDecoration: "none",
 						}}
@@ -113,7 +99,7 @@ export default function Navbar() {
 						fontSize={"lg"}
 						fontWeight={"medium"}
 						color={"white"}
-						href={"/consult"}
+						href={"/konzultace"}
 						display={["none", "block"]}
 					>
 						Konzultace
@@ -180,7 +166,7 @@ const variants: Variants = {
 	},
 };
 
-const MotionVStack = motion.custom(VStack);
+const MotionVStack = motion(VStack);
 
 function MobileNav() {
 	const [isOpen, { toggle }] = useBoolean(false);
@@ -232,7 +218,7 @@ function MobileNav() {
 					fontSize={"lg"}
 					fontWeight={"medium"}
 					color={"white"}
-					href={"/consult"}
+					href={"/konzultace"}
 				>
 					Konzultace
 				</NextChakraLink>

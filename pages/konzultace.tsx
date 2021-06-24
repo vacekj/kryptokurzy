@@ -25,7 +25,7 @@ import {
 import { Controller, useForm } from "react-hook-form";
 import React, { useState } from "react";
 
-export default function Consult() {
+export default function Konzultace() {
 	const cardBg = useColorModeValue("gray.100", "gray.900");
 	const textColor = useColorModeValue("gray.700", "gray.300");
 
@@ -54,8 +54,8 @@ export default function Consult() {
 						>
 							3 roky zkušeností s investováním do kryptoměn a
 							vynikající výsledky nám dovolují poskytovat expertní
-							konzultace.&amp; Zakládáme si na osobním přístupu a
-							vše šijeme na míru vašim potřebám.
+							konzultace. Zakládáme si na osobním přístupu a vše
+							šijeme na míru vašim potřebám.
 						</Box>
 					</VStack>
 				</HStack>
@@ -136,7 +136,8 @@ function ConsultingFormCustom() {
 								required: true,
 								minLength: 5,
 								maxLength: 60,
-								pattern: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+								pattern:
+									/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
 							})}
 							bg={inputBg}
 							placeholder={"vas@email.cz"}

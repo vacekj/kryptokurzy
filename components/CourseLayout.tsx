@@ -6,6 +6,7 @@ import {
 	HStack,
 	Icon,
 	IconButton,
+	SimpleGrid,
 	Tag,
 	useColorModeValue,
 	VStack,
@@ -24,11 +25,13 @@ import { difficulties, difficultiesColors } from "./DifficultyTag";
 import { StrapiImage } from "./NextChakraLink";
 import { NextSeo } from "next-seo";
 import removeMd from "remove-markdown";
+import { ArticleCard } from "../pages";
 
 export default function CourseLayout(props: {
 	children: React.ReactNode;
 	headings: string[];
 	article: Article;
+	recommendedArticles: Article[];
 }) {
 	const { scrollYProgress, scrollY } = useViewportScroll();
 	const width = useTransform(
@@ -151,7 +154,7 @@ export default function CourseLayout(props: {
 						</Tag>
 					))}
 				</HStack>
-				<HStack alignItems={"center"} spacing={5}>
+				<HStack alignItems={"center"} spacing={5} pb={4}>
 					<Tag
 						variant={"subtle"}
 						fontSize={["sm", "md"]}
@@ -162,7 +165,7 @@ export default function CourseLayout(props: {
 						{difficulties[props.article.difficulty]}
 					</Tag>
 					<HStack>
-						<Icon as={HiOutlineClock} />
+						<Icon as={HiOutlineClock} mr={-1} />
 						<Box>
 							{formatDuration(
 								{
@@ -174,6 +177,7 @@ export default function CourseLayout(props: {
 					</HStack>
 				</HStack>
 				<StrapiImage
+					my={3}
 					rounded={10}
 					w={"full"}
 					objectFit={"cover"}
@@ -184,8 +188,34 @@ export default function CourseLayout(props: {
 				<Box fontSize={"xl"} pb={10} position={"relative"}>
 					{props.children}
 				</Box>
+				<RecommendedArticles articles={props.recommendedArticles} />
 			</VStack>
 			<Footer />
 		</>
+	);
+}
+
+interface RecommendedArticlesProps {
+	articles: Article[];
+}
+
+function RecommendedArticles(props: RecommendedArticlesProps) {
+	return (
+		<VStack>
+			<Box
+				whiteSpace={"nowrap"}
+				p={2}
+				pb={3}
+				fontWeight={"medium"}
+				textTransform={"uppercase"}
+			>
+				Doporučené články
+			</Box>
+			<SimpleGrid columns={[1, 2, 3]} spacing={[4, 8]}>
+				{props.articles.map((a) => (
+					<ArticleCard article={a} key={a.id} />
+				))}
+			</SimpleGrid>
+		</VStack>
 	);
 }
