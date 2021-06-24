@@ -98,7 +98,8 @@ export default function MailCTA() {
 									required: true,
 									minLength: 5,
 									maxLength: 60,
-									pattern: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+									pattern:
+										/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
 								})}
 								name={"email"}
 								focusBorderColor={"brand.400"}

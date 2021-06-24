@@ -11,11 +11,10 @@ import {
 } from "@chakra-ui/react";
 import { HiOutlineMoon, HiOutlineSearch, HiOutlineSun } from "react-icons/hi";
 import { NextChakraLink } from "./NextChakraLink";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import Search from "./Search";
 import { useClickAway } from "use-click-away";
 import styles from "./navbar.module.css";
-import { usePlatform } from "../caphooks/platform";
 import { useInView } from "react-intersection-observer";
 import { motion, Variants } from "framer-motion";
 import { FaTelegramPlane, FaTwitter } from "react-icons/fa";

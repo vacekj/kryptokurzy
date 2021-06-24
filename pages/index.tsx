@@ -18,7 +18,6 @@ import { HiOutlineClock } from "react-icons/hi";
 import React from "react";
 import { NextChakraLink, StrapiImage } from "../components/NextChakraLink";
 import NextLink from "next/link";
-import Dunno from "../components/Dunno";
 import { Article } from "./kurzy/[slug]";
 import { GetStaticProps } from "next";
 import { DifficultyTag } from "../components/DifficultyTag";

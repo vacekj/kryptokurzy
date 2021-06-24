@@ -10,7 +10,6 @@ import {
 import Navbar from "components/Navbar";
 import Footer from "components/Footer";
 import MailCTA from "../components/MailCTA";
-import Head from "next/head";
 import { NextSeo } from "next-seo";
 
 export default function Showcase() {
