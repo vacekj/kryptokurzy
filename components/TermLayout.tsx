@@ -5,7 +5,6 @@ import {
 	Heading,
 	HStack,
 	Icon,
-	IconButton,
 	Tag,
 	useColorModeValue,
 	VStack,
@@ -18,6 +17,7 @@ import { formatDistanceToNow, formatDuration } from "date-fns";
 import cs from "date-fns/locale/cs";
 import readingTime from "@danieldietrich/reading-time";
 import { NextChakraLink } from "./NextChakraLink";
+import { NextSeo } from "next-seo";
 
 export default function TermLayout(props: {
 	content: React.ReactNode;
@@ -27,6 +27,21 @@ export default function TermLayout(props: {
 	const recommendedPageBg = useColorModeValue("gray.50", "gray.900");
 	return (
 		<>
+			<NextSeo
+				title={props.term.name}
+				description={props.term.summary}
+				openGraph={{
+					url: "https://kryptokurzy.cz/pojem/" + props.term.slug,
+					title: props.term.name,
+					description: props.term.summary,
+					site_name: "Kryptokurzy.cz",
+				}}
+				twitter={{
+					handle: "@kryptokurzy",
+					site: "@kryptokurzy",
+					cardType: "summary_large_image",
+				}}
+			/>
 			<Navbar />
 			<VStack
 				align={"start"}

@@ -27,7 +27,6 @@ import { Term } from "./pojem/[slug]";
 import Terms from "../components/Terms";
 import { strapiFetch } from "../util/getApiUrl";
 import { Course } from "./kurzy/[slug]";
-import { Image } from "@chakra-ui/react";
 
 type IndexProps = {
 	articles: Article[];

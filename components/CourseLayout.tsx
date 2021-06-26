@@ -51,6 +51,25 @@ export default function CourseLayout(props: {
 			<NextSeo
 				title={props.article.title}
 				description={removeMd(props.article.content).slice(0, 150)}
+				openGraph={{
+					url: "https://kryptokurzy.cz/kurzy/" + props.article.slug,
+					title: props.article.title,
+					description: removeMd(props.article.content).slice(0, 150),
+					images: [
+						{
+							url: props.article.cover.url,
+							width: props.article.cover.width,
+							height: props.article.cover.height,
+							alt: props.article.cover.alternativeText,
+						},
+					],
+					site_name: "Kryptokurzy.cz",
+				}}
+				twitter={{
+					handle: "@kryptokurzy",
+					site: "@kryptokurzy",
+					cardType: "summary_large_image",
+				}}
 			/>
 			<Navbar />
 			<HStack

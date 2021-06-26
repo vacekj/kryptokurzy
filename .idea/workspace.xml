@@ -7,96 +7,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29e902be-cac6-49c5-a000-dbc345811b23" name="Default Changelist" comment="remove db">
-      <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/kryptokurzy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kryptokurzy.iml" afterDir="false" />
+    <list default="true" id="29e902be-cac6-49c5-a000-dbc345811b23" name="Default Changelist" comment="remove capacitor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capacitor.config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caphooks/accessibility/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caphooks/accessibility/useAccessibility.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caphooks/app/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caphooks/app/useApp.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caphooks/browser/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caphooks/browser/useBrowser.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caphooks/camera/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caphooks/camera/useCamera.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caphooks/clipboard/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caphooks/clipboard/useClipboard.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caphooks/device/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caphooks/device/useDevice.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caphooks/filesystem/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caphooks/filesystem/useFileSystem.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caphooks/filesystem/utils.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caphooks/geolocation/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caphooks/geolocation/useGeolocation.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caphooks/keyboard/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caphooks/keyboard/useKeyboard.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caphooks/network/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caphooks/network/useNetwork.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caphooks/platform/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caphooks/platform/usePlatform.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caphooks/react-app-env.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caphooks/storage/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caphooks/storage/useStorage.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caphooks/util/feature-check.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caphooks/util/models.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/components/CourseLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/CourseLayout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/MarkdownComponents.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/MarkdownComponents.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/NextChakraLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/NextChakraLink.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Search.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/TermLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/TermLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Terms.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Terms.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/App/App.xcworkspace/contents.xcworkspacedata" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/App/App.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/App/App/AppDelegate.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/App/App/Assets.xcassets/AppIcon.appiconset/AppIcon-20x20@1x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/App/App/Assets.xcassets/AppIcon.appiconset/AppIcon-20x20@2x-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/App/App/Assets.xcassets/AppIcon.appiconset/AppIcon-20x20@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/App/App/Assets.xcassets/AppIcon.appiconset/AppIcon-20x20@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/App/App/Assets.xcassets/AppIcon.appiconset/AppIcon-29x29@1x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/App/App/Assets.xcassets/AppIcon.appiconset/AppIcon-29x29@2x-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/App/App/Assets.xcassets/AppIcon.appiconset/AppIcon-29x29@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/App/App/Assets.xcassets/AppIcon.appiconset/AppIcon-29x29@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/App/App/Assets.xcassets/AppIcon.appiconset/AppIcon-40x40@1x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/App/App/Assets.xcassets/AppIcon.appiconset/AppIcon-40x40@2x-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/App/App/Assets.xcassets/AppIcon.appiconset/AppIcon-40x40@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/App/App/Assets.xcassets/AppIcon.appiconset/AppIcon-40x40@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/App/App/Assets.xcassets/AppIcon.appiconset/AppIcon-512@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/App/App/Assets.xcassets/AppIcon.appiconset/AppIcon-60x60@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/App/App/Assets.xcassets/AppIcon.appiconset/AppIcon-60x60@3x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/App/App/Assets.xcassets/AppIcon.appiconset/AppIcon-76x76@1x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/App/App/Assets.xcassets/AppIcon.appiconset/AppIcon-76x76@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/App/App/Assets.xcassets/AppIcon.appiconset/AppIcon-83.5x83.5@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/App/App/Assets.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/App/App/Assets.xcassets/Contents.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/App/App/Assets.xcassets/Splash.imageset/Contents.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/App/App/Assets.xcassets/Splash.imageset/splash-2732x2732-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/App/App/Assets.xcassets/Splash.imageset/splash-2732x2732-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/App/App/Assets.xcassets/Splash.imageset/splash-2732x2732.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/App/App/Base.lproj/LaunchScreen.storyboard" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/App/App/Base.lproj/Main.storyboard" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/App/App/Info.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/App/App/capacitor.config.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/App/App/config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/App/Jaknacrypto.cz.xcodeproj/project.pbxproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/App/Jaknacrypto.cz.xcodeproj/project.xcworkspace/contents.xcworkspacedata" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/App/Jaknacrypto.cz.xcworkspace/contents.xcworkspacedata" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/App/Podfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/kurzy/[slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/kurzy/[slug].tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/legal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/legal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/pojem/[slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/pojem/[slug].tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/slovnik.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/slovnik.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/team.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/team.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentry.client.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/sentry.client.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sentry.server.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/sentry.server.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/getApiUrl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/util/getApiUrl.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -274,7 +191,7 @@
       <workItem from="1623319912934" duration="5000" />
       <workItem from="1624399109065" duration="2026000" />
       <workItem from="1624471242506" duration="7818000" />
-      <workItem from="1624532505887" duration="12317000" />
+      <workItem from="1624532505887" duration="13114000" />
     </task>
     <task id="LOCAL-00001" summary="postinstall">
       <created>1608915917969</created>
@@ -584,7 +501,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624532943581</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="remove capacitor">
+      <created>1624726488848</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1624726488848</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -628,7 +552,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: hubspot integration" />
     <MESSAGE value="feat: new logo, icons and splashscreens&#10;&#10;prototype a way to get correct api location for capacitor api calls to work." />
     <MESSAGE value="fix: various lighthouse fixes" />
     <MESSAGE value="feat: sentry" />
@@ -653,6 +576,7 @@
     <MESSAGE value="feat: a lot of stuff, idk check the diffs" />
     <MESSAGE value="feat: RC1" />
     <MESSAGE value="remove db" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove db" />
+    <MESSAGE value="remove capacitor" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove capacitor" />
   </component>
 </project>

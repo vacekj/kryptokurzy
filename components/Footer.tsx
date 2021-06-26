@@ -9,7 +9,7 @@ import {
 	VStack,
 } from "@chakra-ui/react";
 import { NextChakraLink } from "./NextChakraLink";
-import { FaTelegramPlane, FaTwitter } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
 
 export default function Footer() {
 	return (
