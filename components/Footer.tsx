@@ -32,8 +32,7 @@ export default function Footer() {
 							alignItems={"left"}
 							textColor={"white"}
 						>
-							{/*TODO: linky na sekce*/}
-							<NextChakraLink href={"/courses"}>
+							<NextChakraLink href={"/"}>
 								Všechny kurzy
 							</NextChakraLink>
 							<NextChakraLink href={"/team"}>
@@ -43,7 +42,7 @@ export default function Footer() {
 								Ochrana osobních údajů
 							</NextChakraLink>
 							<NextChakraLink href={"/legal#disclaimer"}>
-								Prohlášení o vyloučení odpovědnosti
+								Prohlášení o vyloučení odpovědnosti±
 							</NextChakraLink>
 						</VStack>
 					</VStack>
@@ -55,17 +54,17 @@ export default function Footer() {
 							&copy; Dominik Clemente, Josef Vacek 2021
 						</Text>
 						<HStack spacing={5}>
-							<a
-								aria-label={"kryptokurzy.cz Telegram skupina"}
-								href={"https://t.me/joinchat/SW9rdfYLrF5zhrqO"}
-							>
-								<Icon
-									color={"white"}
-									h={5}
-									w={5}
-									as={FaTelegramPlane}
-								/>
-							</a>
+							{/*<a*/}
+							{/*	aria-label={"kryptokurzy.cz Telegram skupina"}*/}
+							{/*	href={"https://t.me/joinchat/SW9rdfYLrF5zhrqO"}*/}
+							{/*>*/}
+							{/*	<Icon*/}
+							{/*		color={"white"}*/}
+							{/*		h={5}*/}
+							{/*		w={5}*/}
+							{/*		as={FaTelegramPlane}*/}
+							{/*	/>*/}
+							{/*</a>*/}
 							<a
 								aria-label={"kryptokurzy.cz Twitter stránka"}
 								href={"https://twitter.com/kryptokurzy"}

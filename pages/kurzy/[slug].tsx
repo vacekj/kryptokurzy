@@ -39,13 +39,9 @@ export default function KurzySlug(props: KurzyProps) {
 export const getStaticProps: GetStaticProps<KurzyProps> = async (context) => {
 	const article: Article = await strapiFetch(
 		"/articles?slug=" + context.params.slug
-	)
-		.then((e) => e.json())
-		.then((articles) => articles[0]);
+	).then((articles) => articles[0]);
 
-	const course: Course = await strapiFetch(
-		"/courses/" + article.course.id
-	).then((e) => e.json());
+	const course: Course = await strapiFetch("/courses/" + article.course.id);
 
 	const mdxSource = await renderToString(article.content, {
 		components: Components,
@@ -64,9 +60,7 @@ export const getStaticProps: GetStaticProps<KurzyProps> = async (context) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-	const articles: Article[] = await strapiFetch("/articles").then((e) =>
-		e.json()
-	);
+	const articles: Article[] = await strapiFetch("/articles");
 
 	const slugs = articles.map((a) => {
 		return {
@@ -190,7 +184,7 @@ export interface Thumbnail {
 }
 
 export interface Course {
-	id: string;
+	id: number;
 	title: string;
 	published_at: string;
 	created_at: string;

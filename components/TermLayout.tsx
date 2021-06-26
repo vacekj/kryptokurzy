@@ -5,6 +5,7 @@ import {
 	Heading,
 	HStack,
 	Icon,
+	IconButton,
 	Tag,
 	useColorModeValue,
 	VStack,
@@ -12,10 +13,11 @@ import {
 import React from "react";
 import { Term } from "../pages/pojem/[slug]";
 import { difficulties, difficultiesColors } from "./DifficultyTag";
-import { HiOutlineClock } from "react-icons/hi";
+import { HiOutlineClock, HiArrowLeft } from "react-icons/hi";
 import { formatDistanceToNow, formatDuration } from "date-fns";
 import cs from "date-fns/locale/cs";
 import readingTime from "@danieldietrich/reading-time";
+import { NextChakraLink } from "./NextChakraLink";
 
 export default function TermLayout(props: {
 	content: React.ReactNode;
@@ -34,6 +36,9 @@ export default function TermLayout(props: {
 				p={5}
 				mt={[2, 10]}
 			>
+				<NextChakraLink href={"/slovnik"} aria-label={"zpět"}>
+					<Icon as={HiArrowLeft} fontSize={"3xl"} />
+				</NextChakraLink>
 				<Heading
 					as={"h1"}
 					fontWeight={"bold"}

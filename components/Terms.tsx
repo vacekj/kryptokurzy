@@ -35,9 +35,7 @@ export default function Terms(props: { terms: Term[] }) {
 					alt={"Ilustrace knih"}
 				/>
 				<VStack alignItems={"flex-start"}>
-					<Heading fontSize={"4xl"}>
-						Blockchain, DeFi, Proof of Stake??
-					</Heading>
+					<Heading fontSize={"4xl"}>Blockchain, DeFi, NFT??</Heading>
 					<Text
 						color={dark ? "gray.200" : "gray.800"}
 						fontSize={"2xl"}

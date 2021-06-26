@@ -165,7 +165,7 @@ export default function Terms(props: TermsProps) {
 }
 
 export const getStaticProps: GetStaticProps<TermsProps> = async (ctx) => {
-	const terms: Term[] = await strapiFetch("/terms").then((e) => e.json());
+	const terms: Term[] = await strapiFetch("/terms");
 
 	return {
 		props: {

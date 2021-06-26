@@ -27,6 +27,7 @@ import { Term } from "./pojem/[slug]";
 import Terms from "../components/Terms";
 import { strapiFetch } from "../util/getApiUrl";
 import { Course } from "./kurzy/[slug]";
+import { Image } from "@chakra-ui/react";
 
 type IndexProps = {
 	articles: Article[];
@@ -37,13 +38,13 @@ type IndexProps = {
 
 export default function Index(props: IndexProps) {
 	const recommendedPageBg = useColorModeValue("gray.50", "gray.900");
-	const zacatek = props.courses.find((c) => c.id === "2");
-	const rest = props.courses.filter((c) => c.id !== "2");
+	const zacatek = props.courses.find((c) => c.id === 2);
+	const rest = props.courses.filter((c) => c.id !== zacatek.id);
 	return (
 		<>
 			<NextSeo
 				title="kryptokurzy.cz"
-				description="KryptoKurzy.cz je Váš ověřený zdroj informací o kryptoměnách, decentralizovaných financích a novinek ze světa crypta"
+				description="KryptoKurzy.cz je Váš ověřený zdroj informací o kryptoměnách, decentralizovaných financích a novinek ze světa krypta"
 			/>
 			<Navbar />
 			<Flex
@@ -106,14 +107,16 @@ export default function Index(props: IndexProps) {
 						>
 							Doporučený článek
 						</Box>
+
 						<StrapiImage
 							rounded={10}
 							w={"full"}
+							h={[40, 80]}
 							objectFit={"cover"}
-							h={[40, "80"]}
 							strapiImage={props.recommendedArticle.cover}
 							alt={props.recommendedArticle.title}
 						/>
+
 						<Box fontWeight={"bold"} fontSize={"2xl"}>
 							{props.recommendedArticle.title}
 						</Box>
@@ -132,11 +135,11 @@ export default function Index(props: IndexProps) {
 				</NextLink>
 			</Flex>
 			<CourseGrid course={zacatek} />
-			<Terms terms={props.terms} />
-			<CourseGrid course={rest[0]} />
 			<MailCTA />
+			<CourseGrid course={rest[0]} />
+			<Terms terms={props.terms} />
 			{rest.slice(1).map((course) => (
-				<CourseGrid course={course} />
+				<CourseGrid course={course} key={course.id} />
 			))}
 			<Footer />
 		</>
@@ -144,20 +147,16 @@ export default function Index(props: IndexProps) {
 }
 
 export const getStaticProps: GetStaticProps<IndexProps> = async (ctx) => {
-	const articles: Article[] = await strapiFetch("/articles").then((e) =>
-		e.json()
-	);
+	const articles: Article[] = await strapiFetch("/articles");
 
-	const courses: Course[] = await strapiFetch("/courses").then((e) =>
-		e.json()
-	);
+	const courses: Course[] = await strapiFetch("/courses");
 
 	const recommendedArticle: {
 		id: number;
 		article: Article;
-	} = await strapiFetch("/index-recommended-article").then((e) => e.json());
+	} = await strapiFetch("/index-recommended-article");
 
-	const terms: Term[] = await strapiFetch("/terms").then((e) => e.json());
+	const terms: Term[] = await strapiFetch("/terms");
 
 	return {
 		props: {
@@ -221,6 +220,8 @@ export function ArticleCard(props: { article: Article }) {
 			>
 				<Box rounded={10}>
 					<StrapiImage
+						maxH={[40, 80]}
+						objectFit={"cover"}
 						strapiImage={props.article.cover}
 						alt={props.article.title}
 						w={"full"}

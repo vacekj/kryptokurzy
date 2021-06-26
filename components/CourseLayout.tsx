@@ -212,7 +212,7 @@ function RecommendedArticles(props: RecommendedArticlesProps) {
 				Doporučené články
 			</Box>
 			<SimpleGrid columns={[1, 2, 3]} spacing={[4, 8]}>
-				{props.articles.map((a) => (
+				{props.articles.slice(0, 3).map((a) => (
 					<ArticleCard article={a} key={a.id} />
 				))}
 			</SimpleGrid>

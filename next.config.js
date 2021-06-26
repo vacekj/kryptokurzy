@@ -2,16 +2,20 @@
 // with Sentry.
 // https://nextjs.org/docs/api-reference/next.config.js/introduction
 // https://docs.sentry.io/platforms/javascript/guides/nextjs/
-
 const { withSentryConfig } = require("@sentry/nextjs");
 
 const moduleExports = {
 	images: {
-		domains: ["cdn.kryptokurzy.cz", "localhost"],
+		domains: ["cdn.kryptokurzy.cz", "localhost", "api.kryptokurzy.cz"],
 	},
 };
 
+/**
+ *
+ * @type {Sentry}
+ */
 const SentryWebpackPluginOptions = {
+	dryRun: process.env.NODE_ENV === "development",
 	// Additional config options for the Sentry Webpack plugin. Keep in mind that
 	// the following options are set automatically, and overriding them is not
 	// recommended:

@@ -8,7 +8,7 @@ import {
 	LinkProps as ChakraLinkProps,
 } from "@chakra-ui/react";
 import { StrapiImageType } from "../pages/kurzy/[slug]";
-import NextImage from "next/image";
+import { Image } from "@chakra-ui/react";
 
 export type NextChakraLinkProps = PropsWithChildren<
 	NextLinkProps & Omit<ChakraLinkProps, "as">
@@ -40,20 +40,13 @@ export const NextChakraLink = ({
 	);
 };
 
-export const StrapiImageFactory = chakra(NextImage, {
-	shouldForwardProp: (prop) =>
-		["width", "height", "src", "alt"].includes(prop),
-});
-
 export const StrapiImage = (
 	props: {
 		strapiImage: StrapiImageType;
 	} & ImageProps
 ) => {
 	return (
-		<StrapiImageFactory
-			// @ts-ignore
-			placeholder={"blur"}
+		<Image
 			width={props.strapiImage.width}
 			height={props.strapiImage.height}
 			src={getStrapiImageUrl(props.strapiImage)}

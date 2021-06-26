@@ -17,7 +17,7 @@ export default function Showcase() {
 		<>
 			<NextSeo
 				title="Zásady ochrany osobních údajů - KryptoKurzy.cz"
-				description="KryptoKurzy.cz je Váš ověřený zdroj informací o kryptoměnách, decentralizovaných financích a novinek ze světa crypta"
+				description="KryptoKurzy.cz je Váš ověřený zdroj informací o kryptoměnách, decentralizovaných financích a novinek ze světa krypta"
 			/>
 			<Navbar />
 			<Container maxW={"3xl"} as={VStack} alignItems={"start"} my={10}>

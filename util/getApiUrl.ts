@@ -1,27 +1,12 @@
-export function getApiUrl() {
-	const isDevelopment = process.env.NODE_ENV === "development";
-	if (isDevelopment) {
-		return `http://${process.env.NEXT_PUBLIC_HOSTNAME ?? "localhost"}:3000`;
+export async function strapiFetch(url: string, init?: RequestInit) {
+	const req = await fetch(process.env.NEXT_PUBLIC_STRAPI_URL + url, init);
+	if (!req.ok) {
+		throw new Error(
+			`Strapi Fetch Error ${req.statusText} Body:${JSON.stringify(
+				await req.json()
+			)}`
+		);
 	} else {
-		return "https://kryptokurzy.cz";
+		return await req.json();
 	}
 }
-
-export function getStrapiUrl() {
-	const isDevelopment = process.env.NODE_ENV === "development";
-	if (isDevelopment) {
-		return `http://${
-			process.env.NEXT_PUBLIC_HOSTNAME
-				? process.env.NEXT_PUBLIC_HOSTNAME
-				: "localhost"
-		}:1337`;
-	} else {
-		return "https://api.kryptokurzy.cz";
-	}
-}
-
-export function strapiFetch(url: string, init?: RequestInit) {
-	return fetch(getStrapiUrl() + url, init);
-}
-
-export const STRAPI_URL = getStrapiUrl();

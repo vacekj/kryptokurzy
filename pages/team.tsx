@@ -28,11 +28,11 @@ export default function Team() {
 
 	return (
 		<>
+			<NextSeo
+				title="O nás - KryptoKurzy.cz"
+				description="Poznejte tým odborníků a nadšenců za projektem KryptoKurzy.cz"
+			/>
 			<Head>
-				<NextSeo
-					title="O nás - KryptoKurzy.cz"
-					description="Poznejte tým odborníků a nadšenců za projektem KryptoKurzy.cz"
-				/>
 				<title>Náš tým - KryptoKurzy.cz</title>
 			</Head>
 
@@ -41,7 +41,7 @@ export default function Team() {
 				<HStack spacing={10}>
 					<VStack>
 						<Text fontSize={["3xl", "5xl"]} fontWeight={"bold"}>
-							Jsme skupina nadšenců do crypta a technologií.{" "}
+							Jsme skupina nadšenců do krypta a technologií.{" "}
 						</Text>
 						<Box
 							fontSize={["xl", "3xl"]}
@@ -67,7 +67,7 @@ export default function Team() {
 							Dominik je blockchain vývojář a krypto konzultant s
 							rozsáhlými zkušenosti v oboru díky aktivní účastí na
 							krypto trzích od konce roku 2017. Mimo kryptokurzy
-							pracuje také jako tržní analytik a programátor v
+							pracuje také jako tržní analytik v
 							<Link
 								href="https://academy.ivanontech.com/"
 								color="blue.500"
@@ -76,8 +76,8 @@ export default function Team() {
 							>
 								<span> </span>Ivan on Tech Academy
 							</Link>
-							, což je největší globální vzdělávácí platforma pro
-							krypto a blockchain na světě.
+							- největší globální vzdělávácí platforma pro krypto
+							a blockchain na světě.
 						</Text>
 						<Stack
 							as={motion.div}
@@ -106,7 +106,7 @@ export default function Team() {
 								>
 									Dominik Clemente
 								</Text>
-								<Text fontSize={"xl"}>Co-founder & CEO</Text>
+								<Text fontSize={"xl"}>Co-founder & Writer</Text>
 								<Link
 									pt={2}
 									href={"mailto:dominik@kryptokurzy.cz"}

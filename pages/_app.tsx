@@ -4,18 +4,14 @@ import Head from "next/head";
 import CookieConsent from "react-cookie-consent";
 import { DefaultSeo } from "next-seo";
 import SEO from "util/DefaultSEO";
-import { usePlatform } from "caphooks/platform";
 import { hotjar } from "react-hotjar";
 import { Global } from "@emotion/react";
 import { useEffect } from "react";
 
 function MyApp({ Component, pageProps }) {
-	const { platform } = usePlatform();
-
 	useEffect(() => {
 		if (process.env.NODE_ENV === "production" && process.browser) {
 			hotjar.initialize(2188656, 6);
-			console.log("hj init");
 		}
 	}, [process.browser]);
 	return (
@@ -56,11 +52,9 @@ function MyApp({ Component, pageProps }) {
 				<title>KryptoKurzy.cz</title>
 			</Head>
 			<DefaultSeo {...SEO} />
-			{platform === "web" && (
-				<CookieConsent buttonText="OK">
-					Tento web používá cookies
-				</CookieConsent>
-			)}
+			<CookieConsent buttonText="OK">
+				Tento web používá cookies
+			</CookieConsent>
 			<ChakraProvider theme={theme}>
 				<Fonts />
 				<Component {...pageProps} />
@@ -74,34 +68,6 @@ function Fonts() {
 		<Global
 			styles={`@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&display=swap');`}
 		/>
-	);
-}
-
-function GoogleAnalytics() {
-	return (
-		<>
-			s
-			{process.env.NODE_ENV === "production" && process.browser && (
-				<>
-					<script
-						async
-						src="https://www.googletagmanager.com/gtag/js?id=G-SE7E1WDWEL"
-					/>
-					<script
-						async
-						dangerouslySetInnerHTML={{
-							__html: `
-								  window.dataLayer = window.dataLayer || [];
-								  function gtag(){dataLayer.push(arguments);}
-								  gtag('js', new Date());
-								
-								  gtag('config', 'G-SE7E1WDWEL');
-								`,
-						}}
-					/>
-				</>
-			)}
-		</>
 	);
 }
 

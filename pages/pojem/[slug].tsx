@@ -2,13 +2,13 @@ import renderToString from "next-mdx-remote/render-to-string";
 import hydrate from "next-mdx-remote/hydrate";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { MdxRemote } from "next-mdx-remote/types";
-import TermLayout from "../../components/TermLayout";
-import { Difficulty } from "../kurzy/[slug]";
+import TermLayout from "components/TermLayout";
+import { Difficulty } from "pages/kurzy/[slug]";
 import {
 	Components,
 	MarkdownChakraProvider,
-} from "../../components/MarkdownComponents";
-import { getStrapiUrl, strapiFetch } from "../../util/getApiUrl";
+} from "components/MarkdownComponents";
+import { strapiFetch } from "util/getApiUrl";
 
 export type Term = {
 	id: number;
@@ -36,12 +36,10 @@ export default function KurzySlug(props: PojemProps) {
 	return <TermLayout content={content} term={props.pojem} />;
 }
 
-export const STRAPI_URL = getStrapiUrl();
-
 export const getStaticProps: GetStaticProps<PojemProps> = async (context) => {
-	const pojem: Term = await strapiFetch("/terms?slug=" + context.params.slug)
-		.then((e) => e.json())
-		.then((pojems) => pojems[0]);
+	const pojem: Term = await strapiFetch(
+		"/terms?slug=" + context.params.slug
+	).then((pojems) => pojems[0]);
 	const mdxSource = await renderToString(pojem.explanation, {
 		components: Components,
 		provider: MarkdownChakraProvider,
@@ -50,7 +48,7 @@ export const getStaticProps: GetStaticProps<PojemProps> = async (context) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-	const terms: Term[] = await strapiFetch("/terms").then((e) => e.json());
+	const terms: Term[] = await strapiFetch("/terms");
 	const slugs = terms.map((a) => {
 		return {
 			params: {
