@@ -16,7 +16,7 @@ import {
 } from "@chakra-ui/react";
 import { HiOutlineClock } from "react-icons/hi";
 import React from "react";
-import { NextChakraLink, StrapiImage } from "../components/NextChakraLink";
+import { NextChakraLink, StrapiNextImage } from "../components/NextChakraLink";
 import NextLink from "next/link";
 import { Article } from "./kurzy/[slug]";
 import { GetStaticProps } from "next";
@@ -107,13 +107,12 @@ export default function Index(props: IndexProps) {
 							Doporučený článek
 						</Box>
 
-						<StrapiImage
+						<StrapiNextImage
 							rounded={10}
 							w={"full"}
 							h={[40, 80]}
 							objectFit={"cover"}
 							strapiImage={props.recommendedArticle.cover}
-							alt={props.recommendedArticle.title}
 						/>
 
 						<Box fontWeight={"bold"} fontSize={"2xl"}>
@@ -217,15 +216,13 @@ export function ArticleCard(props: { article: Article }) {
 				spacing={3}
 				overflow={"hidden"}
 			>
-				<Box rounded={10}>
-					<StrapiImage
-						maxH={[40, 80]}
-						objectFit={"cover"}
-						strapiImage={props.article.cover}
-						alt={props.article.title}
-						w={"full"}
-					/>
-				</Box>
+				<StrapiNextImage
+					rounded={10}
+					h={[40, 72]}
+					strapiImage={props.article.cover}
+					w={"full"}
+					objectFit={"cover"}
+				/>
 				<VStack
 					p={5}
 					pt={0}

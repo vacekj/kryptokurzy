@@ -22,7 +22,7 @@ import cs from "date-fns/locale/cs";
 import { HiOutlineClock } from "react-icons/hi";
 import { Article } from "../pages/kurzy/[slug]";
 import { difficulties, difficultiesColors } from "./DifficultyTag";
-import { StrapiImage } from "./NextChakraLink";
+import { StrapiNextImage } from "./NextChakraLink";
 import { NextSeo } from "next-seo";
 import removeMd from "remove-markdown";
 import { ArticleCard } from "../pages";
@@ -195,14 +195,13 @@ export default function CourseLayout(props: {
 						</Box>
 					</HStack>
 				</HStack>
-				<StrapiImage
+				<StrapiNextImage
 					my={3}
 					rounded={10}
 					w={"full"}
 					objectFit={"cover"}
 					h={[40, "80"]}
 					strapiImage={props.article.cover}
-					alt={props.article.title}
 				/>
 				<Box fontSize={"xl"} pb={10} position={"relative"}>
 					{props.children}

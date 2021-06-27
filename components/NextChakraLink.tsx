@@ -2,12 +2,14 @@ import { PropsWithChildren } from "react";
 import NextLink from "next/link";
 import { LinkProps as NextLinkProps } from "next/dist/client/link";
 import {
-	ImageProps,
+	Box,
+	BoxProps,
+	chakra,
 	Link as ChakraLink,
 	LinkProps as ChakraLinkProps,
 } from "@chakra-ui/react";
 import { StrapiImageType } from "../pages/kurzy/[slug]";
-import { Image } from "@chakra-ui/react";
+import NextImage from "next/image";
 
 export type NextChakraLinkProps = PropsWithChildren<
 	NextLinkProps & Omit<ChakraLinkProps, "as">
@@ -39,18 +41,27 @@ export const NextChakraLink = ({
 	);
 };
 
-export const StrapiImage = (
+const WrappedNextImage = chakra(NextImage, {
+	shouldForwardProp: (prop) =>
+		["width", "height", "src", "alt", "layout"].includes(prop),
+});
+
+export const StrapiNextImage = (
 	props: {
 		strapiImage: StrapiImageType;
-	} & ImageProps
+	} & BoxProps
 ) => {
 	return (
-		<Image
-			width={props.strapiImage.width}
-			height={props.strapiImage.height}
-			src={getStrapiImageUrl(props.strapiImage)}
-			{...props}
-		/>
+		<Box {...props} position={"relative"} overflow={"hidden"}>
+			<WrappedNextImage
+				layout={"fill"}
+				objectFit={"cover"}
+				// @ts-ignore
+				placeholder={"blur"}
+				alt={props.strapiImage.alternativeText}
+				src={getStrapiImageUrl(props.strapiImage)}
+			/>
+		</Box>
 	);
 };
 
