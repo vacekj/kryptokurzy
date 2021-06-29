@@ -134,7 +134,7 @@ export default function ConsultingForm() {
 							<Controller
 								control={control}
 								name="type"
-								render={({ onChange, onBlur, value, ref }) => (
+								render={({ onChange, onBlur, value }) => (
 									<RadioGroup
 										onBlur={onBlur}
 										value={value}

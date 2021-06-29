@@ -51,7 +51,7 @@ export default function Footer() {
 							<img src={"/logo_white.svg"} alt={"Logo"} />
 						</NextChakraLink>
 						<Text pt={[4, 0]} color={"gray.100"}>
-							&copy; Dominik Clemente, Josef Vacek 2021
+							&copy; Josef Vacek, Dominik Clemente 2021
 						</Text>
 						<HStack spacing={5}>
 							{/*<a*/}

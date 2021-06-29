@@ -38,7 +38,9 @@ export default function Search(props: { isOpen: boolean }) {
 
 	const inputRef = useRef(null);
 	useEffect(() => {
-		inputRef.current?.focus();
+		if (props.isOpen) {
+			inputRef.current?.focus();
+		}
 	}, [props.isOpen]);
 
 	const searchResultsBg = useColorModeValue("white", "gray.900");
@@ -87,7 +89,7 @@ export default function Search(props: { isOpen: boolean }) {
 				overflow={"hidden"}
 			>
 				{searchResults && searchResults.length > 0 ? (
-					searchResults.map((result, i) => (
+					searchResults.slice(0, 10).map((result, i) => (
 						<React.Fragment key={result.url}>
 							<VStack
 								as={"a"}

@@ -70,7 +70,7 @@ export default function Index(props: IndexProps) {
 						covered.
 					</Box>
 					<NextChakraLink
-						href={getCourseUrl(props.recommendedArticle)}
+						href={"/kurzy/zacnete-zde"}
 						_hover={{
 							textDecoration: "none",
 						}}
@@ -94,13 +94,13 @@ export default function Index(props: IndexProps) {
 						cursor={"pointer"}
 						alignItems={"start"}
 						bg={recommendedPageBg}
-						rounded={"xl"}
-						spacing={4}
-						p={8}
+						rounded={["xl"]}
+						spacing={[2, 4]}
+						p={[4, 8]}
 						flexBasis={"50%"}
 					>
 						<Box
-							mb={[4, 2]}
+							mb={[2, 2]}
 							fontWeight={"medium"}
 							textTransform={"uppercase"}
 						>
@@ -109,6 +109,7 @@ export default function Index(props: IndexProps) {
 
 						<StrapiNextImage
 							rounded={10}
+							format={"medium"}
 							w={"full"}
 							h={[40, 80]}
 							objectFit={"cover"}
@@ -144,7 +145,7 @@ export default function Index(props: IndexProps) {
 	);
 }
 
-export const getStaticProps: GetStaticProps<IndexProps> = async (ctx) => {
+export const getStaticProps: GetStaticProps<IndexProps> = async () => {
 	const articles: Article[] = await strapiFetch("/articles");
 
 	const courses: Course[] = await strapiFetch("/courses");
@@ -176,16 +177,18 @@ function CourseGrid(props: { course: Course }) {
 			p={[4, 10]}
 		>
 			<HStack w={"full"} pb={4}>
-				<Divider flexShrink={2} />
+				<Divider display={["none", "flex"]} flexShrink={2} />
 				<Box
-					whiteSpace={"nowrap"}
+					whiteSpace={["break-spaces", "nowrap"]}
 					px={2}
-					fontWeight={"medium"}
+					fontSize={["3xl", "initial"]}
+					ml={[-3, "initial"]}
+					fontWeight={["bold", "medium"]}
 					textTransform={"uppercase"}
 				>
 					{props.course.title}
 				</Box>
-				<Divider flexShrink={2} />{" "}
+				<Divider display={["none", "flex"]} flexShrink={2} />{" "}
 			</HStack>
 			<SimpleGrid
 				alignItems={"start"}
@@ -218,15 +221,16 @@ export function ArticleCard(props: { article: Article }) {
 			>
 				<StrapiNextImage
 					rounded={10}
+					format={"small"}
 					h={[40, 72]}
 					strapiImage={props.article.cover}
 					w={"full"}
 					objectFit={"cover"}
 				/>
 				<VStack
-					p={5}
+					p={[5]}
 					pt={0}
-					spacing={4}
+					spacing={[2, 4]}
 					w={"full"}
 					alignItems={"start"}
 				>
@@ -234,11 +238,11 @@ export function ArticleCard(props: { article: Article }) {
 						{props.article.title}
 					</Box>
 					<HStack>
+						<DifficultyTag difficulty={props.article.difficulty} />
 						<Icon as={HiOutlineClock} mr={-1} />
 						<Box mr={2}>
 							{getReadingTime(props.article.content)}
 						</Box>
-						<DifficultyTag difficulty={props.article.difficulty} />
 					</HStack>
 				</VStack>
 			</VStack>

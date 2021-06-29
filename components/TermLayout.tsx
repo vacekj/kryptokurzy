@@ -5,26 +5,30 @@ import {
 	Heading,
 	HStack,
 	Icon,
+	Stack,
 	Tag,
-	useColorModeValue,
 	VStack,
 } from "@chakra-ui/react";
 import React from "react";
 import { Term } from "../pages/pojem/[slug]";
-import { difficulties, difficultiesColors } from "./DifficultyTag";
+import {
+	difficulties,
+	difficultiesColors,
+	DifficultyTag,
+} from "./DifficultyTag";
 import { HiOutlineClock, HiArrowLeft } from "react-icons/hi";
 import { formatDistanceToNow, formatDuration } from "date-fns";
 import cs from "date-fns/locale/cs";
 import readingTime from "@danieldietrich/reading-time";
 import { NextChakraLink } from "./NextChakraLink";
 import { NextSeo } from "next-seo";
+import NextLink from "next/link";
 
 export default function TermLayout(props: {
-	content: React.ReactNode;
 	term: Term;
+	children: React.ReactNode;
 }) {
 	const readingStats = readingTime(props.term.explanation).minutes;
-	const recommendedPageBg = useColorModeValue("gray.50", "gray.900");
 	return (
 		<>
 			<NextSeo
@@ -61,7 +65,11 @@ export default function TermLayout(props: {
 				>
 					{props.term.name}
 				</Heading>
-				<HStack alignItems={"center"} spacing={5}>
+				<Stack
+					direction={["column", "row"]}
+					alignItems={"start"}
+					spacing={[2, 5]}
+				>
 					<Tag
 						variant={"subtle"}
 						fontSize={["sm", "md"]}
@@ -93,12 +101,68 @@ export default function TermLayout(props: {
 							)}
 						</Box>
 					</HStack>
-				</HStack>
+				</Stack>
 				<Box fontSize={"xl"} pb={10}>
-					{props.content}
+					{props.children}
 				</Box>
+				{props.term.related_terms.length > 0 && (
+					<>
+						<Box
+							whiteSpace={"nowrap"}
+							p={2}
+							pb={3}
+							fontWeight={"medium"}
+							textTransform={"uppercase"}
+							textAlign={"center"}
+							w={"full"}
+						>
+							Doporučené články
+						</Box>
+						<Stack direction={["column", "row"]}>
+							{props.term.related_terms.map((term) => (
+								<TermCard term={term} />
+							))}
+						</Stack>
+					</>
+				)}
 			</VStack>
 			<Footer />
 		</>
+	);
+}
+
+export function TermCard(props: { term: Term }) {
+	return (
+		<NextLink href={"/pojem/" + props.term.slug}>
+			<VStack
+				transitionDuration={"300ms"}
+				transitionTimingFunction={"ease-in-out"}
+				shadow={"lg"}
+				_hover={{
+					shadow: "2xl",
+				}}
+				cursor={"pointer"}
+				alignItems={"stretch"}
+				rounded={"xl"}
+				spacing={3}
+				overflow={"hidden"}
+			>
+				<VStack
+					p={[5]}
+					pt={0}
+					spacing={[2, 2]}
+					w={"full"}
+					alignItems={"start"}
+				>
+					<Box fontWeight={"bold"} fontSize={"2xl"}>
+						{props.term.name}
+					</Box>
+					<Box fontSize={"xl"}>{props.term.summary}</Box>
+					<HStack>
+						<DifficultyTag difficulty={props.term.difficulty} />
+					</HStack>
+				</VStack>
+			</VStack>
+		</NextLink>
 	);
 }

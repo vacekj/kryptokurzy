@@ -7,11 +7,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29e902be-cac6-49c5-a000-dbc345811b23" name="Default Changelist" comment="feat: opengraph for all course and pojem pages">
+    <list default="true" id="29e902be-cac6-49c5-a000-dbc345811b23" name="Default Changelist" comment="updates">
+      <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ConsultingForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ConsultingForm.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/CourseLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/CourseLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MarkdownComponents.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/MarkdownComponents.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navbar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/NextChakraLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/NextChakraLink.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Search.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/TableOfContents.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/TableOfContents.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/TermLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/TermLayout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/konzultace.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/konzultace.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/kurzy/[slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/kurzy/[slug].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/pojem/[slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/pojem/[slug].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/slovnik.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/slovnik.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +46,9 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
+  </component>
   <component name="ProjectId" id="1m9oG3lRsZWlXpEnxssC0wtLGsw" />
   <component name="ProjectLevelVcsManager">
     <OptionsSetting value="false" id="Update" />
@@ -48,6 +66,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/.env.local&#10;/Users/pepa/Programming/jaknacrypto.cz/node_modules/@chakra-ui/react/dist/types/index.d.ts" />
+    <property name="database.data.extractors.current.export.id" value="SQL-Insert-Multirow.sql.groovy" />
     <property name="javascript.nodejs.core.library.configured.version" value="14.17.0" />
     <property name="javascript.nodejs.core.library.typings.version" value="14.17.0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -61,7 +80,7 @@
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.CommitDialog" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="ts.rename.search.for.js.occurrences" value="false" />
   </component>
@@ -189,7 +208,8 @@
       <workItem from="1623319912934" duration="5000" />
       <workItem from="1624399109065" duration="2026000" />
       <workItem from="1624471242506" duration="7818000" />
-      <workItem from="1624532505887" duration="16224000" />
+      <workItem from="1624532505887" duration="31295000" />
+      <workItem from="1624991790569" duration="4562000" />
     </task>
     <task id="LOCAL-00001" summary="postinstall">
       <created>1608915917969</created>
@@ -513,7 +533,21 @@
       <option name="project" value="LOCAL" />
       <updated>1624727283611</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="feat: use next/image">
+      <created>1624792187983</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1624792187983</updated>
+    </task>
+    <task id="LOCAL-00048" summary="updates">
+      <created>1625006142146</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1625006142146</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -557,8 +591,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix: various lighthouse fixes" />
-    <MESSAGE value="feat: sentry" />
     <MESSAGE value="feat: hotjar" />
     <MESSAGE value="feat: update favicon" />
     <MESSAGE value="feat: team page WIP" />
@@ -582,6 +614,8 @@
     <MESSAGE value="remove db" />
     <MESSAGE value="remove capacitor" />
     <MESSAGE value="feat: opengraph for all course and pojem pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: opengraph for all course and pojem pages" />
+    <MESSAGE value="feat: use next/image" />
+    <MESSAGE value="updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="updates" />
   </component>
 </project>

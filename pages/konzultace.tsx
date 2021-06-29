@@ -26,7 +26,6 @@ import { Controller, useForm } from "react-hook-form";
 import React, { useState } from "react";
 
 export default function Konzultace() {
-	const cardBg = useColorModeValue("gray.100", "gray.900");
 	const textColor = useColorModeValue("gray.700", "gray.300");
 
 	return (
@@ -167,7 +166,7 @@ function ConsultingFormCustom() {
 						<Controller
 							control={control}
 							name="type"
-							render={({ onChange, onBlur, value, ref }) => (
+							render={({ onChange, onBlur, value }) => (
 								<RadioGroup
 									onBlur={onBlur}
 									value={value}
