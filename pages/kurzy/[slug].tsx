@@ -1,12 +1,8 @@
-import renderToString from "next-mdx-remote/render-to-string";
-import hydrate from "next-mdx-remote/hydrate";
+import { serialize } from "next-mdx-remote/serialize";
+import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import CourseLayout from "../../components/CourseLayout";
 import { GetStaticPaths, GetStaticProps } from "next";
-import { MdxRemote } from "next-mdx-remote/types";
-import {
-	Components,
-	MarkdownChakraProvider,
-} from "../../components/MarkdownComponents";
+import { Components } from "../../components/MarkdownComponents";
 import unified from "unified";
 import markdown from "remark-parse";
 import toString from "mdast-util-to-string";
@@ -15,23 +11,19 @@ import { strapiFetch } from "../../util/getApiUrl";
 
 type KurzyProps = {
 	article: Article;
-	mdxSource: MdxRemote.Source;
+	mdxSource: MDXRemoteSerializeResult;
 	headings: string[];
 	relatedArticles: Article[];
 };
 
 export default function KurzySlug(props: KurzyProps) {
-	const content = hydrate(props.mdxSource, {
-		components: Components,
-		provider: MarkdownChakraProvider,
-	});
 	return (
 		<CourseLayout
 			article={props.article}
 			headings={props.headings}
 			recommendedArticles={props.relatedArticles}
 		>
-			{content}
+			<MDXRemote {...props.mdxSource} components={Components} />
 		</CourseLayout>
 	);
 }
@@ -43,10 +35,7 @@ export const getStaticProps: GetStaticProps<KurzyProps> = async (context) => {
 
 	const course: Course = await strapiFetch("/courses/" + article.course.id);
 
-	const mdxSource = await renderToString(article.content, {
-		components: Components,
-		provider: MarkdownChakraProvider,
-	});
+	const mdxSource = await serialize(article.content);
 	const headings = extractHeadingsFromMarkdown(article.content);
 	return {
 		props: {

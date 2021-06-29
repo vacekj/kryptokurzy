@@ -10,6 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { StrapiImageType } from "../pages/kurzy/[slug]";
 import NextImage from "next/image";
+import { omit } from "lodash-es";
 
 export type NextChakraLinkProps = PropsWithChildren<
 	NextLinkProps & Omit<ChakraLinkProps, "as">
@@ -46,26 +47,41 @@ const WrappedNextImage = chakra(NextImage, {
 		["width", "height", "src", "alt", "layout"].includes(prop),
 });
 
+type Format = "large" | "medium" | "small" | "thumbnail";
+
 export const StrapiNextImage = (
 	props: {
 		strapiImage: StrapiImageType;
+		format?: Format;
 	} & BoxProps
 ) => {
+	const propsWithoutStrapiImage = omit(props, "strapiImage");
 	return (
-		<Box {...props} position={"relative"} overflow={"hidden"}>
+		<Box
+			{...propsWithoutStrapiImage}
+			position={"relative"}
+			overflow={"hidden"}
+		>
 			<WrappedNextImage
 				layout={"fill"}
 				objectFit={"cover"}
 				// @ts-ignore
 				placeholder={"blur"}
 				alt={props.strapiImage.alternativeText}
-				src={getStrapiImageUrl(props.strapiImage)}
+				src={getStrapiImageUrl(props.strapiImage, props.format)}
 			/>
 		</Box>
 	);
 };
-
-export const getStrapiImageUrl = (strapiImage: StrapiImageType) => {
+export const getStrapiImageUrl = (
+	strapiImage: StrapiImageType,
+	format?: Format
+) => {
+	if (format) {
+		return strapiImage.provider === "local"
+			? `${process.env.NEXT_PUBLIC_STRAPI_URL}${strapiImage.formats[format].url}`
+			: strapiImage.formats[format].url;
+	}
 	return strapiImage.provider === "local"
 		? `${process.env.NEXT_PUBLIC_STRAPI_URL}${strapiImage.url}`
 		: strapiImage.url;

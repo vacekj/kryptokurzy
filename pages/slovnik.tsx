@@ -17,7 +17,7 @@ import React, { useRef } from "react";
 import { Term } from "pages/pojem/[slug]";
 import { GetStaticProps } from "next";
 import { useMiniSearch } from "react-minisearch";
-import _ from "lodash";
+import { uniq, sortBy } from "lodash-es";
 import { NextChakraLink } from "../components/NextChakraLink";
 import { strapiFetch } from "../util/getApiUrl";
 
@@ -27,8 +27,8 @@ type TermsProps = {
 
 export default function Terms(props: TermsProps) {
 	const recommendedPageBg = useColorModeValue("gray.50", "gray.900");
-	const indexLetters = _.sortBy(
-		_.uniq(props.terms.map((t) => t.name[0].toUpperCase())),
+	const indexLetters = sortBy(
+		uniq(props.terms.map((t) => t.name[0].toUpperCase())),
 		[(i) => i],
 		["asc"]
 	);
@@ -164,7 +164,7 @@ export default function Terms(props: TermsProps) {
 	);
 }
 
-export const getStaticProps: GetStaticProps<TermsProps> = async (ctx) => {
+export const getStaticProps: GetStaticProps<TermsProps> = async () => {
 	const terms: Term[] = await strapiFetch("/terms");
 
 	return {

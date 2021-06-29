@@ -1,6 +1,5 @@
 import { Heading, ChakraProvider, Box } from "@chakra-ui/react";
 import slugify from "slugify";
-import { MdxRemote } from "next-mdx-remote/types";
 import { theme } from "./ChakraTheme";
 export const Components = {
 	h1: (props) => (
@@ -33,11 +32,4 @@ export const Components = {
 		/>
 	),
 	p: (props) => <Box as={"p"} mb={3} {...props} />,
-};
-
-export const MarkdownChakraProvider: MdxRemote.Provider = {
-	component: ChakraProvider,
-	props: {
-		theme: theme,
-	},
 };

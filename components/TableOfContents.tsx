@@ -13,9 +13,13 @@ import {
 import { FaChevronDown } from "react-icons/fa";
 import { IoMenu } from "react-icons/io5";
 import slugify from "slugify";
+
 export function ToC(props: { headings: string[] }) {
 	const isMobile = useBreakpointValue({ base: true, md: false });
 
+	if (props.headings.length == 0) {
+		return null;
+	}
 	return (
 		<>
 			<Menu>
@@ -38,6 +42,14 @@ export function ToC(props: { headings: string[] }) {
 											lower: true,
 										})
 									}
+									onClick={() => {
+										const elem = document.getElementById(
+											slugify(l, {
+												lower: true,
+											})
+										);
+										elem.scrollIntoView();
+									}}
 								>
 									{l}
 								</Link>

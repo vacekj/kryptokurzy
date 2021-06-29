@@ -23,7 +23,7 @@ export default function Navbar() {
 	const { colorMode, toggleColorMode } = useColorMode();
 	const [searchOpen, setSearchOpen] = useState(false);
 	const clickRef = useRef(null);
-	const { ref, inView: isNavBarInView } = useInView({
+	const { ref } = useInView({
 		initialInView: true,
 	});
 	useClickAway(clickRef, () => {
@@ -241,17 +241,6 @@ function MobileNav() {
 				/>
 
 				<HStack spacing={5} pr={3}>
-					<a
-						aria-label={"kryptokurzy.cz Telegram skupina"}
-						href={"https://t.me/joinchat/SW9rdfYLrF5zhrqO"}
-					>
-						<Icon
-							color={"white"}
-							h={5}
-							w={5}
-							as={FaTelegramPlane}
-						/>
-					</a>
 					<a
 						aria-label={"kryptokurzy.cz Twitter stránka"}
 						href={"https://twitter.com/kryptokurzy"}
