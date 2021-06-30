@@ -44,7 +44,7 @@ export const NextChakraLink = ({
 
 const WrappedNextImage = chakra(NextImage, {
 	shouldForwardProp: (prop) =>
-		["width", "height", "src", "alt", "layout"].includes(prop),
+		["width", "height", "src", "alt", "layout", "priority"].includes(prop),
 });
 
 type Format = "large" | "medium" | "small" | "thumbnail";
@@ -53,6 +53,7 @@ export const StrapiNextImage = (
 	props: {
 		strapiImage: StrapiImageType;
 		format?: Format;
+		priority?: boolean;
 	} & BoxProps
 ) => {
 	const propsWithoutStrapiImage = omit(props, "strapiImage");
@@ -63,6 +64,7 @@ export const StrapiNextImage = (
 			overflow={"hidden"}
 		>
 			<WrappedNextImage
+				priority={props.priority ?? false}
 				layout={"fill"}
 				objectFit={"cover"}
 				// @ts-ignore

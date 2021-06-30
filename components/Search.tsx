@@ -9,24 +9,48 @@ import { BiChevronRight } from "react-icons/bi";
 import React, { useEffect, useRef } from "react";
 import useSWR from "swr";
 import { Article } from "../pages/kurzy/[slug]";
+import { Term } from "../pages/pojem/[slug]";
 
 // @ts-ignore
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 export default function Search(props: { isOpen: boolean }) {
-	const { data } = useSWR<Article[]>(
+	const { data: articles } = useSWR<Article[]>(
 		process.env.NEXT_PUBLIC_STRAPI_URL + "/articles",
 		fetcher
 	);
-	const index = data
-		? data.map((article) => {
+
+	const { data: terms } = useSWR<Term[]>(
+		process.env.NEXT_PUBLIC_STRAPI_URL + "/terms",
+		fetcher
+	);
+
+	const normalizedArticles = articles
+		? articles.map((article) => {
 				return {
-					...article,
+					id: article.id,
+					title: article.title,
+					content: article.content,
 					tags: article.tags.map((t) => t.name),
 					url: "/kurzy/" + article.slug,
 				};
 		  })
 		: [];
+
+	const normalizedTerms = terms
+		? terms.map((term) => {
+				return {
+					id: term.id,
+					title: term.name,
+					content: term.explanation,
+					tags: [],
+					url: "/pojem/" + term.slug,
+				};
+		  })
+		: [];
+
+	const index = normalizedArticles.concat(normalizedTerms);
+
 	const { search, searchResults } = useMiniSearch(index, {
 		fields: ["title", "tags", "content"],
 		storeFields: ["slug", "title", "tags", "url"],

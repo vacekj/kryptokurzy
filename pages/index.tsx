@@ -113,6 +113,7 @@ export default function Index(props: IndexProps) {
 							w={"full"}
 							h={[40, 80]}
 							objectFit={"cover"}
+							priority={true}
 							strapiImage={props.recommendedArticle.cover}
 						/>
 

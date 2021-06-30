@@ -48,7 +48,8 @@ export default function ConsultingForm() {
 			.catch(() => {
 				toast({
 					title: "Vyskytla se chyba",
-					description: "Kontaktujte prosím podporu",
+					description:
+						"Zkuste to prosím znovu a případně kontaktujte podporu",
 					status: "error",
 					duration: 5000,
 					isClosable: true,
@@ -163,7 +164,6 @@ export default function ConsultingForm() {
 							/>
 						</FormControl>
 						<Button
-							disabled={!formState.isValid}
 							variant={"brand"}
 							alignSelf={"start"}
 							size="lg"

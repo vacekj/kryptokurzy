@@ -104,6 +104,7 @@ export default function Terms(props: TermsProps) {
 							p={[0, 10]}
 							py={[0, 6]}
 							w={"full"}
+							key={i}
 						>
 							<Box
 								as={"a"}
@@ -134,6 +135,7 @@ export default function Terms(props: TermsProps) {
 												bg: recommendedPageBg,
 											}}
 											w={"full"}
+											key={term.id}
 										>
 											<VStack
 												alignItems={"start"}

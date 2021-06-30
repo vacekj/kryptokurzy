@@ -195,7 +195,6 @@ function ConsultingFormCustom() {
 						/>
 					</FormControl>
 					<Button
-						disabled={!formState.isValid}
 						variant={"brand"}
 						alignSelf={"start"}
 						size="lg"
