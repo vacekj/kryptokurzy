@@ -8,19 +8,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="29e902be-cac6-49c5-a000-dbc345811b23" name="Default Changelist" comment="updates">
-      <change afterPath="$PROJECT_DIR$/cypress/snapshots/visual.test.ts/Visual Regression Testing -- index.snap.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cypress/snapshots/visual.test.ts/Visual Regression Testing -- konzultace.snap.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cypress/snapshots/visual.test.ts/Visual Regression Testing -- team.snap.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ConsultingForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ConsultingForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/NextChakraLink.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/NextChakraLink.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Search.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cypress/integration/visual.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/cypress/integration/visual.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/konzultace.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/konzultace.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/slovnik.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/slovnik.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +193,8 @@
       <workItem from="1624471242506" duration="7818000" />
       <workItem from="1624532505887" duration="31295000" />
       <workItem from="1624991790569" duration="4562000" />
-      <workItem from="1625043381536" duration="3201000" />
+      <workItem from="1625043381536" duration="3599000" />
+      <workItem from="1625064202741" duration="382000" />
     </task>
     <task id="LOCAL-00001" summary="postinstall">
       <created>1608915917969</created>
@@ -542,7 +532,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625006142146</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="updates">
+      <created>1625046847449</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1625046847449</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

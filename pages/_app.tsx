@@ -50,6 +50,7 @@ function MyApp({ Component, pageProps }) {
 				/>
 				<meta httpEquiv="X-UA-Compatible" content="ie=edge" />
 				<title>KryptoKurzy.cz</title>
+				<Gtag />
 			</Head>
 			<DefaultSeo {...SEO} />
 			<CookieConsent buttonText="OK">
@@ -59,6 +60,26 @@ function MyApp({ Component, pageProps }) {
 				<Fonts />
 				<Component {...pageProps} />
 			</ChakraProvider>
+		</>
+	);
+}
+
+function Gtag() {
+	return (
+		<>
+			<script
+				async
+				src="https://www.googletagmanager.com/gtag/js?id=G-SE7E1WDWEL"
+			/>
+			<script
+				dangerouslySetInnerHTML={{
+					__html: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-SE7E1WDWEL');`,
+				}}
+			/>
 		</>
 	);
 }
