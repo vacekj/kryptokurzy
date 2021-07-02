@@ -1,0 +1,10 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://kryptokurzy.cz
+
+# Sitemaps
+Sitemap: https://kryptokurzy.cz/sitemap.xml
+Sitemap: https://kryptokurzy.cz/server-sitemap.xml

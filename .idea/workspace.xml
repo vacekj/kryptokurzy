@@ -7,13 +7,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29e902be-cac6-49c5-a000-dbc345811b23" name="Default Changelist" comment="updates">
+    <list default="true" id="29e902be-cac6-49c5-a000-dbc345811b23" name="Default Changelist" comment="fixing bugs in production ❤️">
+      <change afterPath="$PROJECT_DIR$/next-sitemap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/server-sitemap.xml/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/CourseLayout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/CourseLayout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Search.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Search.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/konzultace.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/konzultace.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,13 +198,6 @@
       <workItem from="1624991790569" duration="4562000" />
       <workItem from="1625043381536" duration="3599000" />
       <workItem from="1625064202741" duration="382000" />
-    </task>
-    <task id="LOCAL-00001" summary="postinstall">
-      <created>1608915917969</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1608915917969</updated>
     </task>
     <task id="LOCAL-00002" summary="feat: lets go">
       <created>1608933152938</created>
@@ -543,7 +535,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625046847449</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="fixing bugs in production ❤️">
+      <created>1625258612917</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1625258612917</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -587,7 +586,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: hotjar" />
     <MESSAGE value="feat: update favicon" />
     <MESSAGE value="feat: team page WIP" />
     <MESSAGE value="feat: remove sentry, update e2e tests, add eslint, format everything with prettier" />
@@ -612,6 +610,7 @@
     <MESSAGE value="feat: opengraph for all course and pojem pages" />
     <MESSAGE value="feat: use next/image" />
     <MESSAGE value="updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="updates" />
+    <MESSAGE value="fixing bugs in production ❤️" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing bugs in production ❤️" />
   </component>
 </project>
