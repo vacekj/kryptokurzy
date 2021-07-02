@@ -28,7 +28,7 @@ export default function Search(props: { isOpen: boolean }) {
 	const normalizedArticles = articles
 		? articles.map((article) => {
 				return {
-					id: article.id,
+					slug: article.slug,
 					title: article.title,
 					content: article.content,
 					tags: article.tags.map((t) => t.name),
@@ -40,7 +40,7 @@ export default function Search(props: { isOpen: boolean }) {
 	const normalizedTerms = terms
 		? terms.map((term) => {
 				return {
-					id: term.id,
+					slug: term.slug,
 					title: term.name,
 					content: term.explanation,
 					tags: [],
@@ -51,10 +51,10 @@ export default function Search(props: { isOpen: boolean }) {
 
 	const index = normalizedArticles.concat(normalizedTerms);
 
-	const { search, searchResults } = useMiniSearch(index, {
+	const { search, searchResults, removeAll, addAll } = useMiniSearch(index, {
 		fields: ["title", "tags", "content"],
 		storeFields: ["slug", "title", "tags", "url"],
-		idField: "id",
+		idField: "slug",
 		searchOptions: {
 			fuzzy: 0.2,
 		},
@@ -67,6 +67,11 @@ export default function Search(props: { isOpen: boolean }) {
 		}
 	}, [props.isOpen]);
 
+	useEffect(() => {
+		removeAll();
+		addAll(index);
+	}, [index]);
+
 	const searchResultsBg = useColorModeValue("white", "gray.900");
 	const hoverBg = useColorModeValue("gray.50", "gray.800");
 
@@ -75,7 +80,7 @@ export default function Search(props: { isOpen: boolean }) {
 			<motion.div
 				transition={{ duration: 0.3, type: "tween" }}
 				animate={{
-					width: props.isOpen ? "100%" : 0,
+					width: props.isOpen ? "initial" : 0,
 				}}
 				style={{
 					overflow: "hidden",
@@ -113,7 +118,7 @@ export default function Search(props: { isOpen: boolean }) {
 				overflow={"hidden"}
 			>
 				{searchResults && searchResults.length > 0 ? (
-					searchResults.slice(0, 10).map((result, i) => (
+					searchResults.slice(0, 5).map((result, i) => (
 						<React.Fragment key={result.url}>
 							<VStack
 								as={"a"}

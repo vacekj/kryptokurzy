@@ -66,11 +66,11 @@ export default function Navbar() {
 					<NextChakraLink
 						minW={0}
 						pl={[1, 3]}
-						display={["block"]}
 						href={"/kurzy/zacnete-zde"}
 						_hover={{
 							textDecoration: "none",
 						}}
+						display={["none", "block"]}
 					>
 						<Button
 							flexShrink={2}

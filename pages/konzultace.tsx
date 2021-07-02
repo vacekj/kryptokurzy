@@ -124,7 +124,7 @@ function ConsultingFormCustom() {
 					alignItems={"start"}
 				>
 					<Heading fontSize={["3xl", "4xl"]}>
-						Nezávazně poptat
+						Domluvte si nezávaznou konzultaci
 					</Heading>
 					<FormControl id="email">
 						<FormLabel>Emailová adresa</FormLabel>

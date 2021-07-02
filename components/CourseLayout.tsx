@@ -197,7 +197,6 @@ export default function CourseLayout(props: {
 				</HStack>
 				<StrapiNextImage
 					my={3}
-					format={"medium"}
 					rounded={10}
 					w={"full"}
 					objectFit={"cover"}

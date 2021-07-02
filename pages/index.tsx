@@ -61,13 +61,11 @@ export default function Index(props: IndexProps) {
 					mb={[4, 0]}
 				>
 					<Heading fontSize={"5xl"} as={"h1"}>
-						Krypto vzdělání
+						Kryptoměnová revoluce je tady
 					</Heading>
 					<Box maxW={["unset", "80"]} fontSize={"lg"}>
-						Your one-stop guide to all things krypto. Whether you're
-						a rookie trying to understand mining or a veteran
-						looking to develop a trading strategy, we've got you
-						covered.
+						Nenechte si ujet vlak v největší finanční revoluci naší
+						doby.
 					</Box>
 					<NextChakraLink
 						href={"/kurzy/zacnete-zde"}
