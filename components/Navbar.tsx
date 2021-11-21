@@ -85,6 +85,7 @@ export default function Navbar() {
 							flexShrink={2}
 							overflow={"hidden"}
 							h={9}
+							as={"a"}
 							variant={"solid"}
 							colorScheme={"green"}
 						>

@@ -8,7 +8,6 @@ import {
 	useColorModeValue,
 	VStack,
 } from "@chakra-ui/react";
-import { NextChakraLink } from "./NextChakraLink";
 import React from "react";
 import { Term } from "../pages/pojem/[slug]";
 import NextLink from "next/link";
