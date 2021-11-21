@@ -131,7 +131,11 @@ export default function Search(props: { isOpen: boolean }) {
 								key={result.url}
 								alignItems={"start"}
 							>
-								<NextLink href={"/" + result.url} key={i}>
+								<NextLink
+									passHref={true}
+									href={"/" + result.url}
+									key={i}
+								>
 									<Link fontWeight={"bold"} fontSize={"lg"}>
 										{result.title}
 									</Link>
@@ -156,6 +160,7 @@ export default function Search(props: { isOpen: boolean }) {
 													fontSize={"sm"}
 												>
 													<NextLink
+														passHref={true}
 														href={result.url.substring(
 															0,
 															result.url.indexOf(

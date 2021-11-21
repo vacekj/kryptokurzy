@@ -87,7 +87,10 @@ export default function Index(props: IndexProps) {
 					</NextChakraLink>
 				</VStack>
 				{/**/}
-				<NextLink href={getCourseUrl(props.recommendedArticle)}>
+				<NextLink
+					passHref={true}
+					href={getCourseUrl(props.recommendedArticle)}
+				>
 					<VStack
 						cursor={"pointer"}
 						alignItems={"start"}
@@ -95,6 +98,7 @@ export default function Index(props: IndexProps) {
 						rounded={["xl"]}
 						spacing={[2, 4]}
 						p={[4, 8]}
+						as={"a"}
 						flexBasis={"50%"}
 					>
 						<Box
@@ -204,7 +208,7 @@ function CourseGrid(props: { course: Course }) {
 
 export function ArticleCard(props: { article: Article }) {
 	return (
-		<NextLink href={"/kurzy/" + props.article.slug}>
+		<NextLink passHref={true} href={"/kurzy/" + props.article.slug}>
 			<VStack
 				transitionDuration={"300ms"}
 				transitionTimingFunction={"ease-in-out"}
@@ -212,6 +216,7 @@ export function ArticleCard(props: { article: Article }) {
 				_hover={{
 					shadow: "2xl",
 				}}
+				as={"a"}
 				cursor={"pointer"}
 				alignItems={"stretch"}
 				rounded={"xl"}

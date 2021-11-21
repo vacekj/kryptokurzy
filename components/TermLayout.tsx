@@ -133,7 +133,7 @@ export default function TermLayout(props: {
 
 export function TermCard(props: { term: Term }) {
 	return (
-		<NextLink href={"/pojem/" + props.term.slug}>
+		<NextLink passHref={true} href={"/pojem/" + props.term.slug}>
 			<VStack
 				transitionDuration={"300ms"}
 				transitionTimingFunction={"ease-in-out"}
@@ -141,6 +141,7 @@ export function TermCard(props: { term: Term }) {
 				_hover={{
 					shadow: "2xl",
 				}}
+				as={"a"}
 				cursor={"pointer"}
 				alignItems={"stretch"}
 				rounded={"xl"}
