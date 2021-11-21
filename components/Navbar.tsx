@@ -8,6 +8,7 @@ import {
 	Box,
 	VStack,
 	useBoolean,
+	useMediaQuery,
 } from "@chakra-ui/react";
 import { HiOutlineMoon, HiOutlineSearch, HiOutlineSun } from "react-icons/hi";
 import { NextChakraLink } from "./NextChakraLink";
@@ -21,6 +22,7 @@ import { FaTwitter } from "react-icons/fa";
 import { useRouter } from "next/router";
 
 export default function Navbar() {
+	const [isPrint] = useMediaQuery("print");
 	const { colorMode, toggleColorMode } = useColorMode();
 	const [searchOpen, setSearchOpen] = useState(false);
 	const clickRef = useRef(null);
@@ -33,7 +35,7 @@ export default function Navbar() {
 
 	const router = useRouter();
 
-	return (
+	return isPrint ? null : (
 		<>
 			<div className={styles.navbar} ref={ref} />
 			<HStack
@@ -53,17 +55,19 @@ export default function Navbar() {
 				>
 					<NextChakraLink href={"/"} pl={[1, 0]}>
 						<Image
+							color={"white"}
 							display={["none", "block"]}
 							h={7}
 							src={"/logo_white.svg"}
-							alt={"Logo"}
+							alt={"KryptoKurzy.cz Logo"}
 						/>
 						<Image
+							color={"white"}
 							flexShrink={0}
 							display={["block", "none"]}
 							h={8}
 							src={"/glyph.svg"}
-							alt={"Logo"}
+							alt={"KryptoKurzy.cz Logo"}
 						/>
 					</NextChakraLink>
 
