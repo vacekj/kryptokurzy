@@ -182,7 +182,6 @@ const variants: Variants = {
 	},
 	closed: {
 		right: "-100vw",
-		display: "hidden",
 	},
 };
 
