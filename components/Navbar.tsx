@@ -18,6 +18,7 @@ import styles from "./navbar.module.css";
 import { useInView } from "react-intersection-observer";
 import { motion, Variants } from "framer-motion";
 import { FaTwitter } from "react-icons/fa";
+import { useRouter } from "next/router";
 
 export default function Navbar() {
 	const { colorMode, toggleColorMode } = useColorMode();
@@ -30,10 +31,13 @@ export default function Navbar() {
 		setSearchOpen(false);
 	});
 
+	const router = useRouter();
+
 	return (
 		<>
 			<div className={styles.navbar} ref={ref} />
 			<HStack
+				as={"header"}
 				ref={clickRef}
 				bg={"black"}
 				p={3}
@@ -90,6 +94,11 @@ export default function Navbar() {
 						color={"white"}
 						href={"/team"}
 						display={["none", "block"]}
+						textDecoration={
+							router.pathname.includes("/team")
+								? "underline"
+								: "none"
+						}
 					>
 						Náš tým
 					</NextChakraLink>
@@ -100,6 +109,11 @@ export default function Navbar() {
 						color={"white"}
 						href={"/konzultace"}
 						display={["none", "block"]}
+						textDecoration={
+							router.pathname.includes("/konzultace")
+								? "underline"
+								: "none"
+						}
 					>
 						Konzultace
 					</NextChakraLink>
