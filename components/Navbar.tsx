@@ -35,7 +35,9 @@ export default function Navbar() {
 
 	const router = useRouter();
 
-	return isPrint ? null : (
+	return isPrint ? (
+		<Image h={7} src={"/logo_black.svg"} alt={"KryptoKurzy.cz Logo"} />
+	) : (
 		<>
 			<div className={styles.navbar} ref={ref} />
 			<HStack
