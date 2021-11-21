@@ -7,9 +7,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29e902be-cac6-49c5-a000-dbc345811b23" name="Default Changelist" comment="feat: fix more js-only links">
+    <list default="true" id="29e902be-cac6-49c5-a000-dbc345811b23" name="Default Changelist" comment="fix: add cs lang attr to html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navbar.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,13 +198,6 @@
       <workItem from="1624991790569" duration="4562000" />
       <workItem from="1625043381536" duration="3599000" />
       <workItem from="1625064202741" duration="382000" />
-    </task>
-    <task id="LOCAL-00009" summary="feat: seo and PWA">
-      <created>1609065947944</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1609065947944</updated>
     </task>
     <task id="LOCAL-00010" summary="fix: vercel index generation&#10;&#10;vercel currently supports Node.js version up to 12 :(">
       <created>1609066875589</created>
@@ -541,7 +535,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637528498131</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="fix: add cs lang attr to html">
+      <created>1637529595406</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1637529595406</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -585,7 +586,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="HELLO GUYS THIS IS PEPA AND WELCOME TO THE BIGGEST KKCZ UPDATE EVER&#10;hope you enjoy UwU" />
     <MESSAGE value="term" />
     <MESSAGE value="something something we launching soon or what?" />
     <MESSAGE value="feat: google analytics" />
@@ -610,6 +610,7 @@
     <MESSAGE value="fix: make logo alt image text white" />
     <MESSAGE value="feat: show a logo instead of the whole navbar in print mode" />
     <MESSAGE value="feat: fix more js-only links" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: fix more js-only links" />
+    <MESSAGE value="fix: add cs lang attr to html" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: add cs lang attr to html" />
   </component>
 </project>

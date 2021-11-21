@@ -84,7 +84,6 @@ export default function Navbar() {
 						display={["none", "block"]}
 					>
 						<Button
-							as={"a"}
 							flexShrink={2}
 							minW={0}
 							overflow={"hidden"}

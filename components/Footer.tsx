@@ -30,7 +30,6 @@ export default function Footer() {
 							}}
 						>
 							<Button
-								as={"a"}
 								h={9}
 								variant={"solid"}
 								colorScheme={"green"}
