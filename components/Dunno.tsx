@@ -9,7 +9,7 @@ import {
 	VStack,
 } from "@chakra-ui/react";
 import React from "react";
-import { NextChakraLink } from "./NextChakraLink";
+import NextLink from "next/link";
 
 export default function Dunno() {
 	const dark = useColorModeValue(false, true);
@@ -41,13 +41,12 @@ export default function Dunno() {
 					>
 						S naším kurzem pro začátečníky se rychle zorientujete.
 					</Text>
-					<NextChakraLink
-						href={"/kurzy/zacnete-zde"}
-						_hover={{
-							textDecoration: "none",
-						}}
-					>
+					<NextLink href={"/kurzy/zacnete-zde"}>
 						<Button
+							as={"a"}
+							_hover={{
+								textDecoration: "none",
+							}}
 							mt={2}
 							flexShrink={2}
 							minW={0}
@@ -60,7 +59,7 @@ export default function Dunno() {
 						>
 							Začněte zde
 						</Button>
-					</NextChakraLink>
+					</NextLink>
 				</VStack>
 			</HStack>
 		</Container>

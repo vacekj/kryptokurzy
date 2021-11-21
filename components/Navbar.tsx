@@ -20,6 +20,7 @@ import { useInView } from "react-intersection-observer";
 import { motion, Variants } from "framer-motion";
 import { FaTwitter } from "react-icons/fa";
 import { useRouter } from "next/router";
+import NextLink from "next/link";
 
 export default function Navbar() {
 	const [isPrint] = useMediaQuery("print");
@@ -73,19 +74,15 @@ export default function Navbar() {
 						/>
 					</NextChakraLink>
 
-					<NextChakraLink
-						minW={0}
-						pl={[1, 3]}
-						passHref={true}
-						href={"/kurzy/zacnete-zde"}
-						_hover={{
-							textDecoration: "none",
-						}}
-						display={["none", "block"]}
-					>
+					<NextLink passHref={true} href={"/kurzy/zacnete-zde"}>
 						<Button
-							flexShrink={2}
 							minW={0}
+							pl={[1, 3]}
+							_hover={{
+								textDecoration: "none",
+							}}
+							display={["none", "block"]}
+							flexShrink={2}
 							overflow={"hidden"}
 							h={9}
 							variant={"solid"}
@@ -93,7 +90,7 @@ export default function Navbar() {
 						>
 							Začněte zde
 						</Button>
-					</NextChakraLink>
+					</NextLink>
 
 					<NextChakraLink
 						fontSize={"lg"}

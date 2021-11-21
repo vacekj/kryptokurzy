@@ -7,8 +7,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29e902be-cac6-49c5-a000-dbc345811b23" name="Default Changelist" comment="fix: duplicate a tag">
+    <list default="true" id="29e902be-cac6-49c5-a000-dbc345811b23" name="Default Changelist" comment="fix: display hidden">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Dunno.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Dunno.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Footer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,13 +200,6 @@
       <workItem from="1624991790569" duration="4562000" />
       <workItem from="1625043381536" duration="3599000" />
       <workItem from="1625064202741" duration="382000" />
-    </task>
-    <task id="LOCAL-00011" summary="fix: meta description">
-      <created>1609068019047</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1609068019047</updated>
     </task>
     <task id="LOCAL-00012" summary="feat: capacitor, responsivity">
       <created>1609890935685</created>
@@ -540,7 +537,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637529678072</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="fix: display hidden">
+      <created>1637529710266</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1637529710266</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -584,7 +588,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="something something we launching soon or what?" />
     <MESSAGE value="feat: google analytics" />
     <MESSAGE value="feat: google analytics 2" />
     <MESSAGE value="feat: address handling changes" />
@@ -609,6 +612,7 @@
     <MESSAGE value="feat: fix more js-only links" />
     <MESSAGE value="fix: add cs lang attr to html" />
     <MESSAGE value="fix: duplicate a tag" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: duplicate a tag" />
+    <MESSAGE value="fix: display hidden" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: display hidden" />
   </component>
 </project>

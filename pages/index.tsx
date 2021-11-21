@@ -67,12 +67,7 @@ export default function Index(props: IndexProps) {
 						Nenechte si ujet vlak v největší finanční revoluci naší
 						doby.
 					</Box>
-					<NextChakraLink
-						href={"/kurzy/zacnete-zde"}
-						_hover={{
-							textDecoration: "none",
-						}}
-					>
+					<NextLink href={"/kurzy/zacnete-zde"}>
 						<Button
 							px={4}
 							py={6}
@@ -81,10 +76,13 @@ export default function Index(props: IndexProps) {
 							overflow={"hidden"}
 							h={9}
 							variant={"black"}
+							_hover={{
+								textDecoration: "none",
+							}}
 						>
 							Začněte zde
 						</Button>
-					</NextChakraLink>
+					</NextLink>
 				</VStack>
 				{/**/}
 				<NextLink

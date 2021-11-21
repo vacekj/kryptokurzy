@@ -10,6 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { NextChakraLink } from "./NextChakraLink";
 import { FaTwitter } from "react-icons/fa";
+import NextLink from "next/link";
 
 export default function Footer() {
 	return (
@@ -22,21 +23,19 @@ export default function Footer() {
 					alignItems="start"
 				>
 					<VStack spacing={4} alignItems={"start"}>
-						<NextChakraLink
-							passHref={true}
-							href={"/kurzy/zacnete-zde"}
-							_hover={{
-								textDecoration: "none",
-							}}
-						>
+						<NextLink passHref={true} href={"/kurzy/zacnete-zde"}>
 							<Button
+								_hover={{
+									textDecoration: "none",
+								}}
+								as={"a"}
 								h={9}
 								variant={"solid"}
 								colorScheme={"green"}
 							>
 								Začněte zde
 							</Button>
-						</NextChakraLink>
+						</NextLink>
 						<VStack
 							fontWeight={"semibold"}
 							pl={1}
