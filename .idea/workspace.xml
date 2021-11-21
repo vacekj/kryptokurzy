@@ -7,11 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29e902be-cac6-49c5-a000-dbc345811b23" name="Default Changelist" comment="fix: display hidden">
+    <list default="true" id="29e902be-cac6-49c5-a000-dbc345811b23" name="Default Changelist" comment="fix: button cannot be a descendant of a">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Dunno.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Dunno.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Terms.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Terms.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -200,13 +198,6 @@
       <workItem from="1624991790569" duration="4562000" />
       <workItem from="1625043381536" duration="3599000" />
       <workItem from="1625064202741" duration="382000" />
-    </task>
-    <task id="LOCAL-00012" summary="feat: capacitor, responsivity">
-      <created>1609890935685</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1609890935685</updated>
     </task>
     <task id="LOCAL-00013" summary="feat: capacitor, responsivity">
       <created>1609890973296</created>
@@ -544,7 +535,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637529710266</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="fix: button cannot be a descendant of a">
+      <created>1637529915972</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1637529915972</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -588,7 +586,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: google analytics" />
     <MESSAGE value="feat: google analytics 2" />
     <MESSAGE value="feat: address handling changes" />
     <MESSAGE value="fix: build failure when no courses or terms are present" />
@@ -613,6 +610,7 @@
     <MESSAGE value="fix: add cs lang attr to html" />
     <MESSAGE value="fix: duplicate a tag" />
     <MESSAGE value="fix: display hidden" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: display hidden" />
+    <MESSAGE value="fix: button cannot be a descendant of a" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: button cannot be a descendant of a" />
   </component>
 </project>

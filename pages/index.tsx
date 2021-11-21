@@ -16,7 +16,7 @@ import {
 } from "@chakra-ui/react";
 import { HiOutlineClock } from "react-icons/hi";
 import React from "react";
-import { NextChakraLink, StrapiNextImage } from "../components/NextChakraLink";
+import { StrapiNextImage } from "../components/NextChakraLink";
 import NextLink from "next/link";
 import { Article } from "./kurzy/[slug]";
 import { GetStaticProps } from "next";
@@ -75,6 +75,7 @@ export default function Index(props: IndexProps) {
 							minW={0}
 							overflow={"hidden"}
 							h={9}
+							as={"a"}
 							variant={"black"}
 							_hover={{
 								textDecoration: "none",

@@ -11,6 +11,7 @@ import {
 import { NextChakraLink } from "./NextChakraLink";
 import React from "react";
 import { Term } from "../pages/pojem/[slug]";
+import NextLink from "next/link";
 
 export default function Terms(props: { terms: Term[] }) {
 	const dark = useColorModeValue(false, true);
@@ -43,26 +44,25 @@ export default function Terms(props: { terms: Term[] }) {
 						Vysvětlíme vám {props.terms.length} pojmů tak, že už se
 						v krypto slangu neztratíte.
 					</Text>
-					<NextChakraLink
-						href={"/slovnik"}
-						_hover={{
-							textDecoration: "none",
-						}}
-					>
+					<NextLink href={"/slovnik"}>
 						<Button
 							mt={2}
+							_hover={{
+								textDecoration: "none",
+							}}
 							flexShrink={2}
 							minW={0}
 							overflow={"hidden"}
 							h={9}
 							p={6}
+							as={"a"}
 							fontSize={"xl"}
 							variant={"solid"}
 							colorScheme={"brand"}
 						>
 							Slovník
 						</Button>
-					</NextChakraLink>
+					</NextLink>
 				</VStack>
 			</HStack>
 		</Container>
