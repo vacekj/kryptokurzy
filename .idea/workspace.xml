@@ -7,9 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29e902be-cac6-49c5-a000-dbc345811b23" name="Default Changelist" comment="fix: make logo alt image text white">
-      <change beforePath="$PROJECT_DIR$/.idea/codestream.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codestream.xml" afterDir="false" />
+    <list default="true" id="29e902be-cac6-49c5-a000-dbc345811b23" name="Default Changelist" comment="feat: show a logo instead of the whole navbar in print mode">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Footer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navbar.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -198,13 +198,6 @@
       <workItem from="1624991790569" duration="4562000" />
       <workItem from="1625043381536" duration="3599000" />
       <workItem from="1625064202741" duration="382000" />
-    </task>
-    <task id="LOCAL-00007" summary="test: visual regression testing">
-      <created>1609011015851</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1609011015851</updated>
     </task>
     <task id="LOCAL-00008" summary="test: check for 404s recursively starting from index">
       <created>1609012935286</created>
@@ -542,7 +535,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637527641105</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="feat: show a logo instead of the whole navbar in print mode">
+      <created>1637528047657</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1637528047657</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -586,7 +586,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: YUGE UPDATE, LAUNCH DAY IS NEAR, BRACE YOURSELVES" />
     <MESSAGE value="feat: YUGE UPDATE #2" />
     <MESSAGE value="HELLO GUYS THIS IS PEPA AND WELCOME TO THE BIGGEST KKCZ UPDATE EVER&#10;hope you enjoy UwU" />
     <MESSAGE value="term" />
@@ -611,6 +610,7 @@
     <MESSAGE value="fix: typos" />
     <MESSAGE value="feat: make the course div into a &lt;article&gt; tag" />
     <MESSAGE value="fix: make logo alt image text white" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: make logo alt image text white" />
+    <MESSAGE value="feat: show a logo instead of the whole navbar in print mode" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: show a logo instead of the whole navbar in print mode" />
   </component>
 </project>

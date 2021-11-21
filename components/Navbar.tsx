@@ -76,6 +76,7 @@ export default function Navbar() {
 					<NextChakraLink
 						minW={0}
 						pl={[1, 3]}
+						passHref={true}
 						href={"/kurzy/zacnete-zde"}
 						_hover={{
 							textDecoration: "none",
@@ -83,6 +84,7 @@ export default function Navbar() {
 						display={["none", "block"]}
 					>
 						<Button
+							as={"a"}
 							flexShrink={2}
 							minW={0}
 							overflow={"hidden"}

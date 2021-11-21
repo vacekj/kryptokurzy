@@ -22,9 +22,22 @@ export default function Footer() {
 					alignItems="start"
 				>
 					<VStack spacing={4} alignItems={"start"}>
-						<Button h={9} variant={"solid"} colorScheme={"green"}>
-							Začněte zde
-						</Button>
+						<NextChakraLink
+							passHref={true}
+							href={"/kurzy/zacnete-zde"}
+							_hover={{
+								textDecoration: "none",
+							}}
+						>
+							<Button
+								as={"a"}
+								h={9}
+								variant={"solid"}
+								colorScheme={"green"}
+							>
+								Začněte zde
+							</Button>
+						</NextChakraLink>
 						<VStack
 							fontWeight={"semibold"}
 							pl={1}
