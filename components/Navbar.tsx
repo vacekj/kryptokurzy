@@ -37,7 +37,7 @@ export default function Navbar() {
 		<>
 			<div className={styles.navbar} ref={ref} />
 			<HStack
-				as={"header"}
+				as={"nav"}
 				ref={clickRef}
 				bg={"black"}
 				p={3}

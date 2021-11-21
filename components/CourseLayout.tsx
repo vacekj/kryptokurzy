@@ -76,7 +76,7 @@ export default function CourseLayout(props: {
 				position={"fixed"}
 				left={0}
 				top={0}
-				as={motion.div}
+				as={motion.article}
 				initial={false}
 				w={"full"}
 				display={"flex"}
