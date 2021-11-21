@@ -42,7 +42,7 @@ export default function Footer() {
 								Ochrana osobních údajů
 							</NextChakraLink>
 							<NextChakraLink href={"/legal#disclaimer"}>
-								Prohlášení o vyloučení odpovědnosti±
+								Prohlášení o vyloučení odpovědnosti
 							</NextChakraLink>
 						</VStack>
 					</VStack>

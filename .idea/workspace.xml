@@ -7,10 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29e902be-cac6-49c5-a000-dbc345811b23" name="Default Changelist" comment="fix: passHref true on all nextLinks to accomodate turned off JS">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navbar.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="29e902be-cac6-49c5-a000-dbc345811b23" name="Default Changelist" comment="feat: underline active navbar link" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -197,13 +194,6 @@
       <workItem from="1624991790569" duration="4562000" />
       <workItem from="1625043381536" duration="3599000" />
       <workItem from="1625064202741" duration="382000" />
-    </task>
-    <task id="LOCAL-00003" summary="dummy dum">
-      <created>1608933277196</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1608933277196</updated>
     </task>
     <task id="LOCAL-00004" summary="feat: search">
       <created>1608982255343</created>
@@ -541,7 +531,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637523701435</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="feat: underline active navbar link">
+      <created>1637524148355</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1637524148355</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -585,7 +582,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: team page WIP" />
     <MESSAGE value="feat: remove sentry, update e2e tests, add eslint, format everything with prettier" />
     <MESSAGE value="fix: dominik avatar" />
     <MESSAGE value="fix: visual bugs, wip: ToC" />
@@ -610,6 +606,7 @@
     <MESSAGE value="updates" />
     <MESSAGE value="fixing bugs in production ❤️" />
     <MESSAGE value="fix: passHref true on all nextLinks to accomodate turned off JS" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: passHref true on all nextLinks to accomodate turned off JS" />
+    <MESSAGE value="feat: underline active navbar link" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: underline active navbar link" />
   </component>
 </project>

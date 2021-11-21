@@ -113,7 +113,7 @@ export default function ConsultingForm() {
 								type="email"
 							/>
 							<FormHelperText>
-								Email bude použit výhrandě pro komunikační účely
+								Email bude použit výhradně pro komunikační účely
 							</FormHelperText>
 						</FormControl>
 						<FormControl id="text">
