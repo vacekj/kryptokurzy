@@ -7,10 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29e902be-cac6-49c5-a000-dbc345811b23" name="Default Changelist" comment="feat: show a logo instead of the whole navbar in print mode">
+    <list default="true" id="29e902be-cac6-49c5-a000-dbc345811b23" name="Default Changelist" comment="feat: fix more js-only links">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,13 +197,6 @@
       <workItem from="1624991790569" duration="4562000" />
       <workItem from="1625043381536" duration="3599000" />
       <workItem from="1625064202741" duration="382000" />
-    </task>
-    <task id="LOCAL-00008" summary="test: check for 404s recursively starting from index">
-      <created>1609012935286</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1609012935286</updated>
     </task>
     <task id="LOCAL-00009" summary="feat: seo and PWA">
       <created>1609065947944</created>
@@ -542,7 +534,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637528047657</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="feat: fix more js-only links">
+      <created>1637528498131</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1637528498131</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -586,7 +585,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: YUGE UPDATE #2" />
     <MESSAGE value="HELLO GUYS THIS IS PEPA AND WELCOME TO THE BIGGEST KKCZ UPDATE EVER&#10;hope you enjoy UwU" />
     <MESSAGE value="term" />
     <MESSAGE value="something something we launching soon or what?" />
@@ -611,6 +609,7 @@
     <MESSAGE value="feat: make the course div into a &lt;article&gt; tag" />
     <MESSAGE value="fix: make logo alt image text white" />
     <MESSAGE value="feat: show a logo instead of the whole navbar in print mode" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: show a logo instead of the whole navbar in print mode" />
+    <MESSAGE value="feat: fix more js-only links" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: fix more js-only links" />
   </component>
 </project>

@@ -10,6 +10,10 @@ const nextConfig = {
 	images: {
 		domains: ["cdn.kryptokurzy.cz", "localhost", "api.kryptokurzy.cz"],
 	},
+	i18n: {
+		locales: ["cs"],
+		defaultLocale: "cs",
+	},
 };
 
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
