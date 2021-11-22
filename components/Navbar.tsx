@@ -81,7 +81,7 @@ export default function Navbar() {
 							_hover={{
 								textDecoration: "none",
 							}}
-							display={["none", "block"]}
+							display={["none", "flex"]}
 							flexShrink={2}
 							overflow={"hidden"}
 							h={9}
