@@ -1,12 +1,12 @@
-import { theme } from "components/ChakraTheme";
 import { ChakraProvider } from "@chakra-ui/react";
-import Head from "next/head";
-import CookieConsent from "react-cookie-consent";
-import { DefaultSeo } from "next-seo";
-import SEO from "util/DefaultSEO";
-import { hotjar } from "react-hotjar";
 import { Global } from "@emotion/react";
+import { theme } from "components/ChakraTheme";
+import { DefaultSeo } from "next-seo";
+import Head from "next/head";
 import { useEffect } from "react";
+import CookieConsent from "react-cookie-consent";
+import { hotjar } from "react-hotjar";
+import SEO from "util/DefaultSEO";
 
 function MyApp({ Component, pageProps }) {
 	useEffect(() => {

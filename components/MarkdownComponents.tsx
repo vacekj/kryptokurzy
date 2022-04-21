@@ -1,4 +1,4 @@
-import { Heading, Box } from "@chakra-ui/react";
+import { Box, Heading } from "@chakra-ui/react";
 import slugify from "slugify";
 export const Components = {
 	h1: (props) => (

@@ -1,6 +1,6 @@
-import { Difficulty } from "../pages/kurzy/[slug]";
 import { Tag } from "@chakra-ui/react";
 import React from "react";
+import { Difficulty } from "../pages/kurzy/[slug]";
 
 export const difficulties = {
 	1: "Začátečník",

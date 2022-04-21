@@ -1,16 +1,10 @@
-import { PropsWithChildren } from "react";
-import NextLink from "next/link";
-import { LinkProps as NextLinkProps } from "next/dist/client/link";
-import {
-	Box,
-	BoxProps,
-	chakra,
-	Link as ChakraLink,
-	LinkProps as ChakraLinkProps,
-} from "@chakra-ui/react";
-import { StrapiImageType } from "../pages/kurzy/[slug]";
-import NextImage from "next/image";
+import { Box, BoxProps, chakra, Link as ChakraLink, LinkProps as ChakraLinkProps } from "@chakra-ui/react";
 import { omit } from "lodash-es";
+import { LinkProps as NextLinkProps } from "next/dist/client/link";
+import NextImage from "next/image";
+import NextLink from "next/link";
+import { PropsWithChildren } from "react";
+import { StrapiImageType } from "../pages/kurzy/[slug]";
 
 export type NextChakraLinkProps = PropsWithChildren<
 	NextLinkProps & Omit<ChakraLinkProps, "as">
@@ -43,8 +37,7 @@ export const NextChakraLink = ({
 };
 
 const WrappedNextImage = chakra(NextImage, {
-	shouldForwardProp: (prop) =>
-		["width", "height", "src", "alt", "layout", "priority"].includes(prop),
+	shouldForwardProp: (prop) => ["width", "height", "src", "alt", "layout", "priority"].includes(prop),
 });
 
 type Format = "large" | "medium" | "small" | "thumbnail";
@@ -54,7 +47,7 @@ export const StrapiNextImage = (
 		strapiImage: StrapiImageType;
 		format?: Format;
 		priority?: boolean;
-	} & BoxProps
+	} & BoxProps,
 ) => {
 	const propsWithoutStrapiImage = omit(props, "strapiImage");
 	return (
@@ -77,7 +70,7 @@ export const StrapiNextImage = (
 };
 export const getStrapiImageUrl = (
 	strapiImage: StrapiImageType,
-	format?: Format
+	format?: Format,
 ) => {
 	if (format) {
 		return strapiImage.provider === "local"

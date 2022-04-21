@@ -1,13 +1,4 @@
-import {
-	Button,
-	Container,
-	Heading,
-	HStack,
-	Text,
-	Image,
-	useColorModeValue,
-	VStack,
-} from "@chakra-ui/react";
+import { Button, Container, Heading, HStack, Image, Text, useColorModeValue, VStack } from "@chakra-ui/react";
 import React from "react";
 import { NextChakraLink } from "./NextChakraLink";
 

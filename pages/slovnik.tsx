@@ -1,23 +1,23 @@
-import Navbar from "components/Navbar";
-import Footer from "components/Footer";
 import {
 	Box,
+	Divider,
 	Heading,
 	HStack,
 	Image,
-	VStack,
-	Text,
-	useColorModeValue,
 	Input,
-	Divider,
 	Link,
 	Stack,
+	Text,
+	useColorModeValue,
+	VStack,
 } from "@chakra-ui/react";
-import React, { useRef } from "react";
-import { Term } from "pages/pojem/[slug]";
+import Footer from "components/Footer";
+import Navbar from "components/Navbar";
+import { sortBy, uniq } from "lodash-es";
 import { GetStaticProps } from "next";
+import { Term } from "pages/pojem/[slug]";
+import React, { useRef } from "react";
 import { useMiniSearch } from "react-minisearch";
-import { uniq, sortBy } from "lodash-es";
 import { NextChakraLink } from "../components/NextChakraLink";
 import { strapiFetch } from "../util/getApiUrl";
 
@@ -30,7 +30,7 @@ export default function Terms(props: TermsProps) {
 	const indexLetters = sortBy(
 		uniq(props.terms.map((t) => t.name[0].toUpperCase())),
 		[(i) => i],
-		["asc"]
+		["asc"],
 	);
 
 	return (
@@ -122,8 +122,8 @@ export default function Terms(props: TermsProps) {
 								{props.terms
 									.filter(
 										(term) =>
-											term.name[0].toUpperCase() ===
-											letter
+											term.name[0].toUpperCase()
+												=== letter,
 									)
 									.map((term) => (
 										<NextChakraLink
@@ -154,9 +154,7 @@ export default function Terms(props: TermsProps) {
 										</NextChakraLink>
 									))}
 							</VStack>
-							{i !== arr.length - 1 && (
-								<Divider display={["block", "none"]} />
-							)}
+							{i !== arr.length - 1 && <Divider display={["block", "none"]} />}
 						</Stack>
 					))}
 				</VStack>
@@ -221,28 +219,30 @@ function TermSearch(props: { terms: Term[] }) {
 				borderRadius={4}
 				overflow={"hidden"}
 			>
-				{searchResults?.length > 0 ? (
-					searchResults.map((result, i) => (
-						<React.Fragment key={result.slug}>
-							<NextChakraLink
-								href={"/pojem/" + result.slug}
-								cursor={"pointer"}
-								p={4}
-								_hover={{
-									bg: hoverBg,
-								}}
-								alignItems={"start"}
-							>
-								{result.name}
-							</NextChakraLink>
-							{i < searchResults.length - 1 && <Divider />}
-						</React.Fragment>
-					))
-				) : (
-					<Box key={"none"} color={"gray.500"}>
-						Žádné výsledky
-					</Box>
-				)}
+				{searchResults?.length > 0
+					? (
+						searchResults.map((result, i) => (
+							<React.Fragment key={result.slug}>
+								<NextChakraLink
+									href={"/pojem/" + result.slug}
+									cursor={"pointer"}
+									p={4}
+									_hover={{
+										bg: hoverBg,
+									}}
+									alignItems={"start"}
+								>
+									{result.name}
+								</NextChakraLink>
+								{i < searchResults.length - 1 && <Divider />}
+							</React.Fragment>
+						))
+					)
+					: (
+						<Box key={"none"} color={"gray.500"}>
+							Žádné výsledky
+						</Box>
+					)}
 			</Box>
 		</Box>
 	);

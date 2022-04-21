@@ -1,7 +1,3 @@
-import Navbar from "components/Navbar";
-import Footer from "components/Footer";
-import MailCTA from "../components/MailCTA";
-import { NextSeo } from "next-seo";
 import {
 	Box,
 	Button,
@@ -14,19 +10,23 @@ import {
 	useColorModeValue,
 	VStack,
 } from "@chakra-ui/react";
-import { HiOutlineClock } from "react-icons/hi";
-import React from "react";
-import { NextChakraLink, StrapiNextImage } from "../components/NextChakraLink";
-import NextLink from "next/link";
-import { Article } from "./kurzy/[slug]";
+import Footer from "components/Footer";
+import Navbar from "components/Navbar";
 import { GetStaticProps } from "next";
-import { DifficultyTag } from "../components/DifficultyTag";
-import { getReadingTime } from "../components/ReadingTime";
+import { NextSeo } from "next-seo";
+import NextLink from "next/link";
+import React from "react";
+import { HiOutlineClock } from "react-icons/hi";
 import { getCourseUrl } from "../components/CourseUrl";
-import { Term } from "./pojem/[slug]";
+import { DifficultyTag } from "../components/DifficultyTag";
+import MailCTA from "../components/MailCTA";
+import { NextChakraLink, StrapiNextImage } from "../components/NextChakraLink";
+import { getReadingTime } from "../components/ReadingTime";
 import Terms from "../components/Terms";
 import { strapiFetch } from "../util/getApiUrl";
+import { Article } from "./kurzy/[slug]";
 import { Course } from "./kurzy/[slug]";
+import { Term } from "./pojem/[slug]";
 
 type IndexProps = {
 	articles: Article[];
@@ -64,10 +64,8 @@ export default function Index(props: IndexProps) {
 						Krypto vzdělání
 					</Heading>
 					<Box maxW={["unset", "80"]} fontSize={"lg"}>
-						Your one-stop guide to all things krypto. Whether you're
-						a rookie trying to understand mining or a veteran
-						looking to develop a trading strategy, we've got you
-						covered.
+						Your one-stop guide to all things krypto. Whether you're a rookie trying to understand mining or a veteran
+						looking to develop a trading strategy, we've got you covered.
 					</Box>
 					<NextChakraLink
 						href={"/kurzy/zacnete-zde"}
@@ -124,7 +122,7 @@ export default function Index(props: IndexProps) {
 							<Icon as={HiOutlineClock} mr={-1} />
 							<Box>
 								{getReadingTime(
-									props.recommendedArticle.content
+									props.recommendedArticle.content,
 								)}
 							</Box>
 							<DifficultyTag
@@ -138,9 +136,7 @@ export default function Index(props: IndexProps) {
 			<MailCTA />
 			<CourseGrid course={rest[0]} />
 			<Terms terms={props.terms} />
-			{rest.slice(1).map((course) => (
-				<CourseGrid course={course} key={course.id} />
-			))}
+			{rest.slice(1).map((course) => <CourseGrid course={course} key={course.id} />)}
 			<Footer />
 		</>
 	);
@@ -189,16 +185,15 @@ function CourseGrid(props: { course: Course }) {
 				>
 					{props.course.title}
 				</Box>
-				<Divider display={["none", "flex"]} flexShrink={2} />{" "}
+				<Divider display={["none", "flex"]} flexShrink={2} />
+				{" "}
 			</HStack>
 			<SimpleGrid
 				alignItems={"start"}
 				columns={[1, 2, 3]}
 				spacing={[4, 8]}
 			>
-				{props.course.articles.map((a) => (
-					<ArticleCard article={a} key={a.id} />
-				))}
+				{props.course.articles.map((a) => <ArticleCard article={a} key={a.id} />)}
 			</SimpleGrid>
 		</VStack>
 	);

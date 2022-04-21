@@ -1,15 +1,5 @@
+import { Button, Icon, Link, Menu, MenuButton, MenuItem, MenuList, Portal, useBreakpointValue } from "@chakra-ui/react";
 import React from "react";
-import {
-	Button,
-	Icon,
-	Link,
-	Menu,
-	MenuButton,
-	MenuItem,
-	MenuList,
-	Portal,
-	useBreakpointValue,
-} from "@chakra-ui/react";
 import { FaChevronDown } from "react-icons/fa";
 import { IoMenu } from "react-icons/io5";
 import slugify from "slugify";
@@ -36,17 +26,15 @@ export function ToC(props: { headings: string[] }) {
 							<MenuItem key={l}>
 								<Link
 									w={"full"}
-									href={
-										"#" +
-										slugify(l, {
+									href={"#"
+										+ slugify(l, {
 											lower: true,
-										})
-									}
+										})}
 									onClick={() => {
 										const elem = document.getElementById(
 											slugify(l, {
 												lower: true,
-											})
+											}),
 										);
 										elem.scrollIntoView();
 									}}

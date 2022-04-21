@@ -1,5 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from "next";
 import * as hubspot from "@hubspot/api-client";
+import type { NextApiRequest, NextApiResponse } from "next";
 
 const client = new hubspot.Client({
 	apiKey: process.env.HUBSPOT_KEY,

@@ -1,28 +1,16 @@
-import Navbar from "./Navbar";
-import Footer from "./Footer";
-import {
-	Box,
-	Heading,
-	HStack,
-	Icon,
-	Stack,
-	Tag,
-	VStack,
-} from "@chakra-ui/react";
-import React from "react";
-import { Term } from "../pages/pojem/[slug]";
-import {
-	difficulties,
-	difficultiesColors,
-	DifficultyTag,
-} from "./DifficultyTag";
-import { HiOutlineClock, HiArrowLeft } from "react-icons/hi";
+import { Box, Heading, HStack, Icon, Stack, Tag, VStack } from "@chakra-ui/react";
+import readingTime from "@danieldietrich/reading-time";
 import { formatDistanceToNow, formatDuration } from "date-fns";
 import cs from "date-fns/locale/cs";
-import readingTime from "@danieldietrich/reading-time";
-import { NextChakraLink } from "./NextChakraLink";
 import { NextSeo } from "next-seo";
 import NextLink from "next/link";
+import React from "react";
+import { HiArrowLeft, HiOutlineClock } from "react-icons/hi";
+import { Term } from "../pages/pojem/[slug]";
+import { difficulties, difficultiesColors, DifficultyTag } from "./DifficultyTag";
+import Footer from "./Footer";
+import Navbar from "./Navbar";
+import { NextChakraLink } from "./NextChakraLink";
 
 export default function TermLayout(props: {
 	term: Term;
@@ -85,7 +73,7 @@ export default function TermLayout(props: {
 								{
 									minutes: readingStats,
 								},
-								{ locale: cs }
+								{ locale: cs },
 							)}
 						</Box>
 					</HStack>
@@ -97,7 +85,7 @@ export default function TermLayout(props: {
 								{
 									locale: cs,
 									addSuffix: true,
-								}
+								},
 							)}
 						</Box>
 					</HStack>
@@ -119,9 +107,7 @@ export default function TermLayout(props: {
 							Doporučené články
 						</Box>
 						<Stack direction={["column", "row"]}>
-							{props.term.related_terms.map((term) => (
-								<TermCard term={term} />
-							))}
+							{props.term.related_terms.map((term) => <TermCard term={term} />)}
 						</Stack>
 					</>
 				)}

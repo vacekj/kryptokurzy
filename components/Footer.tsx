@@ -1,15 +1,6 @@
-import {
-	Box,
-	Button,
-	Container,
-	HStack,
-	Icon,
-	Stack,
-	Text,
-	VStack,
-} from "@chakra-ui/react";
-import { NextChakraLink } from "./NextChakraLink";
+import { Box, Button, Container, HStack, Icon, Stack, Text, VStack } from "@chakra-ui/react";
 import { FaTwitter } from "react-icons/fa";
+import { NextChakraLink } from "./NextChakraLink";
 
 export default function Footer() {
 	return (

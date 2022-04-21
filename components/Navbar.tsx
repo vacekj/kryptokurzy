@@ -1,23 +1,13 @@
-import {
-	Button,
-	HStack,
-	Icon,
-	IconButton,
-	useColorMode,
-	Image,
-	Box,
-	VStack,
-	useBoolean,
-} from "@chakra-ui/react";
-import { HiOutlineMoon, HiOutlineSearch, HiOutlineSun } from "react-icons/hi";
-import { NextChakraLink } from "./NextChakraLink";
+import { Box, Button, HStack, Icon, IconButton, Image, useBoolean, useColorMode, VStack } from "@chakra-ui/react";
+import { motion, Variants } from "framer-motion";
 import React, { useRef, useState } from "react";
-import Search from "./Search";
+import { FaTwitter } from "react-icons/fa";
+import { HiOutlineMoon, HiOutlineSearch, HiOutlineSun } from "react-icons/hi";
+import { useInView } from "react-intersection-observer";
 import { useClickAway } from "use-click-away";
 import styles from "./navbar.module.css";
-import { useInView } from "react-intersection-observer";
-import { motion, Variants } from "framer-motion";
-import { FaTwitter } from "react-icons/fa";
+import { NextChakraLink } from "./NextChakraLink";
+import Search from "./Search";
 
 export default function Navbar() {
 	const { colorMode, toggleColorMode } = useColorMode();
@@ -138,13 +128,9 @@ export default function Navbar() {
 						}}
 						display={["none", "block"]}
 						onClick={() => toggleColorMode()}
-						icon={
-							colorMode === "light" ? (
-								<Icon w={6} h={6} as={HiOutlineMoon} />
-							) : (
-								<Icon w={6} h={6} as={HiOutlineSun} />
-							)
-						}
+						icon={colorMode === "light"
+							? <Icon w={6} h={6} as={HiOutlineMoon} />
+							: <Icon w={6} h={6} as={HiOutlineSun} />}
 						color={"white"}
 					/>
 					<MobileNav />
@@ -230,13 +216,9 @@ function MobileNav() {
 					}}
 					display={"block"}
 					onClick={() => toggleColorMode()}
-					icon={
-						colorMode === "light" ? (
-							<Icon w={6} h={6} as={HiOutlineMoon} />
-						) : (
-							<Icon w={6} h={6} as={HiOutlineSun} />
-						)
-					}
+					icon={colorMode === "light"
+						? <Icon w={6} h={6} as={HiOutlineMoon} />
+						: <Icon w={6} h={6} as={HiOutlineSun} />}
 					color={"white"}
 				/>
 

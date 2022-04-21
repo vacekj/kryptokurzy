@@ -1,9 +1,9 @@
-import { serialize } from "next-mdx-remote/serialize";
-import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
-import { GetStaticPaths, GetStaticProps } from "next";
-import TermLayout from "components/TermLayout";
-import { Difficulty } from "pages/kurzy/[slug]";
 import { Components } from "components/MarkdownComponents";
+import TermLayout from "components/TermLayout";
+import { GetStaticPaths, GetStaticProps } from "next";
+import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
+import { serialize } from "next-mdx-remote/serialize";
+import { Difficulty } from "pages/kurzy/[slug]";
 import { strapiFetch } from "util/getApiUrl";
 
 export type Term = {
@@ -34,7 +34,7 @@ export default function KurzySlug(props: PojemProps) {
 
 export const getStaticProps: GetStaticProps<PojemProps> = async (context) => {
 	const pojem: Term = await strapiFetch(
-		"/terms?slug=" + context.params.slug
+		"/terms?slug=" + context.params.slug,
 	).then((pojems) => pojems[0]);
 	const mdxSource = await serialize(pojem.explanation);
 	return { props: { pojem, mdxSource }, revalidate: 1 };

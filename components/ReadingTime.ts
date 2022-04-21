@@ -1,5 +1,5 @@
-import { formatDuration } from "date-fns";
 import readingTime from "@danieldietrich/reading-time";
+import { formatDuration } from "date-fns";
 import cs from "date-fns/locale/cs";
 
 export function getReadingTime(text: string) {
@@ -9,6 +9,6 @@ export function getReadingTime(text: string) {
 		},
 		{
 			locale: cs,
-		}
+		},
 	);
 }

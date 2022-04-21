@@ -1,16 +1,7 @@
-import {
-	Button,
-	Container,
-	Heading,
-	HStack,
-	Image,
-	Text,
-	useColorModeValue,
-	VStack,
-} from "@chakra-ui/react";
-import { NextChakraLink } from "./NextChakraLink";
+import { Button, Container, Heading, HStack, Image, Text, useColorModeValue, VStack } from "@chakra-ui/react";
 import React from "react";
 import { Term } from "../pages/pojem/[slug]";
+import { NextChakraLink } from "./NextChakraLink";
 
 export default function Terms(props: { terms: Term[] }) {
 	const dark = useColorModeValue(false, true);
@@ -40,8 +31,7 @@ export default function Terms(props: { terms: Term[] }) {
 						color={dark ? "gray.200" : "gray.800"}
 						fontSize={"2xl"}
 					>
-						Vysvětlíme vám {props.terms.length} pojmů tak, že už se
-						v krypto slangu neztratíte.
+						Vysvětlíme vám {props.terms.length} pojmů tak, že už se v krypto slangu neztratíte.
 					</Text>
 					<NextChakraLink
 						href={"/slovnik"}

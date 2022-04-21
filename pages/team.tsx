@@ -1,21 +1,21 @@
-import Navbar from "components/Navbar";
-import Footer from "components/Footer";
-import Head from "next/head";
-import ConsultingForm from "../components/ConsultingForm";
-import { NextSeo } from "next-seo";
 import {
 	Avatar,
 	Box,
 	Container,
 	Heading,
+	HStack,
+	Link,
 	Stack,
 	Text,
 	useColorModeValue,
 	VStack,
-	Link,
-	HStack,
 } from "@chakra-ui/react";
+import Footer from "components/Footer";
+import Navbar from "components/Navbar";
 import { motion, useTransform, useViewportScroll } from "framer-motion";
+import { NextSeo } from "next-seo";
+import Head from "next/head";
+import ConsultingForm from "../components/ConsultingForm";
 
 export default function Team() {
 	const { scrollYProgress } = useViewportScroll();
@@ -48,8 +48,7 @@ export default function Team() {
 							color={textColor}
 							fontWeight={["medium", "semibold"]}
 						>
-							Naším cílem je předat Vám toto nadšení, společně se
-							zkušenostmi a dovednostmi.
+							Naším cílem je předat Vám toto nadšení, společně se zkušenostmi a dovednostmi.
 						</Box>
 					</VStack>
 				</HStack>
@@ -64,20 +63,17 @@ export default function Team() {
 						direction={["column-reverse", "row"]}
 					>
 						<Text fontSize={["xl", "3xl"]}>
-							Dominik je blockchain vývojář a krypto konzultant s
-							rozsáhlými zkušenosti v oboru díky aktivní účastí na
-							krypto trzích od konce roku 2017. Mimo kryptokurzy
-							pracuje také jako tržní analytik v
+							Dominik je blockchain vývojář a krypto konzultant s rozsáhlými zkušenosti v oboru díky aktivní účastí na
+							krypto trzích od konce roku 2017. Mimo kryptokurzy pracuje také jako tržní analytik v
 							<Link
 								href="https://academy.ivanontech.com/"
 								color="blue.500"
 								fontWeight="500"
 								isExternal
 							>
-								<span> </span>Ivan on Tech Academy
+								<span></span>Ivan on Tech Academy
 							</Link>
-							- největší globální vzdělávácí platforma pro krypto
-							a blockchain na světě.
+							- největší globální vzdělávácí platforma pro krypto a blockchain na světě.
 						</Text>
 						<Stack
 							as={motion.div}
@@ -153,12 +149,9 @@ export default function Team() {
 							</VStack>
 						</Stack>
 						<Text fontSize={["xl", "3xl"]}>
-							Pepa má na starosti vývoj webu a aplikace a veškeré
-							technické zázemí. <br /> Má za páskem řadu úspěšných
-							projektů ve školství, e-learningu, webdesignu a
-							marketingu. O kryptoměny a blockchainové technologie
-							se zajímá od roku 2015 a již druhým rokem do nich
-							aktivně investuje.
+							Pepa má na starosti vývoj webu a aplikace a veškeré technické zázemí. <br />{" "}
+							Má za páskem řadu úspěšných projektů ve školství, e-learningu, webdesignu a marketingu. O kryptoměny a
+							blockchainové technologie se zajímá od roku 2015 a již druhým rokem do nich aktivně investuje.
 							<br />
 						</Text>
 					</Stack>

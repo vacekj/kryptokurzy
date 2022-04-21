@@ -48,8 +48,7 @@ export default function ConsultingForm() {
 			.catch(() => {
 				toast({
 					title: "Vyskytla se chyba",
-					description:
-						"Zkuste to prosím znovu a případně kontaktujte podporu",
+					description: "Zkuste to prosím znovu a případně kontaktujte podporu",
 					status: "error",
 					duration: 5000,
 					isClosable: true,
@@ -85,8 +84,7 @@ export default function ConsultingForm() {
 						color={dark ? "gray.200" : "gray.800"}
 						fontSize={"xl"}
 					>
-						Nevíte si rady, nebo chcete své crypto znalosti dostat
-						na vyšší úroveň? Jsme experti na investice, portfolio
+						Nevíte si rady, nebo chcete své crypto znalosti dostat na vyšší úroveň? Jsme experti na investice, portfolio
 						management, obchodování a blockchain development.
 					</Box>
 					<VStack
@@ -104,8 +102,7 @@ export default function ConsultingForm() {
 									required: true,
 									minLength: 5,
 									maxLength: 60,
-									pattern:
-										/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+									pattern: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
 								})}
 								bg={inputBg}
 								placeholder={"vas@email.cz"}

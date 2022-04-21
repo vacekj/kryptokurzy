@@ -1,12 +1,12 @@
-import { useMiniSearch } from "react-minisearch";
-import NextLink from "next/link";
 import { Input, useColorModeValue } from "@chakra-ui/react";
-import { Divider, Box, Link, VStack, HStack, Icon } from "@chakra-ui/react";
+import { Box, Divider, HStack, Icon, Link, VStack } from "@chakra-ui/react";
 import { Breadcrumb, BreadcrumbItem } from "@chakra-ui/react";
-import { motion } from "framer-motion";
 import { Tag } from "@chakra-ui/react";
-import { BiChevronRight } from "react-icons/bi";
+import { motion } from "framer-motion";
+import NextLink from "next/link";
 import React, { useEffect, useRef } from "react";
+import { BiChevronRight } from "react-icons/bi";
+import { useMiniSearch } from "react-minisearch";
 import useSWR from "swr";
 import { Article } from "../pages/kurzy/[slug]";
 import { Term } from "../pages/pojem/[slug]";
@@ -17,36 +17,36 @@ const fetcher = (...args) => fetch(...args).then((res) => res.json());
 export default function Search(props: { isOpen: boolean }) {
 	const { data: articles } = useSWR<Article[]>(
 		process.env.NEXT_PUBLIC_STRAPI_URL + "/articles",
-		fetcher
+		fetcher,
 	);
 
 	const { data: terms } = useSWR<Term[]>(
 		process.env.NEXT_PUBLIC_STRAPI_URL + "/terms",
-		fetcher
+		fetcher,
 	);
 
 	const normalizedArticles = articles
 		? articles.map((article) => {
-				return {
-					id: article.id,
-					title: article.title,
-					content: article.content,
-					tags: article.tags.map((t) => t.name),
-					url: "/kurzy/" + article.slug,
-				};
-		  })
+			return {
+				id: article.id,
+				title: article.title,
+				content: article.content,
+				tags: article.tags.map((t) => t.name),
+				url: "/kurzy/" + article.slug,
+			};
+		})
 		: [];
 
 	const normalizedTerms = terms
 		? terms.map((term) => {
-				return {
-					id: term.id,
-					title: term.name,
-					content: term.explanation,
-					tags: [],
-					url: "/pojem/" + term.slug,
-				};
-		  })
+			return {
+				id: term.id,
+				title: term.name,
+				content: term.explanation,
+				tags: [],
+				url: "/pojem/" + term.slug,
+			};
+		})
 		: [];
 
 	const index = normalizedArticles.concat(normalizedTerms);
@@ -97,9 +97,7 @@ export default function Search(props: { isOpen: boolean }) {
 				/>
 			</motion.div>
 			<Box
-				display={
-					props.isOpen && searchResults?.length ? "flex" : "none"
-				}
+				display={props.isOpen && searchResults?.length ? "flex" : "none"}
 				flexDir={"column"}
 				position={"absolute"}
 				left={-2}
@@ -112,86 +110,87 @@ export default function Search(props: { isOpen: boolean }) {
 				borderRadius={4}
 				overflow={"hidden"}
 			>
-				{searchResults && searchResults.length > 0 ? (
-					searchResults.slice(0, 10).map((result, i) => (
-						<React.Fragment key={result.url}>
-							<VStack
-								as={"a"}
-								href={result.url}
-								cursor={"pointer"}
-								p={4}
-								_hover={{
-									bg: hoverBg,
-								}}
-								key={result.url}
-								alignItems={"start"}
-							>
-								<NextLink href={"/" + result.url} key={i}>
-									<Link fontWeight={"bold"} fontSize={"lg"}>
-										{result.title}
-									</Link>
-								</NextLink>
-								<HStack>
-									<Breadcrumb
-										spacing="4px"
-										separator={
-											<Icon
-												as={BiChevronRight}
-												color="gray.500"
-											/>
-										}
-									>
-										{result.url
-											.slice(1)
-											.split("/")
-											.map((crumb, i, arr) => (
-												<BreadcrumbItem
-													key={i}
-													color={"gray.500"}
-													fontSize={"sm"}
-												>
-													<NextLink
-														href={result.url.substring(
-															0,
-															result.url.indexOf(
-																arr[i + 1]
-															)
-														)}
+				{searchResults && searchResults.length > 0
+					? (
+						searchResults.slice(0, 10).map((result, i) => (
+							<React.Fragment key={result.url}>
+								<VStack
+									as={"a"}
+									href={result.url}
+									cursor={"pointer"}
+									p={4}
+									_hover={{
+										bg: hoverBg,
+									}}
+									key={result.url}
+									alignItems={"start"}
+								>
+									<NextLink href={"/" + result.url} key={i}>
+										<Link fontWeight={"bold"} fontSize={"lg"}>
+											{result.title}
+										</Link>
+									</NextLink>
+									<HStack>
+										<Breadcrumb
+											spacing="4px"
+											separator={
+												<Icon
+													as={BiChevronRight}
+													color="gray.500"
+												/>
+											}
+										>
+											{result.url
+												.slice(1)
+												.split("/")
+												.map((crumb, i, arr) => (
+													<BreadcrumbItem
+														key={i}
+														color={"gray.500"}
+														fontSize={"sm"}
 													>
-														<Link>
-															{crumb
-																.trim()
-																.replace(
-																	/^\w/,
-																	(c) =>
-																		c.toUpperCase()
-																)
-																.replaceAll(
-																	"-",
-																	" "
-																)}
-														</Link>
-													</NextLink>
-												</BreadcrumbItem>
-											))}
-									</Breadcrumb>
-								</HStack>
-								<HStack maxW={"full"} flexWrap={"wrap"}>
-									{result.tags.map((tag) => (
-										<Tag key={tag} marginBottom={"4px"}>
-											{tag}
-										</Tag>
-									))}
-								</HStack>
-							</VStack>
-							{i < searchResults.length - 1 && <Divider />}
-						</React.Fragment>
-					))
-				) : (
-					<Box key={"none"} color={"gray.500"}>
-						Žádné výsledky
-					</Box>
-				)}
+														<NextLink
+															href={result.url.substring(
+																0,
+																result.url.indexOf(
+																	arr[i + 1],
+																),
+															)}
+														>
+															<Link>
+																{crumb
+																	.trim()
+																	.replace(
+																		/^\w/,
+																		(c) => c.toUpperCase(),
+																	)
+																	.replaceAll(
+																		"-",
+																		" ",
+																	)}
+															</Link>
+														</NextLink>
+													</BreadcrumbItem>
+												))}
+										</Breadcrumb>
+									</HStack>
+									<HStack maxW={"full"} flexWrap={"wrap"}>
+										{result.tags.map((tag) => (
+											<Tag key={tag} marginBottom={"4px"}>
+												{tag}
+											</Tag>
+										))}
+									</HStack>
+								</VStack>
+								{i < searchResults.length - 1 && <Divider />}
+							</React.Fragment>
+						))
+					)
+					: (
+						<Box key={"none"} color={"gray.500"}>
+							Žádné výsledky
+						</Box>
+					)}
 			</Box>
 		</HStack>
 	);

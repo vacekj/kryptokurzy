@@ -3,21 +3,20 @@ import {
 	Container,
 	Heading,
 	HStack,
+	Image,
 	Input,
 	Text,
-	Image,
 	useColorModeValue,
-	VStack,
 	useToast,
+	VStack,
 } from "@chakra-ui/react";
-import { useForm } from "react-hook-form";
 import React, { useState } from "react";
+import { useForm } from "react-hook-form";
 
 export const qs = (params) =>
 	Object.keys(params)
 		.map(
-			(key) =>
-				`${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`
+			(key) => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`,
 		)
 		.join("&");
 
@@ -50,10 +49,9 @@ export default function MailCTA() {
 			.catch((err) => {
 				toast({
 					title: "Nelze přihlásit k odběru",
-					description:
-						err.status === 409
-							? "K odběru jste již přihlášeni"
-							: "Kontaktujte prosím podporu",
+					description: err.status === 409
+						? "K odběru jste již přihlášeni"
+						: "Kontaktujte prosím podporu",
 					status: "error",
 					duration: 5000,
 					isClosable: true,
@@ -98,8 +96,7 @@ export default function MailCTA() {
 									required: true,
 									minLength: 5,
 									maxLength: 60,
-									pattern:
-										/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+									pattern: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
 								})}
 								name={"email"}
 								focusBorderColor={"brand.400"}

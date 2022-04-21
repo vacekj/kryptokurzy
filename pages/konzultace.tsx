@@ -1,29 +1,29 @@
-import Navbar from "components/Navbar";
-import Footer from "components/Footer";
-import { qs } from "../components/MailCTA";
-import Head from "next/head";
-import { NextSeo } from "next-seo";
 import {
 	Box,
+	Button,
 	Container,
+	FormControl,
+	FormHelperText,
+	FormLabel,
 	Heading,
+	HStack,
+	Input,
+	Radio,
+	RadioGroup,
 	Stack,
 	Text,
-	useColorModeValue,
-	VStack,
-	HStack,
-	useToast,
-	FormControl,
-	FormLabel,
-	Input,
-	FormHelperText,
 	Textarea,
-	RadioGroup,
-	Radio,
-	Button,
+	useColorModeValue,
+	useToast,
+	VStack,
 } from "@chakra-ui/react";
-import { Controller, useForm } from "react-hook-form";
+import Footer from "components/Footer";
+import Navbar from "components/Navbar";
+import { NextSeo } from "next-seo";
+import Head from "next/head";
 import React, { useState } from "react";
+import { Controller, useForm } from "react-hook-form";
+import { qs } from "../components/MailCTA";
 
 export default function Konzultace() {
 	const textColor = useColorModeValue("gray.700", "gray.300");
@@ -43,18 +43,15 @@ export default function Konzultace() {
 				<HStack spacing={10} mb={-12}>
 					<VStack>
 						<Text fontSize={"5xl"} fontWeight={"bold"}>
-							Poskytujeme odborné konzultace pro firmy i
-							jednotlivce
+							Poskytujeme odborné konzultace pro firmy i jednotlivce
 						</Text>
 						<Box
 							fontSize={"3xl"}
 							color={textColor}
 							fontWeight={"semibold"}
 						>
-							3 roky zkušeností s investováním do kryptoměn a
-							vynikající výsledky nám dovolují poskytovat expertní
-							konzultace. Zakládáme si na osobním přístupu a vše
-							šijeme na míru vašim potřebám.
+							3 roky zkušeností s investováním do kryptoměn a vynikající výsledky nám dovolují poskytovat expertní
+							konzultace. Zakládáme si na osobním přístupu a vše šijeme na míru vašim potřebám.
 						</Box>
 					</VStack>
 				</HStack>
@@ -135,8 +132,7 @@ function ConsultingFormCustom() {
 								required: true,
 								minLength: 5,
 								maxLength: 60,
-								pattern:
-									/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+								pattern: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
 							})}
 							bg={inputBg}
 							placeholder={"vas@email.cz"}

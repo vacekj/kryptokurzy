@@ -1,7 +1,7 @@
 const checkedLinks = [];
 
-describe("Test for unwanted 404s", function () {
-	it("should not get 404s on any links on our page", function () {
+describe("Test for unwanted 404s", function() {
+	it("should not get 404s on any links on our page", function() {
 		ensureNot404("/");
 	});
 });
@@ -12,7 +12,7 @@ function ensureNot404(url: string) {
 	cy.log("Not a 404, following links");
 	checkedLinks.push(url);
 	cy.log(
-		`Added ${url} to checked links, ${checkedLinks.length} checked so far`
+		`Added ${url} to checked links, ${checkedLinks.length} checked so far`,
 	);
 	/*Get all links on page and recursively check them */
 	cy.get("html").then(() => {

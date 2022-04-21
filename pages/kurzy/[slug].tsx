@@ -1,12 +1,12 @@
-import { serialize } from "next-mdx-remote/serialize";
-import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
-import CourseLayout from "../../components/CourseLayout";
-import { GetStaticPaths, GetStaticProps } from "next";
-import { Components } from "../../components/MarkdownComponents";
-import unified from "unified";
-import markdown from "remark-parse";
-import toString from "mdast-util-to-string";
 import { Heading, Root } from "mdast";
+import toString from "mdast-util-to-string";
+import { GetStaticPaths, GetStaticProps } from "next";
+import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
+import { serialize } from "next-mdx-remote/serialize";
+import markdown from "remark-parse";
+import unified from "unified";
+import CourseLayout from "../../components/CourseLayout";
+import { Components } from "../../components/MarkdownComponents";
 import { strapiFetch } from "../../util/getApiUrl";
 
 type KurzyProps = {
@@ -30,7 +30,7 @@ export default function KurzySlug(props: KurzyProps) {
 
 export const getStaticProps: GetStaticProps<KurzyProps> = async (context) => {
 	const article: Article = await strapiFetch(
-		"/articles?slug=" + context.params.slug
+		"/articles?slug=" + context.params.slug,
 	).then((articles) => articles[0]);
 
 	const course: Course = await strapiFetch("/courses/" + article.course.id);

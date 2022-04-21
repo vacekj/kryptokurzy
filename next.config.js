@@ -26,5 +26,5 @@ module.exports = withPlugins(
 		[withBundleAnalyzer],
 		[withTM],
 	],
-	nextConfig
+	nextConfig,
 );

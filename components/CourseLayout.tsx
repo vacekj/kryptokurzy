@@ -1,31 +1,21 @@
-import Navbar from "./Navbar";
-import Footer from "./Footer";
-import {
-	Box,
-	Heading,
-	HStack,
-	Icon,
-	IconButton,
-	SimpleGrid,
-	Tag,
-	useColorModeValue,
-	VStack,
-} from "@chakra-ui/react";
-import React, { useState } from "react";
-import { motion, useTransform, useViewportScroll } from "framer-motion";
-import { FaChevronLeft } from "react-icons/fa";
-import { ToC } from "./TableOfContents";
-import { useRouter } from "next/router";
+import { Box, Heading, HStack, Icon, IconButton, SimpleGrid, Tag, useColorModeValue, VStack } from "@chakra-ui/react";
 import readingTime from "@danieldietrich/reading-time";
 import { formatDuration } from "date-fns";
 import cs from "date-fns/locale/cs";
-import { HiOutlineClock } from "react-icons/hi";
-import { Article } from "../pages/kurzy/[slug]";
-import { difficulties, difficultiesColors } from "./DifficultyTag";
-import { StrapiNextImage } from "./NextChakraLink";
+import { motion, useTransform, useViewportScroll } from "framer-motion";
 import { NextSeo } from "next-seo";
+import { useRouter } from "next/router";
+import React, { useState } from "react";
+import { FaChevronLeft } from "react-icons/fa";
+import { HiOutlineClock } from "react-icons/hi";
 import removeMd from "remove-markdown";
 import { ArticleCard } from "../pages";
+import { Article } from "../pages/kurzy/[slug]";
+import { difficulties, difficultiesColors } from "./DifficultyTag";
+import Footer from "./Footer";
+import Navbar from "./Navbar";
+import { StrapiNextImage } from "./NextChakraLink";
+import { ToC } from "./TableOfContents";
 
 export default function CourseLayout(props: {
 	children: React.ReactNode;
@@ -37,7 +27,7 @@ export default function CourseLayout(props: {
 	const width = useTransform(
 		scrollYProgress,
 		[0, 1],
-		["calc(0%)", "calc(100%)"]
+		["calc(0%)", "calc(100%)"],
 	);
 	const [scroll, setScroll] = useState(0);
 	scrollY.onChange((s) => setScroll(s));
@@ -177,9 +167,7 @@ export default function CourseLayout(props: {
 					<Tag
 						variant={"subtle"}
 						fontSize={["sm", "md"]}
-						colorScheme={
-							difficultiesColors[props.article.difficulty]
-						}
+						colorScheme={difficultiesColors[props.article.difficulty]}
 					>
 						{difficulties[props.article.difficulty]}
 					</Tag>
@@ -190,7 +178,7 @@ export default function CourseLayout(props: {
 								{
 									minutes: readingStats,
 								},
-								{ locale: cs }
+								{ locale: cs },
 							)}
 						</Box>
 					</HStack>
@@ -231,9 +219,7 @@ function RecommendedArticles(props: RecommendedArticlesProps) {
 				Doporučené články
 			</Box>
 			<SimpleGrid columns={[1, 2, 3]} spacing={[4, 8]}>
-				{props.articles.slice(0, 3).map((a) => (
-					<ArticleCard article={a} key={a.id} />
-				))}
+				{props.articles.slice(0, 3).map((a) => <ArticleCard article={a} key={a.id} />)}
 			</SimpleGrid>
 		</VStack>
 	);
